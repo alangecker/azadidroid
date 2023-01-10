@@ -1,0 +1,6 @@
+[submodule "fastboot.js"]
+	path = fastboot.js
+	url = https://github.com/kdrag0n/fastboot.js.git
+[submodule "heimdall.js"]
+	path = heimdall.js
+	url = https://github.com/alangecker/heimdall.js.git

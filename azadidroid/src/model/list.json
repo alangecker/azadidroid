@@ -1,0 +1,3668 @@
+[
+  {
+    "code": "A6020",
+    "vendor": "Lenovo",
+    "name": "Vibe K5 / K5 Plus",
+    "method": "fastboot",
+    "models": [
+      "A6020a40",
+      "A6020a41",
+      "A6020a46",
+      "A6020l36",
+      "A6020l37"
+    ]
+  },
+  {
+    "code": "Amber",
+    "vendor": "Yandex",
+    "name": "Phone",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "DRG",
+    "vendor": "Nokia",
+    "name": "6.1 Plus",
+    "method": "fastboot",
+    "models": [
+      "TA-1083"
+    ]
+  },
+  {
+    "code": "FP2",
+    "vendor": "Fairphone",
+    "name": "2",
+    "method": "fastboot",
+    "models": [
+      "FP2"
+    ]
+  },
+  {
+    "code": "FP3",
+    "vendor": "Fairphone",
+    "name": "3",
+    "method": "fastboot",
+    "models": [
+      "FP3",
+      "FP3+"
+    ]
+  },
+  {
+    "code": "I001D",
+    "vendor": "ASUS",
+    "name": "ROG Phone 2 (ZS660KL)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "I01WD",
+    "vendor": "ASUS",
+    "name": "Zenfone 6 (ZS630KL)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "P024",
+    "vendor": "ASUS",
+    "name": "ZenPad 8.0 (Z380KL)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "PL2",
+    "vendor": "Nokia",
+    "name": "6.1 (2018)",
+    "method": "fastboot",
+    "models": [
+      "TA-1043",
+      "TA-1089"
+    ]
+  },
+  {
+    "code": "RMX1801",
+    "vendor": "Realme",
+    "name": "2 Pro",
+    "method": "fastboot",
+    "models": [
+      "RMX1801"
+    ]
+  },
+  {
+    "code": "RMX1851",
+    "vendor": "Realme",
+    "name": "3 Pro",
+    "method": "fastboot",
+    "models": [
+      "RMX1851"
+    ]
+  },
+  {
+    "code": "TP1803",
+    "vendor": "Nubia",
+    "name": "Mini 5G",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "X00P",
+    "vendor": "ASUS",
+    "name": "Zenfone Max M1",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "X00TD",
+    "vendor": "ASUS",
+    "name": "Zenfone Max Pro M1",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "X01AD",
+    "vendor": "ASUS",
+    "name": "Zenfone Max M2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "X01BD",
+    "vendor": "ASUS",
+    "name": "Zenfone Max Pro M2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "YTX703F",
+    "vendor": "Lenovo",
+    "name": "Yoga Tab 3 Plus Wi-Fi",
+    "method": "fastboot",
+    "models": [
+      "YTX703F"
+    ]
+  },
+  {
+    "code": "YTX703L",
+    "vendor": "Lenovo",
+    "name": "Yoga Tab 3 Plus LTE",
+    "method": "fastboot",
+    "models": [
+      "YTX703L",
+      "YTX703X"
+    ]
+  },
+  {
+    "code": "Z008",
+    "vendor": "ASUS",
+    "name": "Zenfone 2 (720p)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "Z00A",
+    "vendor": "ASUS",
+    "name": "Zenfone 2 (1080p)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "Z00D",
+    "vendor": "ASUS",
+    "name": "Zenfone 2 (ZE500CL)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "Z00L",
+    "vendor": "ASUS",
+    "name": "Zenfone 2 Laser (720p)",
+    "method": "fastboot",
+    "models": [
+      "ZE500KL",
+      "ZE550KL"
+    ]
+  },
+  {
+    "code": "Z00T",
+    "vendor": "ASUS",
+    "name": "Zenfone 2 Laser / Selfie (1080p)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "Z01R",
+    "vendor": "ASUS",
+    "name": "Zenfone 5Z (ZS620KL)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "a3xelte",
+    "vendor": "Samsung",
+    "name": "Galaxy A3 (2016)",
+    "method": "heimdall",
+    "models": [
+      "SM-A310F",
+      "SM-A310F/DS",
+      "SM-A310M",
+      "SM-A310N0",
+      "SM-A310Y"
+    ]
+  },
+  {
+    "code": "a52q",
+    "vendor": "Samsung",
+    "name": "Galaxy A52 4G",
+    "method": "heimdall",
+    "models": [
+      "SM-A525F",
+      "SM-A525M",
+      "SM-A525F/DS",
+      "SM-A525M/DS"
+    ]
+  },
+  {
+    "code": "a5xelte",
+    "vendor": "Samsung",
+    "name": "Galaxy A5 (2016)",
+    "method": "heimdall",
+    "models": [
+      "SM-A510F",
+      "SM-A510F/DS",
+      "SM-A510M",
+      "SM-A510Y",
+      "SM-A510K",
+      "SM-A510L",
+      "SM-A510S",
+      "SM-A5108"
+    ]
+  },
+  {
+    "code": "a5y17lte",
+    "vendor": "Samsung",
+    "name": "Galaxy A5 (2017)",
+    "method": "heimdall",
+    "models": [
+      "SM-A520F",
+      "SM-A520F/DS",
+      "SM-A520K",
+      "SM-A520L",
+      "SM-A520S",
+      "SM-A520W"
+    ]
+  },
+  {
+    "code": "a72q",
+    "vendor": "Samsung",
+    "name": "Galaxy A72",
+    "method": "heimdall",
+    "models": [
+      "SM-A725F",
+      "SM-A725M",
+      "SM-A725F/DS",
+      "SM-A725M/DS"
+    ]
+  },
+  {
+    "code": "a7xelte",
+    "vendor": "Samsung",
+    "name": "Galaxy A7 (2016)",
+    "method": "heimdall",
+    "models": [
+      "SM-A710F",
+      "SM-A710F/DS",
+      "SM-A710M",
+      "SM-A710Y",
+      "SM-A710K",
+      "SM-A710L",
+      "SM-A710S"
+    ]
+  },
+  {
+    "code": "a7y17lte",
+    "vendor": "Samsung",
+    "name": "Galaxy A7 (2017)",
+    "method": "heimdall",
+    "models": [
+      "SM-A720F",
+      "SM-A720F/DS",
+      "SM-A720S"
+    ]
+  },
+  {
+    "code": "addison",
+    "vendor": "Motorola",
+    "name": "moto z play",
+    "method": "fastboot",
+    "models": [
+      "XT1635-01",
+      "XT1635-02",
+      "XT1635-03"
+    ]
+  },
+  {
+    "code": "ahannah",
+    "vendor": "Motorola",
+    "name": "moto e5 plus (XT1924-3/9)",
+    "method": "fastboot",
+    "models": [
+      "XT1924-3",
+      "XT1924-9"
+    ]
+  },
+  {
+    "code": "akari",
+    "vendor": "Sony",
+    "name": "Xperia XZ2",
+    "method": "fastboot",
+    "models": [
+      "H8216",
+      "H8266",
+      "H8276",
+      "H8296"
+    ]
+  },
+  {
+    "code": "akatsuki",
+    "vendor": "Sony",
+    "name": "Xperia XZ3",
+    "method": "fastboot",
+    "models": [
+      "H8416",
+      "H9436",
+      "H9493"
+    ]
+  },
+  {
+    "code": "albus",
+    "vendor": "Motorola",
+    "name": "moto z2 play",
+    "method": "fastboot",
+    "models": [
+      "XT1710-01",
+      "XT1710-02",
+      "XT1710-07",
+      "XT1710-08",
+      "XT1710-09",
+      "XT1710-10",
+      "XT1710-11"
+    ]
+  },
+  {
+    "code": "alioth",
+    "vendor": "Xiaomi",
+    "name": "POCO F3 / Redmi K40 / Mi 11X",
+    "method": "fastboot",
+    "models": [
+      "M2012K11AC",
+      "M2012K11AI",
+      "M2012K11AG"
+    ]
+  },
+  {
+    "code": "angler",
+    "vendor": "Google",
+    "name": "Nexus 6P",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "anne",
+    "vendor": "Huawei",
+    "name": "P20 Lite",
+    "method": "fastboot",
+    "models": [
+      "ANE-LX1",
+      "ANE-LX2",
+      "ANE-LX3",
+      "ANE-LX2J",
+      "ANE-AL00",
+      "ANE-L23",
+      "ANE-L22",
+      "ANE-L21"
+    ]
+  },
+  {
+    "code": "apollon",
+    "vendor": "Xiaomi",
+    "name": "Mi 10T / Mi 10T Pro / Redmi K30S Ultra",
+    "method": "fastboot",
+    "models": [
+      "M2007J3SC",
+      "M2007J3SG",
+      "M2007J3SY"
+    ]
+  },
+  {
+    "code": "armani",
+    "vendor": "Xiaomi",
+    "name": "Redmi 1S",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "athene",
+    "vendor": "Motorola",
+    "name": "moto g4",
+    "method": "fastboot",
+    "models": [
+      "XT1622",
+      "XT1624",
+      "XT1625",
+      "XT1626",
+      "XT1640",
+      "XT1641",
+      "XT1642",
+      "XT1643",
+      "XT1644"
+    ]
+  },
+  {
+    "code": "aura",
+    "vendor": "Razer",
+    "name": "Phone 2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "aurora",
+    "vendor": "Sony",
+    "name": "Xperia XZ2 Premium",
+    "method": "fastboot",
+    "models": [
+      "H8116",
+      "H8166"
+    ]
+  },
+  {
+    "code": "avicii",
+    "vendor": "OnePlus",
+    "name": "Nord",
+    "method": "fastboot",
+    "models": [
+      "AC2001",
+      "AC2003"
+    ]
+  },
+  {
+    "code": "axolotl",
+    "vendor": "SHIFT",
+    "name": "SHIFT6mq",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "axon7",
+    "vendor": "ZTE",
+    "name": "Axon 7",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "bacon",
+    "vendor": "OnePlus",
+    "name": "One",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "barbet",
+    "vendor": "Google",
+    "name": "Pixel 5a",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "bardock",
+    "vendor": "BQ",
+    "name": "Aquaris X",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "bardockpro",
+    "vendor": "BQ",
+    "name": "Aquaris X Pro",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "beckham",
+    "vendor": "Motorola",
+    "name": "moto z3 play",
+    "method": "fastboot",
+    "models": [
+      "XT1929-2",
+      "XT1929-3",
+      "XT1929-4",
+      "XT1929-5",
+      "XT1929-6"
+    ]
+  },
+  {
+    "code": "berkeley",
+    "vendor": "Huawei",
+    "name": "Honor View 10",
+    "method": "fastboot",
+    "models": [
+      "BKL-AL00",
+      "BKL-AL10",
+      "BKL-AL20",
+      "BKL-L09",
+      "BKL-TL10",
+      "BKL-TL20"
+    ]
+  },
+  {
+    "code": "berlin",
+    "vendor": "Motorola",
+    "name": "edge 20",
+    "method": "fastboot",
+    "models": [
+      "XT2143-1"
+    ]
+  },
+  {
+    "code": "beryllium",
+    "vendor": "Xiaomi",
+    "name": "Poco F1",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "beyond0lte",
+    "vendor": "Samsung",
+    "name": "Galaxy S10e",
+    "method": "heimdall",
+    "models": [
+      "SM-G970F",
+      "SM-G970F/DS",
+      "SM-G970N"
+    ]
+  },
+  {
+    "code": "beyond1lte",
+    "vendor": "Samsung",
+    "name": "Galaxy S10",
+    "method": "heimdall",
+    "models": [
+      "SM-G973F",
+      "SM-G973F/DS",
+      "SM-G973N"
+    ]
+  },
+  {
+    "code": "beyond2lte",
+    "vendor": "Samsung",
+    "name": "Galaxy S10+",
+    "method": "heimdall",
+    "models": [
+      "SM-G975F",
+      "SM-G975F/DS",
+      "SM-G975N"
+    ]
+  },
+  {
+    "code": "beyondx",
+    "vendor": "Samsung",
+    "name": "Galaxy S10 5G",
+    "method": "heimdall",
+    "models": [
+      "SM-G977B",
+      "SM-G977N"
+    ]
+  },
+  {
+    "code": "blueline",
+    "vendor": "Google",
+    "name": "Pixel 3",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "bonito",
+    "vendor": "Google",
+    "name": "Pixel 3a XL",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "bramble",
+    "vendor": "Google",
+    "name": "Pixel 4a 5G",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "bullhead",
+    "vendor": "Google",
+    "name": "Nexus 5X",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "cancro",
+    "vendor": "Xiaomi",
+    "name": "Mi 3 / Mi 4",
+    "method": "fastboot",
+    "models": [
+      "MI3",
+      "MI4"
+    ]
+  },
+  {
+    "code": "capricorn",
+    "vendor": "Xiaomi",
+    "name": "Mi 5s",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "castor",
+    "vendor": "Sony",
+    "name": "Xperia Tablet Z2 LTE",
+    "method": "fastboot",
+    "models": [
+      "SGP521",
+      "SGP541",
+      "SGP551"
+    ]
+  },
+  {
+    "code": "castor_windy",
+    "vendor": "Sony",
+    "name": "Xperia Tablet Z2 Wi-Fi",
+    "method": "fastboot",
+    "models": [
+      "SGP511",
+      "SGP512"
+    ]
+  },
+  {
+    "code": "cedric",
+    "vendor": "Motorola",
+    "name": "moto g5",
+    "method": "fastboot",
+    "models": [
+      "XT1670",
+      "XT1671",
+      "XT1672",
+      "XT1675",
+      "XT1676",
+      "XT1677"
+    ]
+  },
+  {
+    "code": "chagalllte",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S 10.5 LTE",
+    "method": "heimdall",
+    "models": [
+      "SM-T805"
+    ]
+  },
+  {
+    "code": "chagallwifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S 10.5 Wi-Fi",
+    "method": "heimdall",
+    "models": [
+      "SM-T800"
+    ]
+  },
+  {
+    "code": "channel",
+    "vendor": "Motorola",
+    "name": "moto g7 play",
+    "method": "fastboot",
+    "models": [
+      "XT1952-1",
+      "XT1952-2",
+      "XT1952-3"
+    ]
+  },
+  {
+    "code": "chaozu",
+    "vendor": "BQ",
+    "name": "Aquaris U",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "charlotte",
+    "vendor": "Huawei",
+    "name": "P20 Pro",
+    "method": "fastboot",
+    "models": [
+      "CLT-AL00",
+      "CLT-AL01",
+      "CLT-L04",
+      "CLT-L09",
+      "CLT-L29",
+      "CLT-TL00",
+      "CLT-TL01"
+    ]
+  },
+  {
+    "code": "che10",
+    "vendor": "Huawei",
+    "name": "Honor 4x (China Telecom)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "cheeseburger",
+    "vendor": "OnePlus",
+    "name": "5",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "chef",
+    "vendor": "Motorola",
+    "name": "one power",
+    "method": "fastboot",
+    "models": [
+      "XT1942-1",
+      "XT1942-2"
+    ]
+  },
+  {
+    "code": "cherry",
+    "vendor": "Huawei",
+    "name": "Honor 4 / 4X",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "cheryl",
+    "vendor": "Razer",
+    "name": "Phone",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "chiron",
+    "vendor": "Xiaomi",
+    "name": "Mi MIX 2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "clark",
+    "vendor": "Motorola",
+    "name": "moto x pure edition / style (2015)",
+    "method": "fastboot",
+    "models": [
+      "XT1570",
+      "XT1572",
+      "XT1575"
+    ]
+  },
+  {
+    "code": "condor",
+    "vendor": "Motorola",
+    "name": "moto e",
+    "method": "fastboot",
+    "models": [
+      "XT1021",
+      "XT1022",
+      "XT1023"
+    ]
+  },
+  {
+    "code": "coral",
+    "vendor": "Google",
+    "name": "Pixel 4 XL",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "crackling",
+    "vendor": "Wileyfox",
+    "name": "Swift",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "crosshatch",
+    "vendor": "Google",
+    "name": "Pixel 3 XL",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "crownlte",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 9",
+    "method": "heimdall",
+    "models": [
+      "SM-N960F",
+      "SM-N960F/DS",
+      "SM-N960N"
+    ]
+  },
+  {
+    "code": "d1",
+    "vendor": "Samsung",
+    "name": "Galaxy Note10",
+    "method": "heimdall",
+    "models": [
+      "SM-N970F",
+      "SM-N970F/DS"
+    ]
+  },
+  {
+    "code": "d2att",
+    "vendor": "Samsung",
+    "name": "Galaxy S III (AT&T)",
+    "method": "heimdall",
+    "models": [
+      "SGH-I747",
+      "SGH-I747M"
+    ]
+  },
+  {
+    "code": "d2s",
+    "vendor": "Samsung",
+    "name": "Galaxy Note10+",
+    "method": "heimdall",
+    "models": [
+      "SM-N975F",
+      "SM-N975F/DS"
+    ]
+  },
+  {
+    "code": "d2spr",
+    "vendor": "Samsung",
+    "name": "Galaxy S III (Sprint)",
+    "method": "heimdall",
+    "models": [
+      "SPH-L710"
+    ]
+  },
+  {
+    "code": "d2tmo",
+    "vendor": "Samsung",
+    "name": "Galaxy S III (T-Mobile)",
+    "method": "heimdall",
+    "models": [
+      "SGH-T999"
+    ]
+  },
+  {
+    "code": "d2vzw",
+    "vendor": "Samsung",
+    "name": "Galaxy S III (Verizon)",
+    "method": "heimdall",
+    "models": [
+      "SCH-I535"
+    ]
+  },
+  {
+    "code": "d2x",
+    "vendor": "Samsung",
+    "name": "Galaxy Note10+ 5G",
+    "method": "heimdall",
+    "models": [
+      "SM-N976B",
+      "SM-N976N"
+    ]
+  },
+  {
+    "code": "d800",
+    "vendor": "LG",
+    "name": "G2 (AT&T)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "d801",
+    "vendor": "LG",
+    "name": "G2 (T-Mobile)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "d802",
+    "vendor": "LG",
+    "name": "G2 (International)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "d803",
+    "vendor": "LG",
+    "name": "G2 (Canadian)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "d850",
+    "vendor": "LG",
+    "name": "G3 (AT&T)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "d851",
+    "vendor": "LG",
+    "name": "G3 (T-Mobile)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "d852",
+    "vendor": "LG",
+    "name": "G3 (Canada)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "d855",
+    "vendor": "LG",
+    "name": "G3 (International)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "davinci",
+    "vendor": "Xiaomi",
+    "name": "Redmi K20 / Mi 9T",
+    "method": "fastboot",
+    "models": [
+      "M1903F10A",
+      "M1903F10C",
+      "M1903F10G",
+      "M1903F10I",
+      "M1903F10T"
+    ]
+  },
+  {
+    "code": "deadpool",
+    "vendor": "Google",
+    "name": "ADT-3",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "deb",
+    "vendor": "Google",
+    "name": "Nexus 7 (LTE, 2013 version)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "dipper",
+    "vendor": "Xiaomi",
+    "name": "Mi 8",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "discovery",
+    "vendor": "Sony",
+    "name": "Xperia XA2 Ultra",
+    "method": "fastboot",
+    "models": [
+      "H3213",
+      "H4213",
+      "H4233",
+      "H3223"
+    ]
+  },
+  {
+    "code": "dogo",
+    "vendor": "Sony",
+    "name": "Xperia ZR",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "dragon",
+    "vendor": "Google",
+    "name": "Pixel C",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "dre",
+    "vendor": "OnePlus",
+    "name": "Nord N200",
+    "method": "fastboot",
+    "models": [
+      "DE2117"
+    ]
+  },
+  {
+    "code": "dubai",
+    "vendor": "Motorola",
+    "name": "edge 30",
+    "method": "fastboot",
+    "models": [
+      "XT2203-1"
+    ]
+  },
+  {
+    "code": "dumpling",
+    "vendor": "OnePlus",
+    "name": "5T",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "enchilada",
+    "vendor": "OnePlus",
+    "name": "6",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "equuleus",
+    "vendor": "Xiaomi",
+    "name": "Mi 8 Pro",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "espresso3g",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab 2 7.0 / Tab 2 10.1 (GSM)",
+    "method": "heimdall",
+    "models": [
+      "P3100",
+      "P5100"
+    ]
+  },
+  {
+    "code": "espressowifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab 2 7.0 / Tab 2 10.1 (Wi-Fi / Wi-Fi + IR)",
+    "method": "heimdall",
+    "models": [
+      "P3110",
+      "P3113",
+      "P5110",
+      "P5113"
+    ]
+  },
+  {
+    "code": "ether",
+    "vendor": "Nextbit",
+    "name": "Robin",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "evert",
+    "vendor": "Motorola",
+    "name": "moto g6 plus",
+    "method": "fastboot",
+    "models": [
+      "XT1926-2",
+      "XT1926-3",
+      "XT1926-5",
+      "XT1926-6",
+      "XT1926-7",
+      "XT1926-8",
+      "XT1926-9"
+    ]
+  },
+  {
+    "code": "f1f",
+    "vendor": "OPPO",
+    "name": "F1 (International)",
+    "method": "fastboot",
+    "models": [
+      "F1f"
+    ]
+  },
+  {
+    "code": "f400",
+    "vendor": "LG",
+    "name": "G3 (Korea)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "fajita",
+    "vendor": "OnePlus",
+    "name": "6T",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "falcon",
+    "vendor": "Motorola",
+    "name": "moto g",
+    "method": "fastboot",
+    "models": [
+      "XT1031",
+      "XT1032",
+      "XT1033",
+      "XT1034"
+    ]
+  },
+  {
+    "code": "figo",
+    "vendor": "Huawei",
+    "name": "P Smart",
+    "method": "fastboot",
+    "models": [
+      "FIG-LX1",
+      "FIG-LA1",
+      "FIG-LX2",
+      "FIG-LX3",
+      "FIG-TL10",
+      "FIG-AL10"
+    ]
+  },
+  {
+    "code": "find7",
+    "vendor": "OPPO",
+    "name": "Find 7a/s",
+    "method": "fastboot",
+    "models": [
+      "Find 7a",
+      "Find 7s"
+    ]
+  },
+  {
+    "code": "flame",
+    "vendor": "Google",
+    "name": "Pixel 4",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "flo",
+    "vendor": "Google",
+    "name": "Nexus 7 (Wi-Fi, 2013 version)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "flounder",
+    "vendor": "Google",
+    "name": "Nexus 9 (Wi-Fi)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "flounder_lte",
+    "vendor": "Google",
+    "name": "Nexus 9 (LTE)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "flox",
+    "vendor": "Google",
+    "name": "Nexus 7 2013 (Wi-Fi, Repartitioned)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "foster",
+    "vendor": "NVIDIA",
+    "name": "Shield TV (2015 / 2015 Pro / 2017 / 2019 Pro) / Jetson TX1 [Android TV]",
+    "method": "fastboot",
+    "models": [
+      "darcy",
+      "foster_e",
+      "foster_e_hdd",
+      "jetson_cv",
+      "mdarcy"
+    ]
+  },
+  {
+    "code": "foster_tab",
+    "vendor": "NVIDIA",
+    "name": "Shield TV (2015 / 2015 Pro / 2017 / 2019 Pro) / Jetson TX1 [Tablet]",
+    "method": "fastboot",
+    "models": [
+      "darcy",
+      "foster_e",
+      "foster_e_hdd",
+      "jetson_cv",
+      "mdarcy"
+    ]
+  },
+  {
+    "code": "fugu",
+    "vendor": "Google",
+    "name": "Nexus Player",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "g2m",
+    "vendor": "LG",
+    "name": "G2 Mini",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "gauguin",
+    "vendor": "Xiaomi",
+    "name": "Mi 10T Lite / Mi 10i / Redmi Note 9 Pro 5G",
+    "method": "fastboot",
+    "models": [
+      "M2007J17G",
+      "M2007J17C",
+      "M2007J17I"
+    ]
+  },
+  {
+    "code": "gemini",
+    "vendor": "Xiaomi",
+    "name": "Mi 5",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "ghost",
+    "vendor": "Motorola",
+    "name": "moto x",
+    "method": "fastboot",
+    "models": [
+      "xt1052",
+      "xt1053",
+      "xt1055",
+      "xt1056",
+      "xt1058",
+      "xt1060"
+    ]
+  },
+  {
+    "code": "ginkgo",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 8 / 8T",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "gohan",
+    "vendor": "BQ",
+    "name": "Aquaris X5 Plus",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "griffin",
+    "vendor": "Motorola",
+    "name": "moto z",
+    "method": "fastboot",
+    "models": [
+      "XT1650-03",
+      "XT1650-05"
+    ]
+  },
+  {
+    "code": "grus",
+    "vendor": "Xiaomi",
+    "name": "Mi 9 SE",
+    "method": "fastboot",
+    "models": [
+      "M1903F2G",
+      "M1903F2A"
+    ]
+  },
+  {
+    "code": "gta4xl",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S6 Lite (LTE)",
+    "method": "heimdall",
+    "models": [
+      "SM-P615"
+    ]
+  },
+  {
+    "code": "gta4xlwifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S6 Lite (Wi-Fi)",
+    "method": "heimdall",
+    "models": [
+      "SM-P610"
+    ]
+  },
+  {
+    "code": "gtelwifiue",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab E 9.6 (WiFi)",
+    "method": "heimdall",
+    "models": [
+      "SM-T560NU"
+    ]
+  },
+  {
+    "code": "gtesqltespr",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab E 8.0 LTE (Sprint)",
+    "method": "heimdall",
+    "models": [
+      "SM-T377P"
+    ]
+  },
+  {
+    "code": "gts210ltexx",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S2 9.7 (LTE)",
+    "method": "heimdall",
+    "models": [
+      "SM-T815"
+    ]
+  },
+  {
+    "code": "gts210vewifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S2 9.7 Wi-Fi (2016)",
+    "method": "heimdall",
+    "models": [
+      "SM-T813"
+    ]
+  },
+  {
+    "code": "gts210wifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S2 9.7 (Wi-Fi)",
+    "method": "heimdall",
+    "models": [
+      "SM-T810"
+    ]
+  },
+  {
+    "code": "gts28vewifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S2 8.0 Wi-Fi (2016)",
+    "method": "heimdall",
+    "models": [
+      "SM-T713"
+    ]
+  },
+  {
+    "code": "gts4lv",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S5e (LTE)",
+    "method": "heimdall",
+    "models": [
+      "SM-T725",
+      "SM-T725C",
+      "SM-T725N",
+      "SM-T727"
+    ]
+  },
+  {
+    "code": "gts4lvwifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S5e (Wi-Fi)",
+    "method": "heimdall",
+    "models": [
+      "SM-T720",
+      "SM-T720N"
+    ]
+  },
+  {
+    "code": "guacamole",
+    "vendor": "OnePlus",
+    "name": "7 Pro",
+    "method": "fastboot",
+    "models": [
+      "GM1910",
+      "GM1911",
+      "GM1913",
+      "GM1917"
+    ]
+  },
+  {
+    "code": "guacamoleb",
+    "vendor": "OnePlus",
+    "name": "7",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "h811",
+    "vendor": "LG",
+    "name": "G4 (T-Mobile)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "h815",
+    "vendor": "LG",
+    "name": "G4 (International)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "h830",
+    "vendor": "LG",
+    "name": "G5 (T-Mobile)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "h850",
+    "vendor": "LG",
+    "name": "G5 (International)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "h870",
+    "vendor": "LG",
+    "name": "G6 (EU Unlocked)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "h910",
+    "vendor": "LG",
+    "name": "V20 (AT&T)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "h918",
+    "vendor": "LG",
+    "name": "V20 (T-Mobile)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "h990",
+    "vendor": "LG",
+    "name": "V20 (Global)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "ha3g",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 3 (International 3G)",
+    "method": "heimdall",
+    "models": [
+      "SM-N9000"
+    ]
+  },
+  {
+    "code": "ham",
+    "vendor": "ZUK",
+    "name": "Z1",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "hammerhead",
+    "vendor": "Google",
+    "name": "Nexus 5",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "hannah",
+    "vendor": "Motorola",
+    "name": "moto e5 plus (XT1924-6/7/8)",
+    "method": "fastboot",
+    "models": [
+      "XT1924-6",
+      "XT1924-7",
+      "XT1924-8"
+    ]
+  },
+  {
+    "code": "harpia",
+    "vendor": "Motorola",
+    "name": "moto g4 play",
+    "method": "fastboot",
+    "models": [
+      "XT1600",
+      "XT1601",
+      "XT1602",
+      "XT1603",
+      "XT1604",
+      "XT1607"
+    ]
+  },
+  {
+    "code": "hayabusa",
+    "vendor": "Sony",
+    "name": "Xperia TX",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "heart",
+    "vendor": "Lenovo",
+    "name": "Z5 Pro GT",
+    "method": "fastboot",
+    "models": [
+      "L78032"
+    ]
+  },
+  {
+    "code": "hero2lte",
+    "vendor": "Samsung",
+    "name": "Galaxy S7 Edge",
+    "method": "heimdall",
+    "models": [
+      "SM-G935F",
+      "SM-G935FD",
+      "SM-G935S",
+      "SM-G935K",
+      "SM-G935L",
+      "SM-G935W8"
+    ]
+  },
+  {
+    "code": "herolte",
+    "vendor": "Samsung",
+    "name": "Galaxy S7",
+    "method": "heimdall",
+    "models": [
+      "SM-G930F",
+      "SM-G930FD",
+      "SM-G930S",
+      "SM-G930K",
+      "SM-G930L",
+      "SM-G930W8"
+    ]
+  },
+  {
+    "code": "hiae",
+    "vendor": "HTC",
+    "name": "One A9",
+    "method": "fastboot",
+    "models": [
+      "2PQ9120",
+      "2PQ9100"
+    ]
+  },
+  {
+    "code": "himaul",
+    "vendor": "HTC",
+    "name": "One M9 (GSM)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "himawl",
+    "vendor": "HTC",
+    "name": "One M9 (Verizon)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "hlte",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 3 LTE (N9005/P)",
+    "method": "heimdall",
+    "models": [
+      "SM-N9005",
+      "SM-N900P"
+    ]
+  },
+  {
+    "code": "hltechn",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 3 LTE (N9008V)",
+    "method": "heimdall",
+    "models": [
+      "SM-N9008V"
+    ]
+  },
+  {
+    "code": "hltekor",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 3 LTE (N900K/L/S)",
+    "method": "heimdall",
+    "models": [
+      "SM-N900K",
+      "SM-N900L",
+      "SM-N900S"
+    ]
+  },
+  {
+    "code": "hltetmo",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 3 LTE (N900T/V/W8)",
+    "method": "heimdall",
+    "models": [
+      "SM-N900T",
+      "SM-N900V",
+      "SM-N900W8"
+    ]
+  },
+  {
+    "code": "hotdog",
+    "vendor": "OnePlus",
+    "name": "7T Pro",
+    "method": "fastboot",
+    "models": [
+      "HD1910",
+      "HD1911",
+      "HD1913",
+      "HD1917"
+    ]
+  },
+  {
+    "code": "hotdogb",
+    "vendor": "OnePlus",
+    "name": "7T",
+    "method": "fastboot",
+    "models": [
+      "HD1900",
+      "HD1901",
+      "HD1903",
+      "HD1905"
+    ]
+  },
+  {
+    "code": "huashan",
+    "vendor": "Sony",
+    "name": "Xperia SP",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "hydrogen",
+    "vendor": "Xiaomi",
+    "name": "Mi Max",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "i9100",
+    "vendor": "Samsung",
+    "name": "Galaxy S II",
+    "method": "heimdall",
+    "models": [
+      "GT-I9100",
+      "GT-I9100T",
+      "GT-I9100M",
+      "GT-I9100P",
+      "SC-02C"
+    ]
+  },
+  {
+    "code": "i9300",
+    "vendor": "Samsung",
+    "name": "Galaxy S III (International)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9300",
+      "GT-I9300T"
+    ]
+  },
+  {
+    "code": "i9305",
+    "vendor": "Samsung",
+    "name": "Galaxy S III (LTE / International)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9305",
+      "GT-I9305T",
+      "GT-I9305N"
+    ]
+  },
+  {
+    "code": "ido",
+    "vendor": "Xiaomi",
+    "name": "Redmi 3/Prime",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "instantnoodle",
+    "vendor": "OnePlus",
+    "name": "8",
+    "method": "fastboot",
+    "models": [
+      "IN2010",
+      "IN2011",
+      "IN2013",
+      "IN2015"
+    ]
+  },
+  {
+    "code": "instantnoodlep",
+    "vendor": "OnePlus",
+    "name": "8 Pro",
+    "method": "fastboot",
+    "models": [
+      "IN2020",
+      "IN2023",
+      "IN2025"
+    ]
+  },
+  {
+    "code": "ivy",
+    "vendor": "Sony",
+    "name": "Xperia Z3+",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "j7elte",
+    "vendor": "Samsung",
+    "name": "Galaxy J7 (2015)",
+    "method": "heimdall",
+    "models": [
+      "SM-J700F",
+      "SM-J700F/DS",
+      "SM-J700H",
+      "SM-J700M"
+    ]
+  },
+  {
+    "code": "jactivelte",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 Active",
+    "method": "heimdall",
+    "models": [
+      "GT-I9295"
+    ]
+  },
+  {
+    "code": "jag3gds",
+    "vendor": "LG",
+    "name": "G3 S",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "jagnm",
+    "vendor": "LG",
+    "name": "G3 Beat",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "jalebi",
+    "vendor": "YU",
+    "name": "Yunique",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "jasmine",
+    "vendor": "ZTE",
+    "name": "AT&T Trek 2 HD",
+    "method": "edl_custom",
+    "models": []
+  },
+  {
+    "code": "jasmine_sprout",
+    "vendor": "Xiaomi",
+    "name": "Mi A2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "jason",
+    "vendor": "Xiaomi",
+    "name": "Mi Note 3",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "jflteatt",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 (SGH-I337)",
+    "method": "dd",
+    "models": [
+      "SGH-I337"
+    ]
+  },
+  {
+    "code": "jfltespr",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 (SCH-R970, SPH-L720)",
+    "method": "heimdall",
+    "models": [
+      "SCH-R970/C/X",
+      "SPH-L720"
+    ]
+  },
+  {
+    "code": "jfltevzw",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 (SCH-I545)",
+    "method": "dd",
+    "models": [
+      "SCH-I545"
+    ]
+  },
+  {
+    "code": "jfltexx",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 (GT-I9505, SGH-I337M, SGH-M919)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9505",
+      "SGH-I337M",
+      "SGH-M919"
+    ]
+  },
+  {
+    "code": "jfvelte",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 Value Edition (GT-I9515/L)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9515",
+      "GT-I9515L"
+    ]
+  },
+  {
+    "code": "k3gxx",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 (International 3G)",
+    "method": "heimdall",
+    "models": [
+      "SM-G900H"
+    ]
+  },
+  {
+    "code": "kane",
+    "vendor": "Motorola",
+    "name": "one vision / p50",
+    "method": "fastboot",
+    "models": [
+      "XT1970-1",
+      "XT1970-2",
+      "XT1970-3",
+      "XT1970-5"
+    ]
+  },
+  {
+    "code": "karin",
+    "vendor": "Sony",
+    "name": "Xperia Z4 Tablet LTE",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "karin_windy",
+    "vendor": "Sony",
+    "name": "Xperia Z4 Tablet WiFi",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "kccat6",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 Plus",
+    "method": "heimdall",
+    "models": [
+      "SM-G901F"
+    ]
+  },
+  {
+    "code": "kebab",
+    "vendor": "OnePlus",
+    "name": "8T",
+    "method": "fastboot",
+    "models": [
+      "KB2000",
+      "KB2001",
+      "KB2003",
+      "KB2005"
+    ]
+  },
+  {
+    "code": "kenzo",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 3",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "kiev",
+    "vendor": "Motorola",
+    "name": "moto g 5G / one 5G ace",
+    "method": "fastboot",
+    "models": [
+      "XT2113-2",
+      "XT2113-3",
+      "XT2113-5"
+    ]
+  },
+  {
+    "code": "kingdom",
+    "vendor": "Lenovo",
+    "name": "Vibe Z2 Pro",
+    "method": "fastboot",
+    "models": [
+      "kingdom_row (ROW)",
+      "kingdomt (CN)"
+    ]
+  },
+  {
+    "code": "kipper",
+    "vendor": "Wileyfox",
+    "name": "Storm",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "kirin",
+    "vendor": "Sony",
+    "name": "Xperia 10",
+    "method": "fastboot",
+    "models": [
+      "I3113",
+      "I3123",
+      "I4113",
+      "I4193"
+    ]
+  },
+  {
+    "code": "kiwi",
+    "vendor": "Huawei",
+    "name": "Honor 5X",
+    "method": "fastboot",
+    "models": [
+      "KIW-L24",
+      "KIW-L23",
+      "KIW-L22",
+      "KIW-L21",
+      "KIW-AL10",
+      "KIW-AL20",
+      "KIW-CL00",
+      "KIW-UL00",
+      "KIW-TL00",
+      "KIW-TL00H",
+      "KII-L05",
+      "KII-L22",
+      "KII-L21"
+    ]
+  },
+  {
+    "code": "klimtwifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab S 8.4 Wi-Fi",
+    "method": "heimdall",
+    "models": [
+      "SM-T700"
+    ]
+  },
+  {
+    "code": "klte",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 LTE (G900F/M/R4/R7/T/V/W8)",
+    "method": "heimdall",
+    "models": [
+      "SM-G900F",
+      "SM-G900M",
+      "SM-G900R4",
+      "SM-G900R7",
+      "SM-G900T",
+      "SM-G900V",
+      "SM-G900W8"
+    ]
+  },
+  {
+    "code": "klteactivexx",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 Active (G870F)",
+    "method": "heimdall",
+    "models": [
+      "SM-G870F"
+    ]
+  },
+  {
+    "code": "klteaio",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 LTE (G900AZ/S902L)",
+    "method": "heimdall",
+    "models": [
+      "SM-G900AZ",
+      "SM-S902L"
+    ]
+  },
+  {
+    "code": "kltechn",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 LTE (G9006V/8V)",
+    "method": "heimdall",
+    "models": [
+      "SM-G9006V",
+      "SM-G9008V"
+    ]
+  },
+  {
+    "code": "kltechnduo",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 LTE Duos (G9006W/8W)",
+    "method": "heimdall",
+    "models": [
+      "SM-G9006W",
+      "SM-G9008W",
+      "SM-G9009W"
+    ]
+  },
+  {
+    "code": "klteduos",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 LTE Duos (G900FD/MD)",
+    "method": "heimdall",
+    "models": [
+      "SM-G900FD",
+      "SM-G900MD"
+    ]
+  },
+  {
+    "code": "kltedv",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 LTE (G900I/P)",
+    "method": "heimdall",
+    "models": [
+      "SM-G900I",
+      "SM-G900P"
+    ]
+  },
+  {
+    "code": "kltekdi",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 LTE (SC-04F/SCL23)",
+    "method": "heimdall",
+    "models": [
+      "SC-04F",
+      "SCL23"
+    ]
+  },
+  {
+    "code": "kltekor",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 LTE (G900K/L/S)",
+    "method": "heimdall",
+    "models": [
+      "SM-G900K",
+      "SM-G900L",
+      "SM-G900S"
+    ]
+  },
+  {
+    "code": "kltesprsports",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 Sport",
+    "method": "heimdall",
+    "models": [
+      "SM-G860P"
+    ]
+  },
+  {
+    "code": "ks01lte",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 LTE-A (GT-I9506)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9506"
+    ]
+  },
+  {
+    "code": "kugo",
+    "vendor": "Sony",
+    "name": "Xperia X Compact",
+    "method": "fastboot",
+    "models": [
+      "SO-02J",
+      "F5321"
+    ]
+  },
+  {
+    "code": "kuntao",
+    "vendor": "Lenovo",
+    "name": "P2",
+    "method": "fastboot",
+    "models": [
+      "P2a42"
+    ]
+  },
+  {
+    "code": "lake",
+    "vendor": "Motorola",
+    "name": "moto g7 plus",
+    "method": "fastboot",
+    "models": [
+      "XT1965-2",
+      "XT1965-3",
+      "XT1965-6",
+      "XT1965-T"
+    ]
+  },
+  {
+    "code": "land",
+    "vendor": "Xiaomi",
+    "name": "Redmi 3S / 3X",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "lavender",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 7",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "lemonade",
+    "vendor": "OnePlus",
+    "name": "9",
+    "method": "fastboot",
+    "models": [
+      "LE2110",
+      "LE2111",
+      "LE2113",
+      "LE2115"
+    ]
+  },
+  {
+    "code": "lemonadep",
+    "vendor": "OnePlus",
+    "name": "9 Pro",
+    "method": "fastboot",
+    "models": [
+      "LE2120",
+      "LE2121",
+      "LE2123",
+      "LE2125"
+    ]
+  },
+  {
+    "code": "lentislte",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 LTE-A",
+    "method": "heimdall",
+    "models": [
+      "SM-G906S",
+      "SM-G906K",
+      "SM-G906L"
+    ]
+  },
+  {
+    "code": "lettuce",
+    "vendor": "YU",
+    "name": "Yuphoria",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "libra",
+    "vendor": "Xiaomi",
+    "name": "Mi 4c",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "lithium",
+    "vendor": "Xiaomi",
+    "name": "Mi MIX",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "lmi",
+    "vendor": "Xiaomi",
+    "name": "POCO F2 Pro / Redmi K30 Pro / Redmi K30 Pro Zoom Edition",
+    "method": "fastboot",
+    "models": [
+      "M2004J11G",
+      "M2001J11C",
+      "M2001J11E"
+    ]
+  },
+  {
+    "code": "ls990",
+    "vendor": "LG",
+    "name": "G3 (Sprint)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "ls997",
+    "vendor": "LG",
+    "name": "V20 (Sprint)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "lt02ltespr",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab 3 7.0 LTE",
+    "method": "heimdall",
+    "models": [
+      "SM-T217S"
+    ]
+  },
+  {
+    "code": "lt03lte",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 10.1 2014 (LTE)",
+    "method": "heimdall",
+    "models": []
+  },
+  {
+    "code": "lux",
+    "vendor": "Motorola",
+    "name": "moto x play",
+    "method": "fastboot",
+    "models": [
+      "XT1562",
+      "XT1563"
+    ]
+  },
+  {
+    "code": "m20lte",
+    "vendor": "Samsung",
+    "name": "Galaxy M20",
+    "method": "heimdall",
+    "models": [
+      "SM-M205F",
+      "SM-M205FN",
+      "SM-M205G",
+      "SM-M205M",
+      "SM-M205N"
+    ]
+  },
+  {
+    "code": "m216",
+    "vendor": "LG",
+    "name": "K10",
+    "method": "dd",
+    "models": [
+      "K420N",
+      "K420DS"
+    ]
+  },
+  {
+    "code": "m7",
+    "vendor": "HTC",
+    "name": "One (GSM)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "m7vzw",
+    "vendor": "HTC",
+    "name": "One (Verizon)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "m8",
+    "vendor": "HTC",
+    "name": "One (M8)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "m8d",
+    "vendor": "HTC",
+    "name": "One (M8) Dual SIM",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "maguro",
+    "vendor": "Google",
+    "name": "Galaxy Nexus GSM",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "mako",
+    "vendor": "Google",
+    "name": "Nexus 4",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "manta",
+    "vendor": "Google",
+    "name": "Nexus 10",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "marlin",
+    "vendor": "Google",
+    "name": "Pixel XL",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "maserati",
+    "vendor": "Motorola",
+    "name": "DROID 4",
+    "method": "fastboot",
+    "models": [
+      "XT894"
+    ]
+  },
+  {
+    "code": "mata",
+    "vendor": "Essential",
+    "name": "PH-1",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "mdarcy",
+    "vendor": "NVIDIA",
+    "name": "Shield TV 2019 Pro [Android TV]",
+    "method": "fastboot",
+    "models": [
+      "mdarcy"
+    ]
+  },
+  {
+    "code": "mdarcy_tab",
+    "vendor": "NVIDIA",
+    "name": "Shield TV 2019 Pro [Tablet]",
+    "method": "fastboot",
+    "models": [
+      "mdarcy"
+    ]
+  },
+  {
+    "code": "merlin",
+    "vendor": "Motorola",
+    "name": "moto g3 turbo",
+    "method": "fastboot",
+    "models": [
+      "XT1556",
+      "XT1557"
+    ]
+  },
+  {
+    "code": "mermaid",
+    "vendor": "Sony",
+    "name": "Xperia 10 Plus",
+    "method": "fastboot",
+    "models": [
+      "I3213",
+      "I3223",
+      "I4213",
+      "I4293"
+    ]
+  },
+  {
+    "code": "miatoll",
+    "vendor": "Xiaomi",
+    "name": "POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite",
+    "method": "fastboot",
+    "models": [
+      "2109106A1I",
+      "M2003J6A1G",
+      "M2003J6A1R",
+      "M2003J6A1I",
+      "M2003J6B1I",
+      "M2003J6B2G",
+      "M2003J6CI"
+    ]
+  },
+  {
+    "code": "mido",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 4",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "mint",
+    "vendor": "Sony",
+    "name": "Xperia T",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "mondrianwifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab Pro 8.4",
+    "method": "heimdall",
+    "models": []
+  },
+  {
+    "code": "monet",
+    "vendor": "Xiaomi",
+    "name": "Mi 10 Lite 5G",
+    "method": "fastboot",
+    "models": [
+      "M2002J9G"
+    ]
+  },
+  {
+    "code": "montana",
+    "vendor": "Motorola",
+    "name": "moto g5s",
+    "method": "fastboot",
+    "models": [
+      "XT1790",
+      "XT1791",
+      "XT1792",
+      "XT1793",
+      "XT1794",
+      "XT1795",
+      "XT1797",
+      "XT1799-2"
+    ]
+  },
+  {
+    "code": "ms013g",
+    "vendor": "Samsung",
+    "name": "Galaxy Grand 2 Duos",
+    "method": "heimdall",
+    "models": [
+      "SM-G7102"
+    ]
+  },
+  {
+    "code": "mt2",
+    "vendor": "Huawei",
+    "name": "Ascend Mate 2 4G",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "n1awifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 10.1 Wi-Fi (2014)",
+    "method": "heimdall",
+    "models": [
+      "SM-P600"
+    ]
+  },
+  {
+    "code": "n2awifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab PRO 10.1",
+    "method": "heimdall",
+    "models": [
+      "SM-T520"
+    ]
+  },
+  {
+    "code": "n3",
+    "vendor": "OPPO",
+    "name": "N3",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "n5100",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 8.0 (GSM)",
+    "method": "heimdall",
+    "models": [
+      "GT-N5100"
+    ]
+  },
+  {
+    "code": "n5110",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 8.0 (Wi-Fi)",
+    "method": "heimdall",
+    "models": []
+  },
+  {
+    "code": "n5120",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 8.0 (LTE)",
+    "method": "heimdall",
+    "models": []
+  },
+  {
+    "code": "nairo",
+    "vendor": "Motorola",
+    "name": "moto g 5G plus / one 5G",
+    "method": "fastboot",
+    "models": [
+      "XT2075-2",
+      "XT2075-3",
+      "XT2075-5"
+    ]
+  },
+  {
+    "code": "nash",
+    "vendor": "Motorola",
+    "name": "moto z2 force",
+    "method": "fastboot",
+    "models": [
+      "XT1789-02",
+      "XT1789-03",
+      "XT1789-04",
+      "XT1789-05",
+      "XT1789-06",
+      "XT1789-07"
+    ]
+  },
+  {
+    "code": "natrium",
+    "vendor": "Xiaomi",
+    "name": "Mi 5s Plus",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "nicki",
+    "vendor": "Sony",
+    "name": "Xperia M",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "nio",
+    "vendor": "Motorola",
+    "name": "edge s / moto g100",
+    "method": "fastboot",
+    "models": [
+      "XT2125-4"
+    ]
+  },
+  {
+    "code": "nx512j",
+    "vendor": "Nubia",
+    "name": "Z9 Max",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "nx563j",
+    "vendor": "Nubia",
+    "name": "Z17",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "obiwan",
+    "vendor": "ASUS",
+    "name": "ROG Phone 3",
+    "method": "fastboot",
+    "models": [
+      "ZS661KS"
+    ]
+  },
+  {
+    "code": "ocean",
+    "vendor": "Motorola",
+    "name": "moto g7 power",
+    "method": "fastboot",
+    "models": [
+      "XT1955-1",
+      "XT1955-2",
+      "XT1955-4",
+      "XT1955-5",
+      "XT1955-7"
+    ]
+  },
+  {
+    "code": "odin",
+    "vendor": "Sony",
+    "name": "Xperia ZL",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "onclite",
+    "vendor": "Xiaomi",
+    "name": "Redmi 7",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "oneplus2",
+    "vendor": "OnePlus",
+    "name": "2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "oneplus3",
+    "vendor": "OnePlus",
+    "name": "3 / 3T",
+    "method": "fastboot",
+    "models": [
+      "A3000",
+      "A3003"
+    ]
+  },
+  {
+    "code": "onyx",
+    "vendor": "OnePlus",
+    "name": "X",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "osprey",
+    "vendor": "Motorola",
+    "name": "moto g (2015)",
+    "method": "fastboot",
+    "models": [
+      "XT1540",
+      "XT1541",
+      "XT1542",
+      "XT1543",
+      "XT1544",
+      "XT1548",
+      "XT1550"
+    ]
+  },
+  {
+    "code": "otus",
+    "vendor": "Motorola",
+    "name": "moto e (2015)",
+    "method": "fastboot",
+    "models": [
+      "XT1505",
+      "XT1506",
+      "XT1511"
+    ]
+  },
+  {
+    "code": "paella",
+    "vendor": "BQ",
+    "name": "Aquaris X5",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "payton",
+    "vendor": "Motorola",
+    "name": "moto x4",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "pdx203",
+    "vendor": "Sony",
+    "name": "Xperia 1 II",
+    "method": "fastboot",
+    "models": [
+      "XQ-AT72",
+      "XQ-AT52",
+      "XQ-AT51",
+      "XQ-AT42"
+    ]
+  },
+  {
+    "code": "peach",
+    "vendor": "ARK",
+    "name": "Benefit A3",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "peregrine",
+    "vendor": "Motorola",
+    "name": "moto g 4G",
+    "method": "fastboot",
+    "models": [
+      "XT1039",
+      "XT1040",
+      "XT1042",
+      "XT1045"
+    ]
+  },
+  {
+    "code": "piccolo",
+    "vendor": "BQ",
+    "name": "Aquaris M5",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "pioneer",
+    "vendor": "Sony",
+    "name": "Xperia XA2",
+    "method": "fastboot",
+    "models": [
+      "H3113",
+      "H4113",
+      "H3133",
+      "H4133",
+      "H3123"
+    ]
+  },
+  {
+    "code": "platina",
+    "vendor": "Xiaomi",
+    "name": "Mi 8 Lite",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "pme",
+    "vendor": "HTC",
+    "name": "10",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "polaris",
+    "vendor": "Xiaomi",
+    "name": "Mi MIX 2S",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "pollux",
+    "vendor": "Sony",
+    "name": "Xperia Tablet Z LTE",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "pollux_windy",
+    "vendor": "Sony",
+    "name": "Xperia Tablet Z Wi-Fi",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "porg",
+    "vendor": "NVIDIA",
+    "name": "Jetson (Nano / Nano 2GB) [Android TV]",
+    "method": "apx",
+    "models": [
+      "batuu",
+      "porg"
+    ]
+  },
+  {
+    "code": "porg_tab",
+    "vendor": "NVIDIA",
+    "name": "Jetson (Nano / Nano 2GB) [Tablet]",
+    "method": "apx",
+    "models": [
+      "batuu",
+      "porg"
+    ]
+  },
+  {
+    "code": "pro1",
+    "vendor": "F(x)tec",
+    "name": "Pro¹",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "pstar",
+    "vendor": "Motorola",
+    "name": "edge 20 pro",
+    "method": "fastboot",
+    "models": [
+      "XT2153-1"
+    ]
+  },
+  {
+    "code": "pyxis",
+    "vendor": "Xiaomi",
+    "name": "Mi CC 9 / Mi 9 Lite",
+    "method": "fastboot",
+    "models": [
+      "M1904F3BG",
+      "M1904F3BC"
+    ]
+  },
+  {
+    "code": "quill",
+    "vendor": "NVIDIA",
+    "name": "Jetson (TX2 / TX2 NX) [Android TV]",
+    "method": "apx",
+    "models": [
+      "quill",
+      "lanai"
+    ]
+  },
+  {
+    "code": "quill_tab",
+    "vendor": "NVIDIA",
+    "name": "Jetson (TX2 / TX2 NX) [Tablet]",
+    "method": "apx",
+    "models": [
+      "quill",
+      "lanai"
+    ]
+  },
+  {
+    "code": "r5",
+    "vendor": "OPPO",
+    "name": "R5/R5s (International)",
+    "method": "fastboot",
+    "models": [
+      "R8106",
+      "R8106s"
+    ]
+  },
+  {
+    "code": "r7plus",
+    "vendor": "OPPO",
+    "name": "R7 Plus (International)",
+    "method": "fastboot",
+    "models": [
+      "R7plusf"
+    ]
+  },
+  {
+    "code": "r7sf",
+    "vendor": "OPPO",
+    "name": "R7s (International)",
+    "method": "fastboot",
+    "models": [
+      "R7sf"
+    ]
+  },
+  {
+    "code": "racer",
+    "vendor": "Motorola",
+    "name": "edge",
+    "method": "fastboot",
+    "models": [
+      "XT2063-2",
+      "XT2063-3"
+    ]
+  },
+  {
+    "code": "redfin",
+    "vendor": "Google",
+    "name": "Pixel 5",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "rhannah",
+    "vendor": "Motorola",
+    "name": "moto e5 plus (XT1924-1/2/4/5)",
+    "method": "fastboot",
+    "models": [
+      "XT1924-1",
+      "XT1924-2",
+      "XT1924-4",
+      "XT1924-5"
+    ]
+  },
+  {
+    "code": "river",
+    "vendor": "Motorola",
+    "name": "moto g7",
+    "method": "fastboot",
+    "models": [
+      "XT1962-01",
+      "XT1962-04",
+      "XT1962-05",
+      "XT1962-06"
+    ]
+  },
+  {
+    "code": "roth",
+    "vendor": "NVIDIA",
+    "name": "Shield Portable",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "rs988",
+    "vendor": "LG",
+    "name": "G5 (US Unlocked)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "s2",
+    "vendor": "LeEco",
+    "name": "Le 2",
+    "method": "fastboot",
+    "models": [
+      "X520",
+      "X522",
+      "X526",
+      "X527"
+    ]
+  },
+  {
+    "code": "s3ve3gds",
+    "vendor": "Samsung",
+    "name": "Galaxy S III Neo (Dual SIM)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9300I"
+    ]
+  },
+  {
+    "code": "s3ve3gjv",
+    "vendor": "Samsung",
+    "name": "Galaxy S III Neo (Samsung Camera)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9301I",
+      "GT-I9301Q"
+    ]
+  },
+  {
+    "code": "s3ve3gxx",
+    "vendor": "Samsung",
+    "name": "Galaxy S III Neo (Sony Camera)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9301I",
+      "GT-I9301Q"
+    ]
+  },
+  {
+    "code": "s5neolte",
+    "vendor": "Samsung",
+    "name": "Galaxy S5 Neo",
+    "method": "heimdall",
+    "models": [
+      "SM-G903F",
+      "SM-G903F/DS",
+      "SM-G903M",
+      "SM-G903W"
+    ]
+  },
+  {
+    "code": "sagit",
+    "vendor": "Xiaomi",
+    "name": "Mi 6",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "sailfish",
+    "vendor": "Google",
+    "name": "Pixel",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "sake",
+    "vendor": "ASUS",
+    "name": "ZenFone 8",
+    "method": "fastboot",
+    "models": [
+      "ZS590KS"
+    ]
+  },
+  {
+    "code": "santoni",
+    "vendor": "Xiaomi",
+    "name": "Redmi 4(X)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "sargo",
+    "vendor": "Google",
+    "name": "Pixel 3a",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "scorpio",
+    "vendor": "Xiaomi",
+    "name": "Mi Note 2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "seed",
+    "vendor": "Google",
+    "name": "Android One 2nd Gen",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "serrano3gxx",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 Mini (International 3G)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9190"
+    ]
+  },
+  {
+    "code": "serranodsdd",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 Mini (International Dual SIM)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9192"
+    ]
+  },
+  {
+    "code": "serranoltexx",
+    "vendor": "Samsung",
+    "name": "Galaxy S4 Mini (International LTE)",
+    "method": "heimdall",
+    "models": [
+      "GT-I9195",
+      "SGH-I257M",
+      "SHV-E370K"
+    ]
+  },
+  {
+    "code": "shamu",
+    "vendor": "Google",
+    "name": "Nexus 6",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "shieldtablet",
+    "vendor": "NVIDIA",
+    "name": "Shield Tablet",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "sirius",
+    "vendor": "Sony",
+    "name": "Xperia Z2",
+    "method": "fastboot",
+    "models": [
+      "D6502",
+      "D6503"
+    ]
+  },
+  {
+    "code": "spyder",
+    "vendor": "Motorola",
+    "name": "DROID RAZR/RAZR MAXX (CDMA)",
+    "method": "fastboot",
+    "models": [
+      "XT912"
+    ]
+  },
+  {
+    "code": "star2lte",
+    "vendor": "Samsung",
+    "name": "Galaxy S9+",
+    "method": "heimdall",
+    "models": [
+      "SM-G965F",
+      "SM-G965F/DS",
+      "SM-G965N"
+    ]
+  },
+  {
+    "code": "starlte",
+    "vendor": "Samsung",
+    "name": "Galaxy S9",
+    "method": "heimdall",
+    "models": [
+      "SM-G960F",
+      "SM-G960F/DS",
+      "SM-G960N"
+    ]
+  },
+  {
+    "code": "sumire",
+    "vendor": "Sony",
+    "name": "Xperia Z5",
+    "method": "fastboot",
+    "models": [
+      "E6653",
+      "E6683",
+      "E6633"
+    ]
+  },
+  {
+    "code": "sunfish",
+    "vendor": "Google",
+    "name": "Pixel 4a",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "surnia",
+    "vendor": "Motorola",
+    "name": "moto e LTE (2015)",
+    "method": "fastboot",
+    "models": [
+      "XT1514",
+      "XT1521",
+      "XT1523",
+      "XT1524",
+      "XT1526",
+      "XT1527"
+    ]
+  },
+  {
+    "code": "surya",
+    "vendor": "Xiaomi",
+    "name": "POCO X3 NFC",
+    "method": "fastboot",
+    "models": [
+      "M2007J20CG",
+      "M2007J20CI"
+    ]
+  },
+  {
+    "code": "suzu",
+    "vendor": "Sony",
+    "name": "Xperia X",
+    "method": "fastboot",
+    "models": [
+      "F5122",
+      "F5121"
+    ]
+  },
+  {
+    "code": "suzuran",
+    "vendor": "Sony",
+    "name": "Xperia Z5 Compact",
+    "method": "fastboot",
+    "models": [
+      "E5803",
+      "E5823"
+    ]
+  },
+  {
+    "code": "t0lte",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 2 (LTE)",
+    "method": "heimdall",
+    "models": [
+      "GT-N7105/N7105T",
+      "SGH-I317/I317M",
+      "SGH-T889/T889V",
+      "SHV-E250S/E250K/E250L"
+    ]
+  },
+  {
+    "code": "t6",
+    "vendor": "HTC",
+    "name": "One Max (GSM)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "t6vzw",
+    "vendor": "HTC",
+    "name": "One Max (Verizon)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "taimen",
+    "vendor": "Google",
+    "name": "Pixel 2 XL",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "taoshan",
+    "vendor": "Sony",
+    "name": "Xperia L",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "targa",
+    "vendor": "Motorola",
+    "name": "DROID BIONIC",
+    "method": "fastboot",
+    "models": [
+      "XT875"
+    ]
+  },
+  {
+    "code": "tenshi",
+    "vendor": "BQ",
+    "name": "Aquaris U Plus",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "thea",
+    "vendor": "Motorola",
+    "name": "moto g LTE (2014)",
+    "method": "fastboot",
+    "models": [
+      "XT1072",
+      "XT1077",
+      "XT1078",
+      "XT1079"
+    ]
+  },
+  {
+    "code": "tissot",
+    "vendor": "Xiaomi",
+    "name": "Mi A1",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "titan",
+    "vendor": "Motorola",
+    "name": "moto g (2014)",
+    "method": "fastboot",
+    "models": [
+      "XT1063",
+      "XT1064",
+      "XT1068",
+      "XT1069"
+    ]
+  },
+  {
+    "code": "tomato",
+    "vendor": "YU",
+    "name": "Yureka / Yureka Plus",
+    "method": "fastboot",
+    "models": [
+      "AO5510",
+      "YU5510"
+    ]
+  },
+  {
+    "code": "toro",
+    "vendor": "Google",
+    "name": "Galaxy Nexus LTE (Verizon)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "toroplus",
+    "vendor": "Google",
+    "name": "Galaxy Nexus LTE (Sprint)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "troika",
+    "vendor": "Motorola",
+    "name": "one action",
+    "method": "fastboot",
+    "models": [
+      "XT2013-1",
+      "XT2013-2",
+      "XT2013-3",
+      "XT2013-4"
+    ]
+  },
+  {
+    "code": "tsubasa",
+    "vendor": "Sony",
+    "name": "Xperia V",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "tulip",
+    "vendor": "ZTE",
+    "name": "Axon 7 Mini",
+    "method": "edl_custom",
+    "models": []
+  },
+  {
+    "code": "twolip",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 6 Pro",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "umts_spyder",
+    "vendor": "Motorola",
+    "name": "DROID RAZR / RAZR MAXX (GSM)",
+    "method": "fastboot",
+    "models": [
+      "XT910"
+    ]
+  },
+  {
+    "code": "ursa",
+    "vendor": "Xiaomi",
+    "name": "Mi 8 Explorer Edition",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "us996",
+    "vendor": "LG",
+    "name": "V20 (US Unlocked)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "us997",
+    "vendor": "LG",
+    "name": "G6 (US Unlocked)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "v1awifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Note Pro 12.2 Wi-Fi",
+    "method": "heimdall",
+    "models": [
+      "SM-P900"
+    ]
+  },
+  {
+    "code": "v400",
+    "vendor": "LG",
+    "name": "G Pad 7.0 WiFi",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "v410",
+    "vendor": "LG",
+    "name": "G Pad 7.0 (LTE)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "v480",
+    "vendor": "LG",
+    "name": "G Pad 8.0 (Wi-Fi)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "v500",
+    "vendor": "LG",
+    "name": "G Pad 8.3",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "v521",
+    "vendor": "LG",
+    "name": "G Pad X (T-Mobile)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "vayu",
+    "vendor": "Xiaomi",
+    "name": "POCO X3 Pro",
+    "method": "fastboot",
+    "models": [
+      "M2102J20SG",
+      "M2102J20SI"
+    ]
+  },
+  {
+    "code": "vegetalte",
+    "vendor": "BQ",
+    "name": "Aquaris E5 4G / Aquaris E5s",
+    "method": "fastboot",
+    "models": [
+      "E5 4G",
+      "E5s"
+    ]
+  },
+  {
+    "code": "victara",
+    "vendor": "Motorola",
+    "name": "moto x (2014)",
+    "method": "fastboot",
+    "models": [
+      "XT1092",
+      "XT1093",
+      "XT1094",
+      "XT1095",
+      "XT1096",
+      "XT1097",
+      "XT1098"
+    ]
+  },
+  {
+    "code": "violet",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 7 Pro",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "voyager",
+    "vendor": "Sony",
+    "name": "Xperia XA2 Plus",
+    "method": "fastboot",
+    "models": [
+      "H3413",
+      "H4413",
+      "H4493"
+    ]
+  },
+  {
+    "code": "vs985",
+    "vendor": "LG",
+    "name": "G3 (Verizon)",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "vs995",
+    "vendor": "LG",
+    "name": "V20 (Verizon)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "w5",
+    "vendor": "LG",
+    "name": "Optimus L70",
+    "method": "dd",
+    "models": []
+  },
+  {
+    "code": "w7",
+    "vendor": "LG",
+    "name": "L90",
+    "method": "dd",
+    "models": [
+      "D410",
+      "D410hn",
+      "D405",
+      "D405n",
+      "D415"
+    ]
+  },
+  {
+    "code": "wade",
+    "vendor": "Dynalink",
+    "name": "TV Box (4K)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "walleye",
+    "vendor": "Google",
+    "name": "Pixel 2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "wayne",
+    "vendor": "Xiaomi",
+    "name": "Mi 6X",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "whyred",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 5 Pro",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "wt88047",
+    "vendor": "Wingtech",
+    "name": "Redmi 2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "x2",
+    "vendor": "LeEco",
+    "name": "Le Max2",
+    "method": "fastboot",
+    "models": [
+      "LEX820",
+      "LEX821",
+      "LEX822",
+      "LEX829"
+    ]
+  },
+  {
+    "code": "xmsirius",
+    "vendor": "Xiaomi",
+    "name": "Mi 8 SE",
+    "method": "fastboot",
+    "models": [
+      "M1805E2A"
+    ]
+  },
+  {
+    "code": "xt897",
+    "vendor": "Motorola",
+    "name": "PHOTON Q 4G LTE",
+    "method": "fastboot",
+    "models": [
+      "XT897"
+    ]
+  },
+  {
+    "code": "xz2c",
+    "vendor": "Sony",
+    "name": "Xperia XZ2 Compact",
+    "method": "fastboot",
+    "models": [
+      "H8314",
+      "H8324"
+    ]
+  },
+  {
+    "code": "yuga",
+    "vendor": "Sony",
+    "name": "Xperia Z",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "z2_plus",
+    "vendor": "ZUK",
+    "name": "Z2 Plus",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "z3",
+    "vendor": "Sony",
+    "name": "Xperia Z3",
+    "method": "fastboot",
+    "models": [
+      "D6603"
+    ]
+  },
+  {
+    "code": "z3c",
+    "vendor": "Sony",
+    "name": "Xperia Z3 Compact",
+    "method": "fastboot",
+    "models": [
+      "D5803",
+      "D5833"
+    ]
+  },
+  {
+    "code": "zangya",
+    "vendor": "BQ",
+    "name": "Aquaris X2",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "zangyapro",
+    "vendor": "BQ",
+    "name": "Aquaris X2 Pro",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "zenfone3",
+    "vendor": "ASUS",
+    "name": "Zenfone 3",
+    "method": "fastboot",
+    "models": [
+      "ZE520KL",
+      "ZE552KL"
+    ]
+  },
+  {
+    "code": "zerofltexx",
+    "vendor": "Samsung",
+    "name": "Galaxy S6",
+    "method": "heimdall",
+    "models": [
+      "SM-G920F"
+    ]
+  },
+  {
+    "code": "zeroltexx",
+    "vendor": "Samsung",
+    "name": "Galaxy S6 Edge",
+    "method": "heimdall",
+    "models": [
+      "SM-G925F"
+    ]
+  },
+  {
+    "code": "zippo",
+    "vendor": "Lenovo",
+    "name": "Z6 Pro",
+    "method": "fastboot",
+    "models": [
+      "L78051"
+    ]
+  },
+  {
+    "code": "zl1",
+    "vendor": "LeEco",
+    "name": "Le Pro3 / Le Pro3 Elite",
+    "method": "fastboot",
+    "models": [
+      "LEX720",
+      "LEX722",
+      "LEX727"
+    ]
+  },
+  {
+    "code": "cheetah",
+    "vendor": "Google",
+    "name": "Pixel 7 Pro",
+    "models": [],
+    "method": "fastboot"
+  },
+  {
+    "code": "panther",
+    "vendor": "Google",
+    "name": "Pixel 7",
+    "models": [],
+    "method": "fastboot"
+  },
+  {
+    "code": "bluejay",
+    "vendor": "Google",
+    "name": "Pixel 6a",
+    "models": [],
+    "method": "fastboot"
+  },
+  {
+    "code": "raven",
+    "vendor": "Google",
+    "name": "Pixel 6 Pro",
+    "models": [],
+    "method": "fastboot"
+  },
+  {
+    "code": "oriole",
+    "vendor": "Google",
+    "name": "Pixel 6",
+    "models": [],
+    "method": "fastboot"
+  },
+  {
+    "code": "FP4",
+    "vendor": "Fairphone",
+    "name": "Fairphone 4",
+    "models": [],
+    "method": "fastboot"
+  },
+  {
+    "code": "grouper",
+    "vendor": "Google",
+    "name": "Nexus 7 [2012]",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "n7100",
+    "vendor": "Samsung",
+    "name": "Galaxy Note 2",
+    "method": "heimdall",
+    "models": []
+  },
+  {
+    "code": "raphael",
+    "vendor": "Xiaomi",
+    "name": "Mi 9T Pro",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "yellowstone",
+    "vendor": "Google",
+    "name": "Project Tango Tablet",
+    "method": "fastboot",
+    "models": []
+  }
+]

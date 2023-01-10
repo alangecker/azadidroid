@@ -1,0 +1,49 @@
+Arguments: 
+  /home/user/.nvm/versions/node/v16.18.0/bin/node /usr/bin/yarn link azadidroid
+
+PATH: 
+  /home/user/.nvm/versions/node/v16.18.0/bin:/home/user/.deno/bin:/home/user/.yarn/bin:/home/user/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-ndk:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /development/web-android/repo/azadidroid-cli/package.json: Unexpected token } in JSON at position 266
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "type": "module",
+      "dependencies": {
+        "enquirer": "^2.3.6",
+        "inquirer-autocomplete-prompt": "^3.0.0",
+        "inquirer-press-to-continue": "^1.1.4",
+        "listr-inquirer": "^0.1.0",
+        "listr2": "^5.0.6",
+        "signale-logger": "^1.5.1",
+      },
+      "devDependencies": {
+        "@types/argparse": "^2.0.10",
+        "@types/inquirer": "8.2.4",
+        "@types/node": "^18.11.7",
+        "inquirer": "8.2.4",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.8.4"
+      }
+    }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
