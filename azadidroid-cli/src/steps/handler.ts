@@ -1,9 +1,9 @@
 
 import { ListrTaskWrapper } from 'listr2'
-import type { InstallContext, Step } from 'azadidroid/src/steps/base.js'
-import { RebootOdinToRecoveryStep, TWRPInstallROMStep } from 'azadidroid/src/steps/flash.js'
-import { AllowOEMUnlockStep, AndroidVersionInvalidError, ConfirmAndroidVersionStep } from 'azadidroid/src/steps/requirements.js'
-import { FastbootUnlockStep } from 'azadidroid/src/steps/prepare.js'
+import type { InstallContext, Step } from 'azadidroid-lib/src/steps/base.js'
+import { RebootOdinToRecoveryStep, TWRPInstallROMStep } from 'azadidroid-lib/src/steps/flash.js'
+import { AllowOEMUnlockStep, AndroidVersionInvalidError, ConfirmAndroidVersionStep } from 'azadidroid-lib/src/steps/requirements.js'
+import { FastbootUnlockStep } from 'azadidroid-lib/src/steps/prepare.js'
 import chalk from 'chalk'
 
 type Handler = {

@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-import { loadRomVersions } from "azadidroid/src/roms/index.js"
-import { Rom, RomVersion } from "azadidroid/src/roms/common.js";
+import { loadRomVersions } from "azadidroid-lib/src/roms/index.js"
+import { Rom, RomVersion } from "azadidroid-lib/src/roms/common.js";
 import ora from 'ora';
 import logSymbols from 'log-symbols';
 

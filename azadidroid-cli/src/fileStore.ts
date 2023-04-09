@@ -1,7 +1,7 @@
 
 import fs from 'node:fs/promises'
 import * as path from 'node:path'
-import type { DataStore } from 'azadidroid/src/utils/store.js'
+import type { DataStore } from 'azadidroid-lib/src/utils/store.js'
 import './polyfill.js'
 
 export class FileStore implements DataStore {

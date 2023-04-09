@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import inquirerPrompt from 'inquirer-autocomplete-prompt';
-import { getModelSummaries, ModelSummary } from "azadidroid/src/model/models.js"
+import { getModelSummaries, ModelSummary } from "azadidroid-lib/src/model/models.js"
 inquirer.registerPrompt('autocomplete', inquirerPrompt);
 
 

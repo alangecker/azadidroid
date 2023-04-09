@@ -3,7 +3,7 @@
   "dependencies": {
     "@peculiar/webcrypto": "^1.4.1",
     "@zip.js/zip.js": "2.2.27",
-    "azadidroid": "file:../azadidroid",
+    "azadidroid-lib": "file:../azadidroid-lib",
     "enquirer": "^2.3.6",
     "inquirer-autocomplete-prompt": "^3.0.0",
     "inquirer-press-to-continue": "^1.1.4",

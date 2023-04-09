@@ -1,24 +1,24 @@
 import './polyfill.js'
-import USBPhone from "azadidroid/src/usb/USBPhone.js"
+import USBPhone from "azadidroid-lib/src/usb/USBPhone.js"
 import inquirerImport from 'inquirer';
 /**
  * @deprecated TODO: replace with enquirer
  */
 const inquirer = inquirerImport
 import chalk from 'chalk';
-import lang from 'azadidroid/src/langs/en.js'
+import lang from 'azadidroid-lib/src/langs/en.js'
 import PressToContinuePrompt from 'inquirer-press-to-continue';
-import { AdbWrapper } from "azadidroid/src/usb/adb/AdbWrapper.js";
-import { getModelSummaries } from "azadidroid/src/model/models.js";
-import { DeviceMode } from "azadidroid/src/usb/helpers.js";
+import { AdbWrapper } from "azadidroid-lib/src/usb/adb/AdbWrapper.js";
+import { getModelSummaries } from "azadidroid-lib/src/model/models.js";
+import { DeviceMode } from "azadidroid-lib/src/usb/helpers.js";
 import { askForOdinModel, chooseFromMultipleModel, confirmModel } from "./prompts/detect.js";
 import { pickRom } from "./prompts/roms.js";
-import { ModelInfos } from "azadidroid/src/model/index.js";
-import { getSteps } from "azadidroid/src/steps/index.js";
+import { ModelInfos } from "azadidroid-lib/src/model/index.js";
+import { getSteps } from "azadidroid-lib/src/steps/index.js";
 import logSymbols from 'log-symbols';
 import { Listr, ListrTask } from 'listr2'
-import { IDownloadRequest, InstallContext, Step } from "azadidroid/src/steps/base.js";
-import { logger, logToConsole, logToTask as logToListrTask, logToTask } from 'azadidroid/src/utils/logger.js'
+import { IDownloadRequest, InstallContext, Step } from "azadidroid-lib/src/steps/base.js";
+import { logger, logToConsole, logToTask as logToListrTask, logToTask } from 'azadidroid-lib/src/utils/logger.js'
 import { cliHandleStep } from "./steps/handler.js";
 import { FileStore } from "./fileStore.js";
 import path from "path";
@@ -26,7 +26,7 @@ import path from "path";
 
 const GITHUB_LINK = '[TODO]' //TODO
 import { fileURLToPath } from 'node:url';
-import { download } from "azadidroid/src/utils/download.js";
+import { download } from "azadidroid-lib/src/utils/download.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const fileStore = new FileStore(path.join('/tmp'))
