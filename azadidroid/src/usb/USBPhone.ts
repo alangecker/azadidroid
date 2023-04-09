@@ -7,7 +7,8 @@ import sleep from '../utils/sleep.js'
 import { OdinDevice } from 'heimdall.js/src/OdinDevice.js'
 import { isBrowser, isNode } from '../utils/platform.js'
 import { logger } from '../utils/logger.js'
-// import * as fastboot from 'android-fastboot'
+/// <reference path="./android-fastboot.d.ts" />
+import * as fastboot from "android-fastboot";
 
 export class StateChangeEvent extends Event {
     constructor() {  super('stateChanged') }
@@ -20,6 +21,14 @@ export class DisconnectedEvent extends Event {
 }
 export class BackgroundErrorEvent extends Event {
     constructor() {  super('backgroundError') }
+}
+/**
+ * ADB authentication took longer than 2 seconds.
+ * this is most likely because the user got asked,
+ * whether to accept the connection
+ */
+export class AuthenticationSlowEvent extends Event {
+    constructor() {  super('authSlow') }
 }
 export class DeviceMissingEvent extends BackgroundErrorEvent {}
 export class AccessDeniedEvent extends BackgroundErrorEvent {}
@@ -238,7 +247,9 @@ export default class USBPhone implements EventTarget {
     private _adb: AdbWrapper
     async getAdb(initialize = true): Promise<AdbWrapper> {
         if(this._adb) return this._adb
-        this._adb = await AdbWrapper.connectToUSBDevice(this.device, this.endpointIn, this.endpointOut, initialize)
+        this._adb = await AdbWrapper.connectToUSBDevice(this.device, this.endpointIn, this.endpointOut, initialize, () => {
+            this.dispatchEvent(new AuthenticationSlowEvent())
+        })
 
         this.events.addEventListener('disconnected', () => {
             this._adb = null
@@ -253,7 +264,25 @@ export default class USBPhone implements EventTarget {
         return device
     }
     async getFastboot() {
+        fastboot.setDebugLevel(3)
+        const device = new fastboot.FastbootDevice;
+        device._registeredUsbListeners = true
+        device.device = this.device
+        device.epIn = this.endpointIn.endpointNumber
+        device.epOut = this.endpointOut.endpointNumber
 
+        this.events.addEventListener('reconnected', () => {
+            if(this.deviceMode !== DeviceMode.FASTBOOT) return
+            device.device = this.device
+
+            const d = device as any
+            if (d._connectResolve !== null) {
+                d._connectResolve(undefined);
+                d._connectResolve = null;
+                d._connectReject = null;
+            }
+        })
+        return device
     }
     async waitFor(target: 'adb'|'fastboot'|'odin') {
         while(!this.isConnected || this.deviceMode !== target) {

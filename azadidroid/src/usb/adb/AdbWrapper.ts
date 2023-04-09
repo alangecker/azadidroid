@@ -8,17 +8,30 @@ import { TwrpHelper } from './twrp.js';
 
 const CredentialStore = new AdbHybridCredentialStore();
 
+// without this, adb would script would just crash without any error message
+// could not find any other way to catch this error
+process.on('unhandledRejection', (error, p) => {
+    
+    // console.log('=== UNHANDLED REJECTION ===');
+    // console.dir((error as any)?.stack);
+});
+
 export class AdbWrapper {
     constructor(
         readonly adb: Adb
     ) {}
-    static async connectToUSBDevice(usbDevice: USBDevice, inEndpoint: USBEndpoint, outEndpoint: USBEndpoint, loadProps = true): Promise<AdbWrapper> {
+    static async connectToUSBDevice(usbDevice: USBDevice, inEndpoint: USBEndpoint, outEndpoint: USBEndpoint, loadProps = true, onAuthSlow?: Function): Promise<AdbWrapper> {
         const streams = new AdbWebUsbBackendStream(usbDevice, inEndpoint, outEndpoint);
-        let timeout: NodeJS.Timeout
+        let timeout: NodeJS.Timeout|number
+        let authSlowTimer: NodeJS.Timeout|number
         return new Promise( async (resolve, reject) => {
             timeout = setTimeout(() => {
                 reject(new Error('authentication timeout'))
-            }, 10000)
+            }, 20000)
+            
+            if(onAuthSlow) {
+                authSlowTimer = setTimeout(onAuthSlow, 2000)
+            }
 
             const device = await Adb.authenticate(
                 streams,
@@ -26,6 +39,7 @@ export class AdbWrapper {
                 undefined
             );
             clearTimeout(timeout)
+            clearTimeout(authSlowTimer)
 
             const d = new AdbWrapper(device)
             if(loadProps) {

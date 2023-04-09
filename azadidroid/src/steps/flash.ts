@@ -49,30 +49,43 @@ export class OdinFlashRecoveryStep extends Step {
     }
 }
 
-export class FastbootFlashRecoveryStep extends Step {
+export class FastbootBootRecoveryStep extends Step {
     constructor() {
-        super('fastboot_flash_recovery')
+        super('fastboot_boot_recovery')
     }
     async getFilesToDownload(device: InstallContext) {
         return [
             await getRecoveryFile(device)
         ]
     }
-    async run(device: InstallContext) {
-        throw new Error('unimplemented')
-        // const promise = new CancelablePromise(async (resolve, reject) => {
-        //     try {
-        //         // TODO: await device.usb.waitFor('fastboott')
-        //         if(promise.isCanceled()) return
-        //         // TODO: fastboot flash recovery
-        //         if(promise.isCanceled()) return
-        //         // TODO: fastboot reboot recovery
-        //         resolve('ok')
-        //     } catch(err) {
-        //         reject(err)
-        //     }
-        // })
-        // return promise
+    async run(ctx: InstallContext, abortSignal: AbortSignal) {
+        await ctx.phone.waitFor('fastboot')
+        const fastboot = await ctx.phone.getFastboot()
+
+        logger.debug('reboot bootloader...')
+        await fastboot.reboot('bootloader', true)
+
+        logger.debug('boot recovery.img...')
+        await fastboot.bootBlob(ctx.files['recovery'], (progress) => {
+            // logger.debug('boot upload progress ', progress)
+        })
+        logger.debug('waiting for recovery to be started...')
+        abortSignal.throwIfAborted()
+
+        await ctx.phone.waitFor('adb')
+        // sometimes TWRP disconnects again shortly
+        await sleep(1000)
+
+        abortSignal.throwIfAborted()
+        await ctx.phone.waitFor('adb')
+
+        abortSignal.throwIfAborted()
+        const adb = await ctx.phone.getAdb()
+        abortSignal.throwIfAborted()
+        if(adb.isRecovery) {
+            return
+        }
+        await sleep(500)
     }
 }
 
@@ -96,8 +109,6 @@ export class RebootOdinToRecoveryStep extends Step {
         }
     }
 }
-
-
 
 export class ABCopyPartitionsStep extends Step {
     constructor() {
@@ -191,10 +202,12 @@ export class TWRPInstallROMStep extends Step {
         ]
     }
     async run(ctx: InstallContext, abortSignal: AbortSignal) {
+        logger.debug('get adb...')
         let adb = await ctx.phone.getAdb()
         logger.debug('opening sideload...')
         await adb.twrp().openSideload()
         logger.debug('waiting for adb...')
+        await sleep(100)
         await ctx.phone.waitFor('adb');
         
         // after starting the sideload mode, the device reconnected in a different configuration
@@ -211,7 +224,7 @@ export class TWRPInstallROMStep extends Step {
         logger.debug('sideload done')
 
         // wait until phone reconnected back in normal adb mode
-        await sleep(1000)
+        await sleep(3000)
         await ctx.phone.waitFor('adb');
     }
 }
@@ -222,9 +235,12 @@ export class TWRPFinishStep extends Step {
     }
 
     async run(ctx: InstallContext) {
+        logger.debug('wait for adb to be back')
         await ctx.phone.waitFor('adb')
-        const adb = await ctx.phone.getAdb()
+        const adb = await ctx.phone.getAdb(false)
+        logger.debug('reboot to rom')
         await adb.reboot()
+        logger.debug('reboot triggered')
         await sleep(1000)
     }
 }

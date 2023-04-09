@@ -35,35 +35,23 @@ export class FastbootUnlockStep extends Step {
         super('fastboot_unlock')
     }
 
-    async run(device: InstallContext) {
-        throw new Error('unimplemented')
-        // const promise = new CancelablePromise(async (resolve, reject) => {
-        //     let unlockCommandTriggered = false
+    async run(ctx: InstallContext, abortSignal: AbortSignal) {
+        const fastboot = await ctx.phone.getFastboot()
 
-        //     while(!promise.isCanceled()) {
-        //         try {
-        //             // await device.usb.waitFor('fastboot')
-        //             if(promise.isCanceled()) return
-        //             const isUnlocked = false // await fastboot.getUnlockStatus()
-        //             if(isUnlocked) {
-        //                 resolve('ok')
-        //                 return
-        //             } else if (!unlockCommandTriggered) {
-        //                 try {
-        //                     // fastboot oem unlock
-        //                 } catch(err) {
-        //                     reject(err)
-        //                     return
-        //                 }
-        //                 unlockCommandTriggered = true
-        //             }
-        //         } catch(err) {
-        //             console.error(err)
-        //         }
-        //         await sleep(500)
-        //     }
-        // })
-        // return promise
+        const isUnlocked = await fastboot.getVariable('unlocked')
+        if(isUnlocked === 'yes') {
+            // already unlocked
+            return
+        }
+
+        await fastboot.runCommand(ctx.model.unlockCommand)
+        this.call('confirmUnlock')
+        await fastboot.waitForConnect();
+
+        const isUnlocked2 = await fastboot.getVariable('unlocked')
+        if(isUnlocked2 !== 'yes') {
+            throw new Error('device should now be unlocked, but it is not. Are you sure, that you confirmed the on-screen unlock prompt?')
+        }
     }
 }
 

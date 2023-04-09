@@ -1,9 +1,9 @@
 
-import { ListrErrorTypes, ListrTaskWrapper } from 'listr2'
+import { ListrTaskWrapper } from 'listr2'
 import type { InstallContext, Step } from 'azadidroid/src/steps/base.js'
 import { RebootOdinToRecoveryStep, TWRPInstallROMStep } from 'azadidroid/src/steps/flash.js'
-import { AndroidVersionInvalidError, ConfirmAndroidVersionStep } from 'azadidroid/src/steps/requirements.js'
-import { logger, logToConsole, logToTask } from 'azadidroid/src/utils/logger.js'
+import { AllowOEMUnlockStep, AndroidVersionInvalidError, ConfirmAndroidVersionStep } from 'azadidroid/src/steps/requirements.js'
+import { FastbootUnlockStep } from 'azadidroid/src/steps/prepare.js'
 import chalk from 'chalk'
 
 type Handler = {
@@ -30,6 +30,22 @@ const handlers: Handler[] = [
                 if(err instanceof AndroidVersionInvalidError) {
                     err.message =`You don't have the required official android version installed. Please install version ${err.requiredVersion}. You can find tutorials for your model on the internet`
                 }
+            }
+        },
+        {
+            step: AllowOEMUnlockStep,
+            register(step, task, ctx) {
+                step.on('manualEnableOEMUnlock', () => {
+                    task.output = chalk.bold('Interaction required:')+' Toggle the OEM-Unlock switch and wait'
+                })
+            }
+        },
+        {
+            step: FastbootUnlockStep,
+            register(step, task, ctx) {
+                step.on('confirmUnlock', () => {
+                    task.output = 'At this point the device may display on-screen prompts which will require interaction to continue the process of unlocking the bootloader. Please take whatever actions the device asks you to to proceed.'
+                })
             }
         },
         {

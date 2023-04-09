@@ -1,3 +1,4 @@
+import './polyfill.js'
 import USBPhone from "azadidroid/src/usb/USBPhone.js"
 import inquirerImport from 'inquirer';
 /**
@@ -10,7 +11,6 @@ import PressToContinuePrompt from 'inquirer-press-to-continue';
 import { AdbWrapper } from "azadidroid/src/usb/adb/AdbWrapper.js";
 import { getModelSummaries } from "azadidroid/src/model/models.js";
 import { DeviceMode } from "azadidroid/src/usb/helpers.js";
-import { roms } from "azadidroid/src/roms/index.js"
 import { askForOdinModel, chooseFromMultipleModel, confirmModel } from "./prompts/detect.js";
 import { pickRom } from "./prompts/roms.js";
 import { ModelInfos } from "azadidroid/src/model/index.js";
@@ -20,17 +20,13 @@ import { Listr, ListrTask } from 'listr2'
 import { IDownloadRequest, InstallContext, Step } from "azadidroid/src/steps/base.js";
 import { logger, logToConsole, logToTask as logToListrTask, logToTask } from 'azadidroid/src/utils/logger.js'
 import { cliHandleStep } from "./steps/handler.js";
-import { RomStability } from "azadidroid/src/roms/common.js";
 import { FileStore } from "./fileStore.js";
-import fs from 'node:fs'
 import path from "path";
 
 
 const GITHUB_LINK = '[TODO]' //TODO
 import { fileURLToPath } from 'node:url';
 import { download } from "azadidroid/src/utils/download.js";
-import { adbSideload } from "azadidroid/src/usb/adb/sideload.js";
-import sleep from "azadidroid/src/utils/sleep.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const fileStore = new FileStore(path.join('/tmp'))
@@ -115,10 +111,13 @@ function adbMatchingModels(adb: AdbWrapper) {
 async function main() {
     const phone = new USBPhone()
     phone.addEventListener('backgroundError', console.log)
-    phone.addEventListener('disconnected', console.log)
-    phone.addEventListener('connected', console.log)
-    phone.addEventListener('reconnected', console.log)
+    // phone.addEventListener('disconnected', console.log)
+    // phone.addEventListener('connected', console.log)
+    // phone.addEventListener('reconnected', console.log)
     phone.addEventListener('stateChanged', console.log)
+    phone.addEventListener('authSlow', () => {
+        console.log(chalk.bold("ADB authentication is still in progress...\nmaybe you need to accept the connection on your phone"))
+    })
 
     // find a device
     while(true) {
@@ -175,6 +174,8 @@ async function main() {
                 codename = await askForOdinModel()
                 break
             case DeviceMode.FASTBOOT:
+                codename = 'sargo'
+                // TODO: retrieve correct codename
                 // TODO
                 throw new Error('unimplemented')
 
@@ -237,18 +238,18 @@ async function main() {
 
     }
     const list = new Listr<any>([
-        // {
-        //     title: 'Requirements',
-        //     task: (ctx, task) => {
-        //         return task.newListr([
-        //             ...steps.requirements.map(stepToListrTask),
-        //         ])
-        //     },
-        // },
+        {
+            title: 'Requirements',
+            task: (ctx, task) => {
+                return task.newListr([
+                    ...steps.requirements.map(stepToListrTask),
+                ])
+            },
+        },
         {
             title: 'Download',
             task: (ctx,task) => {
-                // task.output = JSON.stringify(filesToDownload, null, 2)
+                
                 return task.newListr(
                     [
                         ...filesToDownload.map((file): ListrTask => ({
@@ -299,7 +300,7 @@ async function main() {
         
     ], {
         rendererOptions: {
-            collapse: false,
+            collapseSubtasks: false,
             collapseErrors: false,
         }
     })
@@ -307,6 +308,10 @@ async function main() {
         await list.run()
         console.log('done')
         await phone.close()
+
+        // TODO: node process should exit by itself.
+        // there is something still running in the backend...
+        process.exit(0)
     } catch(err) {
         logToConsole()
         logger.error(err)

@@ -1,8 +1,17 @@
 import { ModelInfos } from "../model/index.js";
 import { Rom } from "../roms/index.js";
-import { InstallContext, Step } from "./base.js";
-import { ABCopyPartitionsStep, FastbootRetrofitDynamicPartitionsStep, OdinFlashRecoveryStep, RebootOdinToRecoveryStep, TWRPFinishStep, TWRPInstallROMStep, TWRPWipeStep } from "./flash.js";
-import { WaitForBootloaderStep } from "./prepare.js";
+import { Step } from "./base.js";
+import {
+    ABCopyPartitionsStep,
+    FastbootBootRecoveryStep,
+    FastbootRetrofitDynamicPartitionsStep,
+    OdinFlashRecoveryStep,
+    RebootOdinToRecoveryStep,
+    TWRPFinishStep,
+    TWRPInstallROMStep,
+    TWRPWipeStep
+} from "./flash.js";
+import { FastbootUnlockStep, WaitForBootloaderStep } from "./prepare.js";
 import { AllowOEMUnlockStep, ConfirmAndroidVersionStep } from "./requirements.js";
 
 
@@ -21,18 +30,26 @@ export function getSteps(model: ModelInfos, rom: Rom) {
     }
     steps['prepare'].push(new WaitForBootloaderStep)
     
-    if(model.installMethod == 'heimdall') {
-        
-        if(model.beforeRecoveryInstall == 'samsung_exynos9xxx' || model.beforeRecoveryInstall == 'samsung_sm7125') {
-            // TODO
-            // steps['prepare'].push()
+    if(rom.installVia == 'recovery') {
+        if(model.installMethod == 'heimdall') {
+            
+            if(model.beforeRecoveryInstall == 'samsung_exynos9xxx' || model.beforeRecoveryInstall == 'samsung_sm7125') {
+                // TODO
+                // steps['prepare'].push()
+            }
+
+            steps['install'].push(new OdinFlashRecoveryStep)
+            steps['install'].push(new RebootOdinToRecoveryStep)
+        } else if(model.installMethod.startsWith('fastboot')) {
+            steps['prepare'].push(new FastbootUnlockStep)
+            // TODO: before_recovery_install_boot_stack            
+            steps['install'].push(new FastbootBootRecoveryStep)
         }
 
-        steps['install'].push(new OdinFlashRecoveryStep)
-        steps['install'].push(new RebootOdinToRecoveryStep)
         if(model.beforeRomInstall == 'ab_copy_partitions') {
             steps['install'].push(new ABCopyPartitionsStep)
         }
+
         steps['install'].push(new TWRPWipeStep)
 
         if(model.installMethod.includes('fastboot') && model.isRetrofitDynamicPartitions) {
@@ -40,13 +57,8 @@ export function getSteps(model: ModelInfos, rom: Rom) {
         }
         steps['install'].push(new TWRPInstallROMStep)
         steps['install'].push(new TWRPFinishStep)
-    } else if(model.installMethod.startsWith('fastboot')) {
-        if(rom.installVia == 'recovery') {
-            // install ROM via TWRP
-
-        } else {
-            // install ROM via fastboot
-        }
+    } else {
+        throw new Error('unimplemented: only installation via TWRP is currently supported')
     }
 
     return steps

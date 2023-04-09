@@ -139,6 +139,12 @@ export class ModelInfos {
     get bootIntoRecoveryInstructions() {
         return this.deviceData.recovery_boot || ''
     }
+    get unlockCommand() {
+        return this.deviceData.custom_unlock_cmd?.replace(/^fastboot /, '') || 'oem unlock'
+    }
+    get recoveryPartitionName() {
+        return this.deviceData.recovery_partition_name || 'boot'
+    }
     get unsupportedFeatures() {
         const SUPPORTED = {
             instalMethod: [

@@ -149,12 +149,11 @@ export class TwrpHelper {
     }
 
     async openSideload() {
-        process.on('unhandledRejection', (error, p) => {
-            
-            console.log('=== UNHANDLED REJECTION ===');
-            console.dir((error as any)?.stack);
-        });
-        await this.adb.shell(["twrp", "sideload"])
+        logger.debug('twrp sideload')
+        this.adb.shell(["twrp", "sideload"])
+            .catch((err) => logger.error(err))
+        logger.debug('sleep 1000ms')
         await sleep(1000)
+        logger.debug('sleep ended')
     }
 }
