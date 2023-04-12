@@ -29,7 +29,7 @@ import { fileURLToPath } from 'node:url';
 import { download } from "azadidroid-lib/src/utils/download.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const fileStore = new FileStore(path.join('/tmp'))
+const fileStore = new FileStore(path.join(__dirname, '../cache'))
 
 inquirer.registerPrompt('press-to-continue', PressToContinuePrompt);
 
@@ -91,13 +91,16 @@ function printUnsupported(model: ModelInfos) {
 }
 
 
-function adbMatchingModels(adb: AdbWrapper) {
+async function adbMatchingModels(adb: AdbWrapper) {
     const adbCodename = adb.product
     const model = adb.model.replace(/^(SM|G)-/, '')
+    const device = await adb.getProp('ro.product.device')
     return getModelSummaries()
         .filter(m => 
                 m.code == adbCodename ||
+                m.code === device ||
                 m.models.map(s => s.replace(/^(SM|G)-/, '')).includes(model) ||
+                m.models.map(s => s.replace(/^(SM|G)-/, '')).includes(device) ||
                 m.name.endsWith(model) ||
 
                 // sometimes there is one recovery for multiple models
@@ -151,7 +154,7 @@ async function main() {
                 try {
                     const adb = await phone.getAdb()
                     printAdbDevice(adb)
-                    const models = adbMatchingModels(adb)
+                    const models = await adbMatchingModels(adb)
                     if(!models.length) {
                         throw new Error(`could not identify phone (model=${adb.model}, product=${adb.product})`)
                     } else if(models.length == 1) {
@@ -174,11 +177,12 @@ async function main() {
                 codename = await askForOdinModel()
                 break
             case DeviceMode.FASTBOOT:
-                codename = 'sargo'
-                // TODO: retrieve correct codename
-                // TODO
-                throw new Error('unimplemented')
+                const fastboot = await phone.getFastboot()
 
+                // reboot, just to be sure, that bootloader is not stucked in a wired state
+                await fastboot.reboot('bootloader', true)
+
+                codename = await fastboot.getVariable('product')
         }
         break
     }
@@ -208,7 +212,7 @@ async function main() {
     }
 
     // generate list of required steps
-    const steps = getSteps(model, rom)
+    const steps = await getSteps(model, rom)
 
     // collect files
     const filesToDownload: IDownloadRequest[] = []
@@ -315,6 +319,7 @@ async function main() {
     } catch(err) {
         logToConsole()
         logger.error(err)
+        console.error(err)
         process.exit(1)
     }
 }

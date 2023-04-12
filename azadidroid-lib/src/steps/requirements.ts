@@ -58,16 +58,28 @@ export class AllowOEMUnlockStep extends Step {
     async run(ctx: InstallContext, abortSignal: AbortSignal) {
         let devoptionsOpened = false
         if(ctx.phone.deviceMode === DeviceMode.FASTBOOT) {
-            const fastboot = await ctx.phone.getFastboot()
-            await fastboot.reboot('bootloader', true)
-            const res = (await fastboot.runCommand('flashing get_unlock_ability')).text.trim()
-            logger.debug('flashing get_unlock_ability response', res)
-            if(res === 'get_unlock_ability: 1') {
-                logger.debug('OEM Unlock is enabled')
-            } else if(res === 'get_unlock_ability: 0') {
-                throw new Error('OEM Unlock is not enabled. Manually boot into ROM and try again')
-            } else {
-                logger.debug('unknown response. we just assume, that OEM is unlocked') // TODO
+            if(ctx.model.unlockCommand == 'oem unlock') {
+                // TODO
+                // fastboot oem device-info
+                // (bootloader) 	Device tampered: false
+                // (bootloader) 	Device unlocked: true
+                // (bootloader) 	Device critical unlocked: true
+                // (bootloader) 	Charger screen enabled: false
+
+                logger.warn('checking oem unlock status is not implemented yet')
+                logger.warn('we just assume its enabled')
+            }  else {
+                const fastboot = await ctx.phone.getFastboot()
+                await fastboot.reboot('bootloader', true)
+                const res = (await fastboot.runCommand('flashing get_unlock_ability')).text.trim()
+                logger.debug('flashing get_unlock_ability response', res)
+                if(res === 'get_unlock_ability: 1') {
+                    logger.debug('OEM Unlock is enabled')
+                } else if(res === 'get_unlock_ability: 0') {
+                    throw new Error('OEM Unlock is not enabled. Manually boot into ROM and try again')
+                } else {
+                    logger.debug('unknown response. we just assume, that OEM is unlocked') // TODO
+                }
             }
         } else {
             while(true) {

@@ -27,8 +27,9 @@ export class TwrpHelper {
         }
     }
     async wipePartition(name: string) {
-        logger.debug("wiping partition", name)
+        logger.debug(`wiping partition '${name}'...`)
         await this.adb.shell(["twrp", "wipe", name])
+        logger.debug(`wiping partition '${name}' done`)
         await sleep(500)
     }
 
@@ -52,6 +53,8 @@ export class TwrpHelper {
                 await this.adb.shell(['mount', '/data'])
             }
         } catch(_) {}
+
+        await sleep(500)
     }
 
     private async isDataMounted() {

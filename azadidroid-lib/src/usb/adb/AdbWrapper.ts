@@ -1,10 +1,11 @@
-import { Adb, AdbPacketDispatcher } from '@yume-chan/adb';
-import { AdbWebUsbBackendStream } from './AdbWebUsbBackendStream.js'
+import { Adb } from '@yume-chan/adb';
+import { AdbWebUsbBackendStream } from '@yume-chan/adb-backend-webusb';
 import sleep from '../../utils/sleep.js';
 import AdbHybridCredentialStore from './AdbHybridCredentialStore.js';
 import { adbSideload } from './sideload.js';
 import { logger } from '../../utils/logger.js';
 import { TwrpHelper } from './twrp.js';
+import { webusb } from '../usb.js';
 
 const CredentialStore = new AdbHybridCredentialStore();
 
@@ -21,7 +22,7 @@ export class AdbWrapper {
         readonly adb: Adb
     ) {}
     static async connectToUSBDevice(usbDevice: USBDevice, inEndpoint: USBEndpoint, outEndpoint: USBEndpoint, loadProps = true, onAuthSlow?: Function): Promise<AdbWrapper> {
-        const streams = new AdbWebUsbBackendStream(usbDevice, inEndpoint, outEndpoint);
+        const streams = new AdbWebUsbBackendStream(usbDevice, inEndpoint, outEndpoint, webusb);
         let timeout: NodeJS.Timeout|number
         let authSlowTimer: NodeJS.Timeout|number
         return new Promise( async (resolve, reject) => {

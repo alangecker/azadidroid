@@ -72,12 +72,17 @@ export class FastbootBootRecoveryStep extends Step {
         logger.debug('waiting for recovery to be started...')
         abortSignal.throwIfAborted()
 
+        const waitingForRecoveryTimeout = setTimeout(() => {
+            this.call('stillWaitingForRecovery')
+        }, 10000)
+
         await ctx.phone.waitFor('adb')
         // sometimes TWRP disconnects again shortly
         await sleep(1000)
-
+        
         abortSignal.throwIfAborted()
         await ctx.phone.waitFor('adb')
+        clearTimeout(waitingForRecoveryTimeout)
 
         abortSignal.throwIfAborted()
         const adb = await ctx.phone.getAdb()
@@ -207,7 +212,7 @@ export class TWRPInstallROMStep extends Step {
         logger.debug('opening sideload...')
         await adb.twrp().openSideload()
         logger.debug('waiting for adb...')
-        await sleep(100)
+        await sleep(1000)
         await ctx.phone.waitFor('adb');
         
         // after starting the sideload mode, the device reconnected in a different configuration
@@ -242,5 +247,94 @@ export class TWRPFinishStep extends Step {
         await adb.reboot()
         logger.debug('reboot triggered')
         await sleep(1000)
+    }
+}
+
+
+export class FastbootFlashZipStep extends Step {
+    constructor() {
+        super('fastboot_flash_zip')
+    }
+    async getFilesToDownload(ctx: InstallContext) {
+        const url = new URL(ctx.versionToInstall.url)
+        const p = url.pathname.split('/')
+        return [
+            {
+                key: 'rom',
+                title: ctx.rom.name,
+                fileName: p[p.length-1],
+                url: url.toString(),
+                sha256: ctx.versionToInstall.sha256,
+                sha512: ctx.versionToInstall.sha512
+            }
+        ]
+    }
+    async run(ctx: InstallContext) {
+        await ctx.phone.waitFor('fastboot')
+        const fastboot = await ctx.phone.getFastboot()
+
+        // Cancel snapshot update if in progress on devices which support it on all bootloader versions
+        let snapshotStatus = await fastboot.getVariable("snapshot-update-status");
+        if (snapshotStatus !== null && snapshotStatus !== "none") {
+            await fastboot.runCommand("snapshot-update:cancel");
+        }
+
+
+        await fastboot.flashFactoryZip(ctx.files['rom'], true, () => {
+            logger.log('onReconnected')
+        }, (action, item, progress) => {
+            this.call('progress', action, item, progress)
+        })
+        
+
+        // See https://android.googlesource.com/platform/system/core/+/eclair-release/fastboot/fastboot.c#532
+        // for context as to why the trailing space is needed.
+        this.call('progress', 'disable', 'uart')
+        await fastboot.runCommand("oem uart disable ");
+
+        if (ctx.model.isQualcommSoc) {
+            logger.log("Erasing apdp...");
+            this.call('progress', 'erase', 'apdp')
+            // Both slots are wiped as even apdp on an inactive slot will modify /proc/cmdline
+            await fastboot.runCommand("erase:apdp_a");
+            await fastboot.runCommand("erase:apdp_b");
+        }
+
+        const legacyQualcommDevices = ["sunfish", "coral", "flame", "bonito", "sargo", "crosshatch", "blueline"];
+        if (ctx.model.isQualcommSoc && legacyQualcommDevices.includes(ctx.model.codename)) {
+            logger.log("Erasing msadp...");
+            this.call('progress', 'erase', 'msadp')
+            await fastboot.runCommand("erase:msadp_a");
+            await fastboot.runCommand("erase:msadp_b");
+        }
+
+        if (ctx.model.isTensorSoc) {
+            logger.log("Disabling FIPS...");
+            this.call('progress', 'disable', 'fips')
+            await fastboot.runCommand("erase:fips");
+            logger.log("Erasing DPM...");
+            this.call('progress', 'erase', 'dpm')
+            await fastboot.runCommand("erase:dpm_a");
+            await fastboot.runCommand("erase:dpm_b");
+        }
+    }
+}
+
+export class FastbootLockStep extends Step {
+    constructor() {
+        super('fastboot_lock')
+    }
+
+    async run(ctx: InstallContext) {
+        await ctx.phone.waitFor('fastboot')
+        const fastboot = await ctx.phone.getFastboot()
+
+        try {
+            await fastboot.runCommand("flashing lock")
+        } catch(err) {
+            logger.error(err)
+        }
+        this.call('confirmLock')
+        await fastboot.waitForConnect()
     }
 }

@@ -45,7 +45,7 @@ async function getCachedOrDownload(
         const stored = await store.getBlob('file__'+url)
         logger.log("found cached: "+url)
         abortSignal?.throwIfAborted()
-        onProgress({
+        if(onProgress) onProgress({
             loaded: stored.size,
             total: stored.size,
             progress: 1,

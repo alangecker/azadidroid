@@ -1,4 +1,5 @@
 import { Adb } from '@yume-chan/adb';
+import { Consumable } from '@yume-chan/stream-extra'
 
 const ADB_EXIT_SUCCESS = 'DONEDONE'
 
@@ -32,8 +33,7 @@ export async function adbSideload(device: Adb, data: Blob, onProgress: (percenta
     
             const end = Math.min(offset + ADB_SIDELOAD_CHUNK_SIZE, data.size)
             const chunk = data.slice(offset, end)
-            await writer.write(new Uint8Array(await chunk.arrayBuffer()))
-    
+            await writer.write(new Consumable(new Uint8Array(await chunk.arrayBuffer())))
             transmittedBytes += chunk.size
     
             onProgress(transmittedBytes/data.size*100 * 0.99)

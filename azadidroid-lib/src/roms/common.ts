@@ -23,13 +23,19 @@ export type RomVersion = {
     sha512?: string
 }
 
+
+export enum InstallationMethod  {
+    Recovery,
+    Bootloader,
+}
 export abstract class Rom {
     abstract name: string
     abstract logo: string
     abstract description: string
     abstract link: string
-    installVia: 'recovery'|'bootloader' = 'recovery'
+    installVia: InstallationMethod = InstallationMethod.Recovery
 
+    async isBootloaderRelockSupported(codename: string): Promise<boolean> { return false }
     abstract getAvailableVersions(codename: string): Promise<RomVersion[]>
 }
 

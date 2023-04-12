@@ -1,7 +1,7 @@
 
 import { ListrTaskWrapper } from 'listr2'
 import type { InstallContext, Step } from 'azadidroid-lib/src/steps/base.js'
-import { RebootOdinToRecoveryStep, TWRPInstallROMStep } from 'azadidroid-lib/src/steps/flash.js'
+import { FastbootBootRecoveryStep, FastbootFlashZipStep, FastbootLockStep, RebootOdinToRecoveryStep, TWRPInstallROMStep } from 'azadidroid-lib/src/steps/flash.js'
 import { AllowOEMUnlockStep, AndroidVersionInvalidError, ConfirmAndroidVersionStep } from 'azadidroid-lib/src/steps/requirements.js'
 import { FastbootUnlockStep } from 'azadidroid-lib/src/steps/prepare.js'
 import chalk from 'chalk'
@@ -49,6 +49,14 @@ const handlers: Handler[] = [
             }
         },
         {
+            step: FastbootLockStep,
+            register(step, task, ctx) {
+                step.on('confirmLock', () => {
+                    task.output = 'At this point the device may display on-screen prompts which will require interaction to continue the process of locking the bootloader. Please take whatever actions the device asks you to to proceed.'
+                })
+            }
+        },
+        {
             step: RebootOdinToRecoveryStep,
             register(step, task, ctx) {
                 task.output = chalk.bold('You have to manually reboot into recovery:')
@@ -59,11 +67,34 @@ const handlers: Handler[] = [
             }
         },
         {
+            step: FastbootBootRecoveryStep,
+            register(step, task, ctx) {
+                step.on('stillWaitingForRecovery', () => {
+                    task.output = `Recovery booted, but it doesn't get detected here? try reconnecting the cable or switching "MTP" mode under "Storage"`
+                })
+            }
+        }
+        {
             step: TWRPInstallROMStep,
             register(step, task, ctx) {
                 const initialTitle = task.title
                 step.on('progress', (percentage) => {
                     task.title = `${initialTitle} (${Math.round(percentage)}%)`
+                })
+            }
+        },
+        {
+            step: FastbootFlashZipStep,
+            register(step, task, ctx) {
+                const initialTitle = task.title
+                step.on('progress', (action: string, item: string, progress = null) => {
+                    if(action === 'reboot') {
+                        task.title == `${initialTitle} (rebooting...)`
+                    } else if(progress === null) {
+                        task.title = `${initialTitle} (${action} ${item}...)`
+                    } else {
+                        task.title = `${initialTitle} (${action} ${item}... ${Math.round(progress*100)}%)`
+                    }
                 })
             }
         }

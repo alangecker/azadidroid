@@ -45,6 +45,11 @@ class FileReader {
         this.result = await blob.arrayBuffer()
         this.onload({ target: this })
     }
+    async readAsText(blob: Blob, encoding = 'utf-8') {
+        this.result = await blob.text()
+        
+        this.onload({ target: this })
+    }
 }
 window.FileReader = FileReader
 
@@ -106,6 +111,7 @@ class Worker {
 		}
 		this.codec = createCodec(codecConstructor, options, message.config);
     }
+
 }
 window.Worker = Worker
 

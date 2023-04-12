@@ -3,15 +3,16 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@yume-chan/adb": "^0.0.18",
-    "@yume-chan/adb-backend-webusb": "^0.0.18",
+    "@yume-chan/adb": "^0.0.19",
+    "@yume-chan/adb-backend-webusb": "^0.0.19",
+    "@yume-chan/stream-extra": "^0.0.19",
     "android-fastboot": "file:../fastboot.js",
     "axios": "^1.2.1",
     "heimdall.js": "file:../heimdall.js",
     "js-yaml": "^4.1.0",
     "jssha": "^3.3.0",
     "signale-logger": "^1.5.1",
-    "usb": "2.5.2-alpha.1"
+    "usb": "2.9.0"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",

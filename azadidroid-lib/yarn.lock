@@ -57,32 +57,32 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
   integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
 
-"@types/w3c-web-usb@1.0.6", "@types/w3c-web-usb@^1.0.6":
+"@types/w3c-web-usb@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/w3c-web-usb/-/w3c-web-usb-1.0.6.tgz#5d8560d0d9f585ffc80865bc773db7bc975b680c"
   integrity sha512-cSjhgrr8g4KbPnnijAr/KJDNKa/bBa+ixYkywFRvrhvi9n1WEl7yYbtRyzE6jqNQiSxxJxoAW3STaOQwJHndaw==
 
-"@yume-chan/adb-backend-webusb@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@yume-chan/adb-backend-webusb/-/adb-backend-webusb-0.0.18.tgz#9ff052e232af54915a823d15cfab657c984a5629"
-  integrity sha512-TlxT0OaCavt3CALY6IO+eZ/Sp3AtI6gm6A8fuCPR/Ti2H9lktm7F5+SoMfTGpz3WYdVw3H8U/Nj3hTIWuhUTOw==
+"@yume-chan/adb-backend-webusb@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@yume-chan/adb-backend-webusb/-/adb-backend-webusb-0.0.19.tgz#dba924fb65ca6f1ec90ea0692f5de4ae0256a71f"
+  integrity sha512-jAyHsI4wf8HN3CsKPJwsEW4VPwWiuh28GumPFCpZPNqpC7jk1sXQCuD5SMLtJC+xtCVUIcnuNfdwtov2PaupoA==
   dependencies:
     "@types/w3c-web-usb" "^1.0.6"
-    "@yume-chan/adb" "^0.0.18"
-    "@yume-chan/stream-extra" "^0.0.18"
-    "@yume-chan/struct" "^0.0.18"
+    "@yume-chan/adb" "^0.0.19"
+    "@yume-chan/stream-extra" "^0.0.19"
+    "@yume-chan/struct" "^0.0.19"
     tslib "^2.4.1"
 
-"@yume-chan/adb@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@yume-chan/adb/-/adb-0.0.18.tgz#fc79c9e27619ad0521419d8ca53d000faa8dd553"
-  integrity sha512-NoKqTG4wRsF2Teya/yM61sVKXfLONsnESXlSukYcZsbwX0ysBkoGF7bc5A1NFLebBCMhUrFbln5xuNbXrQvQtA==
+"@yume-chan/adb@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@yume-chan/adb/-/adb-0.0.19.tgz#4b346e3836800b040bfa2f6db8dc222627857ba9"
+  integrity sha512-IqZ0ZuBXiZPggZu1Fw0bp8haAJpHn5FrO4Ot84iZopa8nG0a1KwcdxjXuXbSbv2jG5aqE25EkeCYXj4oGIMCMQ==
   dependencies:
     "@yume-chan/async" "^2.2.0"
-    "@yume-chan/dataview-bigint-polyfill" "^0.0.18"
-    "@yume-chan/event" "^0.0.18"
-    "@yume-chan/stream-extra" "^0.0.18"
-    "@yume-chan/struct" "^0.0.18"
+    "@yume-chan/dataview-bigint-polyfill" "^0.0.19"
+    "@yume-chan/event" "^0.0.19"
+    "@yume-chan/stream-extra" "^0.0.19"
+    "@yume-chan/struct" "^0.0.19"
     tslib "^2.4.1"
 
 "@yume-chan/async@^2.2.0":
@@ -92,37 +92,37 @@
   dependencies:
     tslib "^2.3.1"
 
-"@yume-chan/dataview-bigint-polyfill@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@yume-chan/dataview-bigint-polyfill/-/dataview-bigint-polyfill-0.0.18.tgz#85c15b13ec8ae156273ffffcfb7f442c89808260"
-  integrity sha512-+DEE92D4JE3T/+nK2xE2ESAX3nTHlLwBmcqI7uS7SPPw8eGkJWU6LrlDl/IdHt8ajHre2NF75wma6rWIJasNgQ==
+"@yume-chan/dataview-bigint-polyfill@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@yume-chan/dataview-bigint-polyfill/-/dataview-bigint-polyfill-0.0.19.tgz#29e4daad4882443e58209fe070945d26ed26c951"
+  integrity sha512-q4B4lqQq2xnA5+Psu6UKiogJm2POh0qO323pJJy8WPZ+aCFel1Y3t2yWmDpvOBLuQK+0ovIGq/w2fhtqOVb/gA==
   dependencies:
     tslib "^2.4.1"
 
-"@yume-chan/event@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@yume-chan/event/-/event-0.0.18.tgz#e31b9e05be56c5f253e99a0492ac85695e68eda3"
-  integrity sha512-hF6Fqj7Y7ugSTptMvGMYkHdJhZMJLrcuUq7mvkcXn7ss5kT80ne6YeG9jEXiwh9/QmLu49Hawl7Gx31i4okL4Q==
+"@yume-chan/event@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@yume-chan/event/-/event-0.0.19.tgz#608db3e2989cf1f9f551f40705945ba7be70feb3"
+  integrity sha512-fDJo5eSpl3nnrpi7EoB/3iBQ1SX4+YaAZCpcjjPwFiQAES6Vev/wsnkladN2gqUmig/pLKES3G1VCu4M9VUvaQ==
   dependencies:
     "@yume-chan/async" "^2.2.0"
     tslib "^2.4.1"
 
-"@yume-chan/stream-extra@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@yume-chan/stream-extra/-/stream-extra-0.0.18.tgz#9aee5da58487d17b9a3ed9726777cf54fb4a4444"
-  integrity sha512-rG8niI7ESxMNvc8oGObA+MY4cnCfCi2Ry0Albhuy7MAMNbF4Wwvzee0DjEJgVs6Fk1334VUze7/Dsd/a/352uA==
+"@yume-chan/stream-extra@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@yume-chan/stream-extra/-/stream-extra-0.0.19.tgz#fa390de6ab17493f00bee7122c3b104b63b1adb9"
+  integrity sha512-rwNgOol90ddW4aBIm9HJWA0vMLd5A1d/9B0Q2vylqe1zcvOr2a83+1gaHbnbFZX9OY2Hh/WRlX8rW1s5c3nytQ==
   dependencies:
     "@yume-chan/async" "^2.2.0"
-    "@yume-chan/struct" "^0.0.18"
+    "@yume-chan/struct" "^0.0.19"
     tslib "^2.4.1"
     web-streams-polyfill "^4.0.0-beta.3"
 
-"@yume-chan/struct@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@yume-chan/struct/-/struct-0.0.18.tgz#6bab13d213eba75b64209fd1ceb1ac3396d85c5f"
-  integrity sha512-tKvtcQ3ARXypcAOMuubWnBDoAdWQZUpcMRP+kcn8Mt7OAY7VJ4IgFpmSQ4NEQVnIMUyMyz4jMs6owhITEoQzKQ==
+"@yume-chan/struct@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@yume-chan/struct/-/struct-0.0.19.tgz#19f628a57e2b4cc777e220ed584483d94f61fbd9"
+  integrity sha512-WUCn+ZqgJmQfUJaYsZZdWa2+YTHJd22iNUbLPP3AKEnjZbZHJiSVIbVNg232GxfEPrwDi68+KA5Q44i+lu3Exg==
   dependencies:
-    "@yume-chan/dataview-bigint-polyfill" "^0.0.18"
+    "@yume-chan/dataview-bigint-polyfill" "^0.0.19"
     tslib "^2.4.1"
 
 "@zip.js/zip.js@2.2.27":
@@ -341,12 +341,12 @@ moment-timezone@^0.5.31:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
   integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
-node-addon-api@^4.2.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-4.3.0.tgz#52a1a0b475193e0928e98e0426a0d1254782b77f"
-  integrity sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==
+node-addon-api@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-6.0.0.tgz#cfb3574e6df708ff71a30db6c4762d9e06e11c27"
+  integrity sha512-GyHvgPvUXBvAkXa0YvYnhilSB1A+FRYMpIVggKzPZqdaZfevZOuzfWzyvgzOwRLHBeo/MMswmJFsrNF4Nw1pmA==
 
-node-gyp-build@^4.3.0:
+node-gyp-build@^4.5.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.6.0.tgz#0c52e4cbf54bbd28b709820ef7b6a3c2d6209055"
   integrity sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==
@@ -457,14 +457,14 @@ typescript@^4.9.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.4.tgz#a2a3d2756c079abda241d75f149df9d561091e78"
   integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==
 
-usb@2.5.2-alpha.1:
-  version "2.5.2-alpha.1"
-  resolved "https://registry.yarnpkg.com/usb/-/usb-2.5.2-alpha.1.tgz#86d62d22f3bdd0c589ea4963d5826fec96133c49"
-  integrity sha512-N9fPkrd0zYHYkhJa7NrtdMV2AYDIkB2+ur22ih/2mBJ7bFUzTLb8qfGOgxtKfksbqeBmWuaDLqJZnAHnf8CFDw==
+usb@2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/usb/-/usb-2.9.0.tgz#8ae3b175f93bee559400bff33491eee63406b6a2"
+  integrity sha512-G0I/fPgfHUzWH8xo2KkDxTTFruUWfppgSFJ+bQxz/kVY2x15EQ/XDB7dqD1G432G4gBG4jYQuF3U7j/orSs5nw==
   dependencies:
-    "@types/w3c-web-usb" "1.0.6"
-    node-addon-api "^4.2.0"
-    node-gyp-build "^4.3.0"
+    "@types/w3c-web-usb" "^1.0.6"
+    node-addon-api "^6.0.0"
+    node-gyp-build "^4.5.0"
 
 v8-compile-cache-lib@^3.0.1:
   version "3.0.1"

@@ -26,12 +26,14 @@ export default {
         'confirm_android_version': 'Verify current android version',
         'allow_oem_unlock': 'Allow OEM Unlock',
         'fastboot_unlock': 'Unlock Bootloader',
+        'fastboot_lock': 'Relocking Bootloader',
         'wait_for_bootloader': 'Reboot into the bootloader',
         'odin_flash_recovery': 'Flash recovery',
         'fastboot_boot_recovery': 'Boot recovery',
         'reboot_to_recovery': 'Reboot into recovery',
         'twrp_wipe': 'Wipe all data',
         'twrp_install_rom': 'Installing ROM',
+        'fastboot_flash_zip': 'Installing ROM',
         'twrp_finish': 'Finishing up'
     }
 }

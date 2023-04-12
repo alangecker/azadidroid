@@ -1,5 +1,5 @@
 import { axios } from '../utils/fetch.js'
-import { Rom, RomStability, RomVersion, versionToDate } from './common.js'
+import { InstallationMethod, Rom, RomStability, RomVersion, versionToDate } from './common.js'
 
 
 export class GrapheneOS extends Rom {
@@ -8,8 +8,11 @@ export class GrapheneOS extends Rom {
     description = ''
     link = ''
 
-    installVia = 'bootloader' as 'bootloader'
+    installVia = InstallationMethod.Bootloader
 
+    async isBootloaderRelockSupported(codename: string) {
+        return true
+    }
 
     async getAvailableVersions(codename: string): Promise<RomVersion[]> {
         const res = await axios.get(`https://releases.grapheneos.org/${codename}-stable`, {

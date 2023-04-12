@@ -1,5 +1,5 @@
 import { axios, bypassCORS } from '../utils/fetch.js'
-import { Rom, RomStability, RomVersion } from './common.js'
+import { InstallationMethod, Rom, RomStability, RomVersion } from './common.js'
 import * as yaml from 'js-yaml'
 
 
@@ -8,6 +8,12 @@ export class CalyxOS extends Rom {
     logo = ''
     description = ''
     link = ''
+
+    installVia = InstallationMethod.Bootloader
+
+    async isBootloaderRelockSupported(codename: string) {
+        return true
+    }
 
     async getAvailableVersions(codename: string): Promise<RomVersion[]> {
         const res = await axios.get(`https://gitlab.com/CalyxOS/calyxos.org/-/raw/main/pages/_data/downloads.yml`, {

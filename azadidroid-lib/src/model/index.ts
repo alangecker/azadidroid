@@ -36,18 +36,15 @@ export interface LineageDeviceData {
     required_bootloader?: string[]
     is_unlockable?: boolean
     models?: string[]
+    soc: string
 
     // lineage specific
     maintainers?: string[]
 }
 
 const grapheneDevices = {
-    // currently missing from lineage
-    "cheetah": "Pixel 7 Pro",
-    "panther": "Pixel 7",
-    "bluejay": "Pixel 6a",
-    "raven": "Pixel 6 Pro",
-    "oriole": "Pixel 6",
+    // missing from lineage
+    // (currently none)
 }
 const LINEAGE_WIKI_BRANCH = 'master'
 
@@ -67,7 +64,8 @@ export class ModelInfos {
                         codename: codename,
                         vendor: 'Google',
                         install_method: 'fastboot_nexus',
-                        custom_unlock_cmd: 'fastboot flashing unlock'
+                        custom_unlock_cmd: 'fastboot flashing unlock',
+                        soc: 'Google Tensor'
                     })
                 } else {
                     // TODO: there are some devicestos not in the lineage wiki
@@ -142,9 +140,15 @@ export class ModelInfos {
     get unlockCommand() {
         return this.deviceData.custom_unlock_cmd?.replace(/^fastboot /, '') || 'oem unlock'
     }
-    get recoveryPartitionName() {
-        return this.deviceData.recovery_partition_name || 'boot'
+    get isQualcommSoc() {
+        return this.deviceData.soc?.includes('Qualcomm')
     }
+    get isTensorSoc() {
+        return this.deviceData.soc?.includes('Google Tensor')
+    }
+    // get recoveryPartitionName() {
+    //     return this.deviceData.recovery_partition_name || 'boot'
+    // }
     get unsupportedFeatures() {
         const SUPPORTED = {
             instalMethod: [
