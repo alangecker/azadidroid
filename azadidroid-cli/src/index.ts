@@ -129,7 +129,7 @@ async function main() {
             break
         } catch(err) {
             console.log(err)
-            if(err.message?.match(/no devices found/)) {
+            if(err.message?.match(/no devices found|No device selected/)) {
                 printNoDeviceErrror()
                 await enterToTryAgain()
             } else if(err.message?.match(/LIBUSB_ERROR_BUSY/)) {

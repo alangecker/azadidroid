@@ -95,8 +95,25 @@ export async function download(
     )
     abortSignal?.throwIfAborted()
 
+    // TODO: check sum on download to speed up installation
+    // if(file.sha256) {
+    //     let expectedHash = file.sha256
+    //     if(!expectedHash.match(/^[0-9a-f]+$/)) {
+    //         expectedHash = await getHashFromUrl(file.sha256, filename, file.additionalHeaders)
+    //     }
+    //     const hash = await calculateHash(data, "SHA-256")
         
+    //     if(expectedHash !== hash) throw new DownloadVerificationError
+    // }
     
+    // if(file.sha512) {
+    //     let expectedHash = file.sha512
+    //     if(!expectedHash.match(/^[0-9a-f]+$/)) {
+    //         expectedHash = await getHashFromUrl(file.sha512, filename, file.additionalHeaders)
+    //     }
+    //     const hash = await calculateHash(data, "SHA-512")
+    //     if(expectedHash !== hash) throw new DownloadVerificationError
+    // }
     return data
 }
 

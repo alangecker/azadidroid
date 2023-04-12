@@ -1,3 +1,6 @@
 [submodule "heimdall.js"]
 	path = heimdall.js
 	url = https://github.com/alangecker/heimdall.js.git
+[submodule "fastboot.js"]
+	path = fastboot.js
+	url = https://github.com/alangecker/fastboot.js.git

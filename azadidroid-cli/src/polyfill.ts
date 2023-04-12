@@ -8,10 +8,6 @@ window.navigator = {
 /**
  * required by fastboot.js
  */
-window.requestAnimationFrame = (callback: Function) => {
-    process.nextTick(callback)
-}
-
 import { Blob as NodeBlob } from 'buffer'
 window.Blob = NodeBlob
 

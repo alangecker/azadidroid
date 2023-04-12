@@ -265,7 +265,7 @@ export default class USBPhone implements EventTarget {
     }
     async getFastboot() {
         fastboot.setDebugLevel(3)
-        const device = new fastboot.FastbootDevice;
+        const device = new fastboot.FastbootDevice(webusb);
         device._registeredUsbListeners = true
         device.device = this.device
         device.epIn = this.endpointIn.endpointNumber

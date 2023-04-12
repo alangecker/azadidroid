@@ -73,7 +73,7 @@ const handlers: Handler[] = [
                     task.output = `Recovery booted, but it doesn't get detected here? try reconnecting the cable or switching "MTP" mode under "Storage"`
                 })
             }
-        }
+        },
         {
             step: TWRPInstallROMStep,
             register(step, task, ctx) {

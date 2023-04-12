@@ -15,6 +15,8 @@ export const logger = new signale.Signale({
     stream: defaultWriter as any,
 });
 
+// logger.debug = () => {}
+
 export async function setLogOutput(stream?: WritableStream|NodeJS.WritableStream) {
     if(stream) {
         // @ts-ignore

@@ -54,7 +54,7 @@ declare module 'android-fastboot' {
          * Create a new fastboot device instance. This doesn't actually connect to
          * any USB devices; call {@link connect} to do so.
          */
-        constructor()
+        constructor(usb?: USB)
 
 
         /**
