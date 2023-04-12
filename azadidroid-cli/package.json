@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "scripts": {
+    "azadidroid":"ts-node src/index.ts"
+  },
   "dependencies": {
     "@peculiar/webcrypto": "^1.4.1",
     "@zip.js/zip.js": "2.2.27",
