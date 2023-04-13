@@ -41,8 +41,9 @@ async function getCachedOrDownload(
     abortSignal: AbortSignal,
     additionalHeaders: any
 ): Promise<Blob> {
+    const cacheKey = 'file__'+url.split('?')[0]
     try {
-        const stored = await store.getBlob('file__'+url)
+        const stored = await store.getBlob(cacheKey)
         logger.log("found cached: "+url)
         abortSignal?.throwIfAborted()
         if(onProgress) onProgress({
@@ -73,7 +74,7 @@ async function getCachedOrDownload(
         // for consistent handling with node we still convert the response to an blob
         if(!(res.data instanceof Blob)) res.data = new Blob([res.data])
 
-        await store.set('file__'+url, res.data)
+        await store.set(cacheKey, res.data)
         return res.data
     }
 }

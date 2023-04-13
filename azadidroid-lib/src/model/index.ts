@@ -91,7 +91,7 @@ export class ModelInfos {
     get models() {
         return this.deviceData?.models || []
     }
-    get installMethod(): 'heimdall'|'fastboot_nexus'|'fastboot_xiaomi' {
+    get installMethod(): 'heimdall'|'fastboot_nexus'|'fastboot_xiaomi'|'fastboot_motorola' {
         if(!this.deviceData.install_method) {
             throw new Error(`no 'install_method' specified for ${this.codename}`)
         }
@@ -154,7 +154,8 @@ export class ModelInfos {
             instalMethod: [
                 'heimdall',
                 'fastboot_nexus',
-                'fastboot_xiaomi'
+                'fastboot_xiaomi',
+                'fastboot_motorola',
             ],
             beforeInstall: [
                 'needs_specific_android_fw'

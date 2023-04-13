@@ -6,6 +6,7 @@ import { GrapheneOS } from "./GrapheneOS.js";
 import { eOS } from "./eOS.js";
 import { ProtonAOSP } from "./ProtonAOSP.js";
 import { IodeOS } from "./IodeOS.js";
+import { crDroid } from "./crDroid.js";
 export { Rom, Version } from './common.js'
 
 export const roms: {[name: string]: Rom} = {
@@ -16,6 +17,7 @@ export const roms: {[name: string]: Rom} = {
     eos: new eOS(),
     protonaosp: new ProtonAOSP(),
     iode: new IodeOS(),
+    crdoid: new crDroid(),
 }
 
 export function loadRomVersions(codename: string) {

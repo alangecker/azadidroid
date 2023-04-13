@@ -44,6 +44,10 @@ export class FastbootUnlockStep extends Step {
             return
         }
 
+        if(ctx.model.installMethod == 'fastboot_motorola') {
+            throw new Error('unlocking motorola devices is not supported yet')
+        }
+
         await fastboot.runCommand(ctx.model.unlockCommand)
         this.call('confirmUnlock')
         await fastboot.waitForConnect();

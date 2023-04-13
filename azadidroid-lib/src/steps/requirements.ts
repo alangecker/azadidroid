@@ -71,6 +71,12 @@ export class AllowOEMUnlockStep extends Step {
             }  else {
                 const fastboot = await ctx.phone.getFastboot()
                 await fastboot.reboot('bootloader', true)
+
+                const isUnlocked = await fastboot.getVariable('unlocked')
+                if(isUnlocked === 'yes') {
+                    // device is already unlocked
+                    return
+                }
                 const res = (await fastboot.runCommand('flashing get_unlock_ability')).text.trim()
                 logger.debug('flashing get_unlock_ability response', res)
                 if(res === 'get_unlock_ability: 1') {

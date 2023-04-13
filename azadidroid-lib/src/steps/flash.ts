@@ -78,7 +78,7 @@ export class FastbootBootRecoveryStep extends Step {
 
         await ctx.phone.waitFor('adb')
         // sometimes TWRP disconnects again shortly
-        await sleep(1000)
+        await sleep(3000)
         
         abortSignal.throwIfAborted()
         await ctx.phone.waitFor('adb')

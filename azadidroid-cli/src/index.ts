@@ -95,10 +95,12 @@ async function adbMatchingModels(adb: AdbWrapper) {
     const adbCodename = adb.product
     const model = adb.model.replace(/^(SM|G)-/, '')
     const device = await adb.getProp('ro.product.device')
+    const bootDevice = await adb.getProp('ro.boot.device')
     return getModelSummaries()
         .filter(m => 
                 m.code == adbCodename ||
                 m.code === device ||
+                m.code === bootDevice ||
                 m.models.map(s => s.replace(/^(SM|G)-/, '')).includes(model) ||
                 m.models.map(s => s.replace(/^(SM|G)-/, '')).includes(device) ||
                 m.name.endsWith(model) ||

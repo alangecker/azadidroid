@@ -16,7 +16,9 @@ export async function adbSideload(device: Adb, data: Blob, onProgress: (percenta
         while(true) {
             const res = await reader.read()
             if(res.done) {
-                throw new Error('reader unexpectedly ended')
+                await socket.close().catch(() => {})
+
+                return
             }
             // TODO: replace with something cross platform compatible
             const resStr = Buffer.from(res.value).toString('ascii')
