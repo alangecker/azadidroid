@@ -212,7 +212,7 @@ async function main() {
     }
 
     // generate list of required steps
-    const steps = await getSteps(model, rom)
+    const steps = await getSteps(model, rom, version)
 
     // collect files
     const filesToDownload: IDownloadRequest[] = []

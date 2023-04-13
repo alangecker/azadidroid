@@ -13,6 +13,7 @@ it is an early version. Lot's of devices probably aren't supported yet.
 - CalyxOS
 - Proton AOSP
 - DivestOS
+- iodéOS
 
 
 ## Setup

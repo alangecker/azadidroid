@@ -1,5 +1,5 @@
 import { ModelInfos } from "../model/index.js";
-import { InstallationMethod } from "../roms/common.js";
+import { InstallationMethod, RomVersion } from "../roms/common.js";
 import { Rom } from "../roms/index.js";
 import { Step } from "./base.js";
 import {
@@ -18,7 +18,7 @@ import { FastbootUnlockStep, WaitForBootloaderStep } from "./prepare.js";
 import { AllowOEMUnlockStep, ConfirmAndroidVersionStep } from "./requirements.js";
 
 
-export async function getSteps(model: ModelInfos, rom: Rom) {
+export async function getSteps(model: ModelInfos, rom: Rom, romVersion: RomVersion) {
     const steps = {
         requirements: [] as Step[],
         prepare: [] as Step[],
@@ -33,7 +33,8 @@ export async function getSteps(model: ModelInfos, rom: Rom) {
     }
     steps['prepare'].push(new WaitForBootloaderStep)
     
-    if(rom.installVia == InstallationMethod.Recovery) {
+    const installVia = romVersion.installVia || rom.installVia
+    if(installVia == InstallationMethod.Recovery) {
         if(model.installMethod == 'heimdall') {
             
             if(model.beforeRecoveryInstall == 'samsung_exynos9xxx' || model.beforeRecoveryInstall == 'samsung_sm7125') {
@@ -61,6 +62,9 @@ export async function getSteps(model: ModelInfos, rom: Rom) {
         steps['install'].push(new TWRPInstallROMStep)
         steps['install'].push(new TWRPFinishStep)
     } else {
+        if(model.installMethod == 'heimdall') {
+            throw new Error('currently it is only possible to install ROMs via Recovery on Samsung devices')
+        }
         steps['prepare'].push(new FastbootUnlockStep)
 
         steps['install'].push(new FastbootFlashZipStep)

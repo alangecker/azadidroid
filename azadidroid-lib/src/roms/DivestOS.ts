@@ -42,7 +42,7 @@ export class DivestOS extends Rom {
     link = ''
 
     async getAvailableVersions(codename: string): Promise<RomVersion[]> {
-        const res = await axios.get(`https://gitlab.com/divested-mobile/divestos-website/-/raw/master/update_device_info.sh`, {
+        const res = await axios.get(`https://gitlab.com/divested-mobile/mirror.divestos.org/-/raw/master/update_device_info.sh`, {
             headers: {
                 'Accept-Encoding': 'gzip'
             }
@@ -69,7 +69,7 @@ export class DivestOS extends Rom {
 
         if(!filtered.length) return []
 
-        const page = await axios(bypassCORS('https://divestos.org/index.php?page=devices&base=LineageOS&golden=false'), {
+        const page = await axios(bypassCORS('https://divestos.org/pages/devices'), {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0',
                 'Accept-Encoding': 'gzip'

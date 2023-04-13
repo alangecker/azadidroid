@@ -63,7 +63,7 @@ const handlers: Handler[] = [
                     + "\n * Turn off your device (I know, it is probably advicing you against that, but it's really okay!)"
                     + "\n * "+ctx.model.bootIntoRecoveryInstructions?.replace(/<kbd>(.*?)<\/kbd>/g, (_,m) => chalk.underline(m))
                     + "\n"
-                task.output = "If you device is in recovery but still doesn't show up, try unplugging and replugging the USB cable"
+                    + "\nIf you device is in recovery but still doesn't show up, try unplugging and replugging the USB cable"
             }
         },
         {

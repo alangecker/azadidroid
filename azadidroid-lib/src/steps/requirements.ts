@@ -81,6 +81,9 @@ export class AllowOEMUnlockStep extends Step {
                     logger.debug('unknown response. we just assume, that OEM is unlocked') // TODO
                 }
             }
+        } else if(ctx.phone.deviceMode === DeviceMode.ODIN) {
+            // TODO: implement checking of unlock status in download mode
+            return
         } else {
             while(true) {
                 try {

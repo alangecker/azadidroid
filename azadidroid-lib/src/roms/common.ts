@@ -21,12 +21,13 @@ export type RomVersion = {
     date?: string
     sha256?: string
     sha512?: string
+    installVia?: InstallationMethod
 }
 
 
 export enum InstallationMethod  {
-    Recovery,
-    Bootloader,
+    Recovery = 'recovery',
+    Bootloader = 'bootloader',
 }
 export abstract class Rom {
     abstract name: string

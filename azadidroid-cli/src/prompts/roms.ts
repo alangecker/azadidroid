@@ -15,7 +15,7 @@ export async function pickRom(codename: string) {
     let options: Array<{rom: Rom, version: RomVersion, label: string}> = []
     for(let r of roms) {
         const versions = await r.versions
-        let str = ' * ' + chalk.bold(r.rom.name) + ' '
+        let str = ' * ' + chalk.bold(r.rom.name) + ' '.repeat(r.rom.name.length > 13 ? 0 : 13 - r.rom.name.length)
         if(versions.length) {
             str += logSymbols.success + ' available'
         } else {

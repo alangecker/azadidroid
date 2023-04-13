@@ -226,6 +226,7 @@ export class TWRPInstallROMStep extends Step {
         await adb.sideload(ctx.files['rom'], (percentage) => {
             this.call('progress', percentage)
         })
+        this.call('progress', 100)
         logger.debug('sideload done')
 
         // wait until phone reconnected back in normal adb mode
