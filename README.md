@@ -3,6 +3,8 @@
 
 Automated installation of google free Android distributions - easier than ever before!
 
+This is fully written in JavaScript, which allows us in the next step to port it to the browser (using WebUSB) to make it even easier for people to get a google free and updated android on their phone.
+
 ## Supported 
 it is an early version. Lot's of devices probably aren't supported yet.
 
