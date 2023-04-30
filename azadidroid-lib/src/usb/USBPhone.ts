@@ -76,6 +76,8 @@ export default class USBPhone implements EventTarget {
     private endpointOut: USBEndpoint
     private isClosed = false
 
+    private _odinDevice: OdinDevice
+
     get currentDevice(): USBDevice|null { return this.isConnected ? this.device : null }
     get deviceMode() { 
         if(!this.isConnected) return 'unknown'
@@ -258,10 +260,13 @@ export default class USBPhone implements EventTarget {
         return this._adb
     }
     async getOdin() {
-        const device = new OdinDevice(this.device as any)
-        device.setEndpoints(this.endpointIn, this.endpointOut)
-        await device.initialise()
-        return device
+        if(this._odinDevice) return this._odinDevice
+
+        this._odinDevice = new OdinDevice(this.device as any)
+        this._odinDevice.setEndpoints(this.endpointIn, this.endpointOut)
+        await this._odinDevice.initialise()
+
+        return this._odinDevice
     }
     async getFastboot() {
         fastboot.setDebugLevel(3)
