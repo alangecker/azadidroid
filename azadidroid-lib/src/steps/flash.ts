@@ -11,7 +11,16 @@ async function getRecoveryFile(ctx: InstallContext): Promise<IDownloadRequest> {
     const codename = ctx.model.recoveryCodename
     const res = await axios(bypassCORS(`https://dl.twrp.me/${codename}/`))
     const version = res.data.match(/">(twrp-(.*?).img)<\/a>/)
-    const filename = version[1]
+    let filename = version[1]
+
+    if(codename === 'herolte' && filename === 'twrp-3.7.0_9-0-herolte.img') {
+        // this version is known to be broken, no fix yet available
+        // https://forum.xda-developers.com/t/recovery-exynos-official-twrp-for-galaxy-s7-herolte.3333770/post-87650111
+
+        // rather use the last known good version
+        filename = 'twrp-3.6.2_9-0-herolte.img'
+    }
+
     return {
         key: "recovery",
         title: "Recovery (TWRP)",
