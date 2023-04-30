@@ -310,21 +310,20 @@ async function main() {
             collapseErrors: false,
         }
     })
-    try {
-        await list.run()
-        console.log('done')
-        await phone.close()
 
-        // TODO: node process should exit by itself.
-        // there is something still running in the backend...
-        process.exit(0)
-    } catch(err) {
-        logToConsole()
-        logger.error(err)
-        console.error(err)
-        process.exit(1)
-    }
+    await list.run()
+    console.log('done')
+    await phone.close()
+
+    // TODO: node process should exit by itself.
+    // there is something still running in the backend...
+    process.exit(0)
 }
 
-main()
+main().catch((err) => {
+    logToConsole()
+    logger.error(err)
+    console.error(err)
+    process.exit(1)
+})
 
