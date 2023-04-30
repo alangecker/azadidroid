@@ -43,7 +43,27 @@ export class OdinFlashRecoveryStep extends Step {
         ]
     }
     async run(ctx: InstallContext, abortSignal: AbortSignal) {
+
+        // if we are in recovery and recovery already matches the version
+        // we would install, skip the whole step
+        if(ctx.phone.deviceMode === DeviceMode.ADB) {
+            const adb = await ctx.phone.getAdb()
+            if(adb.isRecovery) {
+                const twrpVersion = await adb.getProp('ro.twrp.version')
+                
+                // TODO: avoid fetching recovery again
+                const files = await this.getFilesToDownload(ctx)
+                const filename = files[0]?.fileName
+                if(filename && twrpVersion?.trim() && filename.startsWith('twrp-'+twrpVersion)) {
+                    logger.info("there is already the TWRP version installed we would going to install. skipping this step")
+                    return
+                }
+            }
+            logger.debug('reboot into odin...')
+            await adb.reboot('download')
+        }
         await ctx.phone.waitFor('odin')
+
         const odin = await ctx.phone.getOdin()
         abortSignal.throwIfAborted()
         logger.debug('beginn session')
