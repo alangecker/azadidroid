@@ -15,16 +15,12 @@ export class TwrpHelper {
     constructor(readonly adb: AdbWrapper) {}
 
     async wipe() {
-        await this.formatData()
         await this.wipePartition('cache')
         await this.wipePartition('dalvik')
-        try {
-            await this.wipePartition('data')
-        } catch(err) {
-            // No big deal because the data partition has
-		    // been formatted successfully already
-		    logger.debug("Error wiping the data partition. This is no big deal because it has just been formatted successfully.", err)
-        }
+        await this.wipePartition('data')
+        
+        // shrink data filesystem to avoid issues with encryption
+        await this.shrinkDataFs()
     }
     async wipePartition(name: string) {
         logger.debug(`wiping partition '${name}'...`)
@@ -33,80 +29,16 @@ export class TwrpHelper {
         await sleep(500)
     }
 
-    async formatData() {
+    async isStarted() {
         try {
-            if(await this.isDataMounted()) {
-                logger.debug("unmount /data")
-                await this.adb.shell(['umount', '/data'])
-            }
-        } catch(_) {}
-
-        try {
-            await this.formatDataORS()
+            // TWRP is printing following line into the log when switching 
+            // from the splash screen to the actual menu
+            const guiLoaded = await this.adb.shell('grep "Switching packages (TWRP)" /tmp/recovery.log')
+            return guiLoaded.includes("Switching packages")
         } catch(_) {
-            await this.formatDataOldschool()
+            return false
         }
-
-        try {
-            if(!await this.isDataMounted()) {
-                logger.debug("mount /data")
-                await this.adb.shell(['mount', '/data'])
-            }
-        } catch(_) {}
-
-        await sleep(500)
-    }
-
-    private async isDataMounted() {
-        const mounts = await this.adb.shell(["cat", "/proc/mounts"])
-        return mounts.split('\n').find(line => line.includes(' /data '))
-    }
-
-    private async formatDataORS() {
-        logger.debug("format data")
-        const stdout = await this.adb.shell(["twrp", "format", "data"])
-        if(stdout.includes("Unrecognized script command")) {
-            throw new Error("Unrecognized script command: adb shell twrp format data")
-        }
-    }
-    private async formatDataOldschool() {
-        logger.debug("format data (old school)")
-        const { pathCandidates, fsCandidates } = await this.findDataCandidates()
-        
-        for(const dataFs of fsCandidates) {
-            for(const dataPath of pathCandidates) {
-                logger.debug("Attempting to format", dataPath, "as", dataFs)    
-
-                if(dataFs === "f2fs") {
-                    try {
-                        const res = await this.adb.shell(["mkfs.f2fs", "-t", "0", dataPath])
-                        if(res.includes('format successful')) {
-                            return
-                        } else {
-                            logger.debug("Did not seem to work:\n", res)
-                        }
-                    } catch(err) {
-                        logger.debug("Format error:", err)
-                    }
-                } else if(dataFs === "ext4") {
-                    try {
-                        const res = await this.adb.shell(["make_ext4fs", dataPath])
-                        if(res.match(/format successful|Created filesystem with/)) {
-                            return
-                        } else {
-                            logger.debug("Did not seem to work:\n", res)
-                        }
-                    } catch(err) {
-                        logger.debug("Format error:", err)
-                    }
-                } else if(dataFs === "") {
-                    throw new Error("Unknown data partition filesystem")
-                } else {
-                    throw new Error("Unable to format data to " + dataFs)
-                }
-            }
-        }
-    }
+     }
 
     private async findDataCandidates() {
         const pathCandidates: string[] = []
@@ -158,5 +90,36 @@ export class TwrpHelper {
         logger.debug('sleep 1000ms')
         await sleep(1000)
         logger.debug('sleep ended')
+    }
+
+    /**
+     * on some devices the encryption fails due to not enough space at the end of the partition
+     * shrinking the partition by some bytes solves that
+     * https://gitlab.com/LineageOS/issues/android/-/issues/338
+     */
+    private async shrinkDataFs() {
+        await this.adb.shell(['umount', '/data', '/sdcard', '/userdata']).catch(() => {})
+
+        const { pathCandidates } = await this.findDataCandidates()
+
+        for(let path of pathCandidates) {
+            try {
+                // get current block count
+                const size = parseInt(await this.adb.shell(`tune2fs -l ${path} | grep "Block count" | awk -F: '{print $2}'`))
+                if(!size) continue
+
+                // run e2fsck first (required by resize2fs)
+                logger.debug(await this.adb.shell(`e2fsck -f -p ${path}`))
+
+                // shrink filesystem
+                logger.debug(await this.adb.shell(['resize2fs', path, (size - 16).toString()]))
+
+                return
+            } catch(err) {
+                logger.debug(err)
+            }
+        }
+        
+        logger.debug("could not shrink /data, this might be no issue on this device")
     }
 }
