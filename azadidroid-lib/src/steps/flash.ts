@@ -74,10 +74,17 @@ export class FastbootBootRecoveryStep extends Step {
         logger.debug('reboot bootloader...')
         await fastboot.reboot('bootloader', true)
 
-        logger.debug('boot recovery.img...')
-        await fastboot.bootBlob(ctx.files['recovery'], (progress) => {
-            // logger.debug('boot upload progress ', progress)
-        })
+        if(ctx.model.installMethod == 'fastboot_xiaomi') {
+            logger.debug('flash recovery.img...')
+            await fastboot.flashBlob('recovery', ctx.files['recovery'])
+            logger.debug('reboot into recovery...')
+            await fastboot.reboot('recovery', false).catch(() => {})
+        } else {
+            logger.debug('boot recovery.img...')
+            await fastboot.bootBlob(ctx.files['recovery'], (progress) => {
+                // logger.debug('boot upload progress ', progress)
+            })
+        }
         logger.debug('waiting for recovery to be started...')
         abortSignal.throwIfAborted()
 
