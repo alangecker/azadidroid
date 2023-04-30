@@ -1,6 +1,5 @@
-import { ModelInfos } from "../model/index.js";
-import { InstallationMethod, RomVersion } from "../roms/common.js";
-import { Rom } from "../roms/index.js";
+import { ModelInfos } from "azadidroid-data/src/model/ModelInfos.js"
+import { Rom, InstallationMethod, RomVersion } from "azadidroid-data/src/roms/common.js"
 import { Step } from "./base.js";
 import {
     ABCopyPartitionsStep,

@@ -9,11 +9,10 @@ import chalk from 'chalk';
 import lang from 'azadidroid-lib/src/langs/en.js'
 import PressToContinuePrompt from 'inquirer-press-to-continue';
 import { AdbWrapper } from "azadidroid-lib/src/usb/adb/AdbWrapper.js";
-import { getModelSummaries } from "azadidroid-lib/src/model/models.js";
 import { DeviceMode } from "azadidroid-lib/src/usb/helpers.js";
 import { askForOdinModel, chooseFromMultipleModel, confirmModel } from "./prompts/detect.js";
 import { pickRom } from "./prompts/roms.js";
-import { ModelInfos } from "azadidroid-lib/src/model/index.js";
+import { getModelIndex, ModelInfos } from "azadidroid-lib/src/models.js";
 import { getSteps } from "azadidroid-lib/src/steps/index.js";
 import logSymbols from 'log-symbols';
 import { Listr, ListrTask } from 'listr2'
@@ -96,7 +95,7 @@ async function adbMatchingModels(adb: AdbWrapper) {
     const model = adb.model.replace(/^(SM|G)-/, '')
     const device = await adb.getProp('ro.product.device')
     const bootDevice = await adb.getProp('ro.boot.device')
-    return getModelSummaries()
+    return getModelIndex()
         .filter(m => 
                 m.code == adbCodename ||
                 m.code === device ||

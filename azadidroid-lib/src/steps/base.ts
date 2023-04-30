@@ -1,6 +1,5 @@
-import { ModelInfos } from "../model/index.js";
-import { RomVersion } from "../roms/common.js";
-import { Rom } from "../roms/index.js";
+import { ModelInfos } from "azadidroid-data/src/model/ModelInfos.js"
+import { Rom, RomVersion } from "azadidroid-data/src/roms/common.js"
 import USBPhone from "../usb/USBPhone.js";
 
 

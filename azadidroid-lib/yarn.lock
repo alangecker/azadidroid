@@ -57,6 +57,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
   integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
 
+"@types/node@^18.16.3":
+  version "18.16.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.3.tgz#6bda7819aae6ea0b386ebc5b24bdf602f1b42b01"
+  integrity sha512-OPs5WnnT1xkCBiuQrZA4+YAV4HEJejmHneyraIaxsbev5yCEr6KMwINNFP9wQeFIw8FWcoTqF3vQsa5CDaI+8Q==
+
 "@types/w3c-web-usb@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/w3c-web-usb/-/w3c-web-usb-1.0.6.tgz#5d8560d0d9f585ffc80865bc773db7bc975b680c"
@@ -125,10 +130,10 @@
     "@yume-chan/dataview-bigint-polyfill" "^0.0.19"
     tslib "^2.4.1"
 
-"@zip.js/zip.js@2.2.27":
-  version "2.2.27"
-  resolved "https://registry.yarnpkg.com/@zip.js/zip.js/-/zip.js-2.2.27.tgz#672c63fd586d83c6f6c6231a38b54a16b5abe267"
-  integrity sha512-lQLsq41xUIGJnUizICgjLL+1hrnlLcqyWnQcaNi8FdsxfJl8y0bqdolDit8o65Huai+/GwXbCODMVu05kNU8mA==
+"@zip.js/zip.js@2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@zip.js/zip.js/-/zip.js-2.7.2.tgz#266346fe59ec62b5cbc00698cf8b98a6179f1394"
+  integrity sha512-sZVb8dyQe84/aL3eEQfgz7B6Hzuidw7lH2+IpGHgyg5bQTXIycghgvnBE5v4mv3S9w9ifRj9lmP+MTsoFstgpg==
 
 acorn-walk@^8.1.1:
   version "8.2.0"
@@ -143,7 +148,7 @@ acorn@^8.4.1:
 "android-fastboot@file:../fastboot.js":
   version "1.1.1"
   dependencies:
-    "@zip.js/zip.js" "2.2.27"
+    "@zip.js/zip.js" "2.7.2"
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -175,6 +180,24 @@ axios@^1.2.1:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
+
+axios@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.4.0.tgz#38a7bf1224cd308de271146038b551d725f0be1f"
+  integrity sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==
+  dependencies:
+    follow-redirects "^1.15.0"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
+azadidroid-data@../azadidroid-data:
+  version "0.0.1"
+  dependencies:
+    "@types/js-yaml" "^4.0.5"
+    "@types/node" "^18.16.3"
+    axios "^1.4.0"
+    js-yaml "^4.1.0"
+    typescript "^5.0.4"
 
 chalk@^2.3.2:
   version "2.4.2"
@@ -456,6 +479,11 @@ typescript@^4.9.4:
   version "4.9.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.4.tgz#a2a3d2756c079abda241d75f149df9d561091e78"
   integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==
+
+typescript@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
+  integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
 
 usb@2.9.0:
   version "2.9.0"

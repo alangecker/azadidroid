@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import inquirerPrompt from 'inquirer-autocomplete-prompt';
-import { getModelSummaries, ModelSummary } from "azadidroid-lib/src/model/models.js"
+import { getModelIndex, ModelSummary } from "azadidroid-lib/src/models.js"
 inquirer.registerPrompt('autocomplete', inquirerPrompt);
 
 
@@ -17,7 +17,7 @@ export async function askForOdinModel() {
     console.log('')
     console.log("Unfortunately in Samsungs download mode, we can't automatically retrieve the model.")
     console.log('')
-    const models = getModelSummaries()
+    const models = getModelIndex()
         .filter(m => m.method == 'heimdall')
         .map(m => {
             return {
@@ -55,7 +55,7 @@ export async function askForOdinModel() {
 
 
 export async function confirmModel(codename: string) {
-    const modelSummary = getModelSummaries().find(m => m.code === codename)
+    const modelSummary = getModelIndex().find(m => m.code === codename)
     console.log('\n')
     console.log(`You have selected following model:`)
     console.log('Vendor:   ' +modelSummary.vendor)

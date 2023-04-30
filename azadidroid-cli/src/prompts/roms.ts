@@ -1,14 +1,13 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-import { loadRomVersions } from "azadidroid-lib/src/roms/index.js"
-import { Rom, RomVersion } from "azadidroid-lib/src/roms/common.js";
+import { getAvailableRoms, Rom, RomVersion } from "azadidroid-lib/src/roms.js";
 import ora from 'ora';
 import logSymbols from 'log-symbols';
 
 export async function pickRom(codename: string) {
     console.log('Retrieving available roms')
     const spinner = ora('Retrieving available roms...').start()
-    const roms = loadRomVersions(codename)
+    const roms = getAvailableRoms(codename)
     await Promise.all(roms.map(r => r.versions))
     spinner.succeed()
 

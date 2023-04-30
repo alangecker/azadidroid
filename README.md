@@ -27,8 +27,13 @@ cd heimdall.js
 yarn
 yarn link
 
+cd ../azadidroid-data
+yarn
+yarn link
+
 cd ../azadidroid-lib
 yarn link heimdall.js
+yarn link azadidroid-data
 yarn
 yarn link
 

@@ -1,5 +1,4 @@
 import axios from "axios"
-import { Rom } from "../roms/index.js"
 import { DeviceMode } from "../usb/helpers.js"
 import { bypassCORS } from "../utils/fetch.js"
 import { logger } from "../utils/logger.js"

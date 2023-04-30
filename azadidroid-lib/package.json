@@ -8,6 +8,7 @@
     "@yume-chan/stream-extra": "^0.0.19",
     "android-fastboot": "file:../fastboot.js",
     "axios": "^1.2.1",
+    "azadidroid-data": "../azadidroid-data",
     "heimdall.js": "file:../heimdall.js",
     "js-yaml": "^4.1.0",
     "jssha": "^3.3.0",

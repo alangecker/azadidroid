@@ -150,6 +150,11 @@ export class ModelInfos {
     // get recoveryPartitionName() {
     //     return this.deviceData.recovery_partition_name || 'boot'
     // }
+
+    /**
+     * @deprecated TODO: move to azadidroid-lib because it should not be required, that azadidroid-data knows about
+     * the capabilities of azadidroid-lib
+     */
     get unsupportedFeatures() {
         const SUPPORTED = {
             instalMethod: [
@@ -197,13 +202,5 @@ export class ModelInfos {
         }
         return unsupported
     }
-
-    // isBootloaderSufficient(bootloader: string) {
-    //     if(!this.deviceData.required_bootloader) return true
-    //     for(let b of this.deviceData.required_bootloader) {
-    //         if(b.includes(bootloader)) return true
-    //     }
-    //     return false
-    // }
 }    
 

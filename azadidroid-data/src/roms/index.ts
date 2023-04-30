@@ -19,20 +19,3 @@ export const roms: {[name: string]: Rom} = {
     iode: new IodeOS(),
     crdoid: new crDroid(),
 }
-
-export function loadRomVersions(codename: string) {
-    const out: Array<{rom: Rom, versions: Promise<RomVersion[]>}> = [ ]
-
-    for(let name in roms) {
-        const promise = roms[name]
-            .getAvailableVersions(codename)
-            .catch((err) => {
-                return []
-            })
-        out.push({
-            rom: roms[name],
-            versions: promise
-        })
-    }
-    return out
-}
