@@ -4,7 +4,7 @@ import { InstallationMethod, Rom, RomStability, RomVersion, versionToDate } from
 
 
 export class crDroid extends Rom {
-    name = 'cdDroid'
+    name = 'crDroid'
     logo = ''
     description = ''
     link = ''
@@ -18,11 +18,7 @@ export class crDroid extends Rom {
         const link = links.find((l: string) => l.includes('/download'))?.replace(/<.*?>/g, '')
         if(!link) return []
         
-        const file = await axios.get(link, {
-            maxRedirects: 0,
-            validateStatus: null
-        })
-        const location = file.headers.location
+        const location = link.replace(/\/download$/, '')
         const u = new URL(location)
         const filename = u.pathname.split('/').reverse()[0]
         const date = filename.split('-')[2]

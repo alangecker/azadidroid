@@ -34,6 +34,23 @@ async function getHashFromUrl(url: string, filename: string, additionalHeaders: 
     return line.split(' ')[0]
 }
 
+
+async function getSourceforgeMirrorUrl(url: string) {
+    const res1 = await axios.get(url+"/download", {
+        maxRedirects: 0,
+        validateStatus: null
+    })
+    const res2 = await axios.get(res1.headers.location, {
+        maxRedirects: 0,
+        validateStatus: null
+    })
+    const u = new URL(res2.headers.location)
+    if(!u.hostname.endsWith('.dl.sourceforge.net')) {
+        throw new Error(`there was an error while getting a sourceforge mirror link. (got redirected to ${u.toString()})`)
+    }
+    return res2.headers.location
+}
+
 async function getCachedOrDownload(
     url: string,
     store:  DataStore,
@@ -56,6 +73,10 @@ async function getCachedOrDownload(
         return stored
     } catch(_) {
         logger.log("downloading "+url)
+
+        if(url.startsWith('https://sourceforge.net/')) {
+            url = await getSourceforgeMirrorUrl(url)
+        }
         const res = await axios(bypassCORS(url), {
             headers: Object.assign(
                 {
