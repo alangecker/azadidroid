@@ -132,6 +132,7 @@ export class ModelInfos {
     }
 
     get recoveryCodename() {
+        if(this.codename == 'klteactivexx') return 'klte'
         return this.deviceData.custom_recovery_codename || this.codename
     }
     get bootIntoRecoveryInstructions() {
