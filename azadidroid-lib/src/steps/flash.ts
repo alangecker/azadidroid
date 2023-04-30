@@ -76,12 +76,7 @@ export class FastbootBootRecoveryStep extends Step {
             this.call('stillWaitingForRecovery')
         }, 10000)
 
-        await ctx.phone.waitFor('adb')
-        // sometimes TWRP disconnects again shortly
-        await sleep(3000)
-        
-        abortSignal.throwIfAborted()
-        await ctx.phone.waitFor('adb')
+        await ctx.phone.waitFor('recovery')
         clearTimeout(waitingForRecoveryTimeout)
 
         abortSignal.throwIfAborted()
@@ -100,18 +95,14 @@ export class RebootOdinToRecoveryStep extends Step {
     }
 
     async run(ctx: InstallContext, abortSignal: AbortSignal) {
-        while(true) {
-            await ctx.phone.waitFor('adb')
-            // sometimes TWRP disconnects again shortly
-            await sleep(1000)
-            await ctx.phone.waitFor('adb')
-            const adb = await ctx.phone.getAdb()
-            abortSignal.throwIfAborted()
-            if(adb.isRecovery) {
-                return
-            }
-            await sleep(500)
+        await ctx.phone.waitFor('recovery')
+
+        const adb = await ctx.phone.getAdb()
+        abortSignal.throwIfAborted()
+        if(adb.isRecovery) {
+            return
         }
+        await sleep(500)
     }
 }
 
@@ -149,7 +140,7 @@ export class TWRPWipeStep extends Step {
         super('twrp_wipe')
     }
     async run(ctx: InstallContext) {
-        await ctx.phone.waitFor('adb')
+        await ctx.phone.waitFor('recovery')
         const adb = await ctx.phone.getAdb()
         await adb.twrp().wipe()
     }

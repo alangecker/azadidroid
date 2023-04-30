@@ -53,7 +53,8 @@ export class AdbWrapper {
     isRecovery: boolean = false
     productDevice: string = ''
     async loadProps() {
-        this.isRecovery = parseInt(await this.getProp('ro.boot.boot_recovery')) === 1
+        this.isRecovery = parseInt(await this.getProp('ro.boot.boot_recovery')) === 1 
+            || (await this.getProp('init.svc.recovery')).trim().length > 0
         this.productDevice = await this.getProp('ro.product.device')
         // samsung.hardware
         // ro.product.model

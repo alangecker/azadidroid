@@ -284,13 +284,42 @@ export default class USBPhone implements EventTarget {
         })
         return device
     }
-    async waitFor(target: 'adb'|'fastboot'|'odin') {
+    async waitFor(target: 'adb'|'fastboot'|'odin'|'recovery') {
+        if(target == 'recovery') {
+            return this.waitForRecovery()
+        }
         while(!this.isConnected || this.deviceMode !== target) {
             await sleep(100)
         }
         if(target === 'adb') {
         } else if(target === 'odin') {
             // await this.getOdin()
+        }
+    }
+
+    private async waitForRecovery() {
+        while(true) {
+            await this.waitFor('adb')
+            try {
+                const adb = await this.getAdb()
+                if(!adb.isRecovery) {
+                    await sleep(2000)
+                    continue
+                }
+                const isTwrpStarted = await adb.twrp().isStarted()
+                if(!isTwrpStarted) {
+                    await sleep(1000)
+                    continue
+                }
+                
+                // maybe it still switches usb mode, leading to reconnects
+                await sleep(2000)
+                await this.waitFor('adb')
+                return
+            } catch(err) {
+                logger.error(err)
+            }
+            await sleep(200)
         }
     }
 }
