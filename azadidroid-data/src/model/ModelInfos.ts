@@ -1,52 +1,4 @@
-import { axios } from '../utils/fetch.js'
-import * as yaml from 'js-yaml'
-
-interface BeforeInstallDeviceVariant {
-    device: string
-    firmware: string
-    download_link: string
-}
-
-export interface LineageDeviceData {
-    before_lineage_install?: 'ab_copy_partitions'
-    before_recovery_install?: {
-        instructions: 'boot_stack',
-        partitions: string[]
-    } | string
-    before_install?: {
-        instructions:"needs_specific_android_fw",
-        version: string
-    },
-    before_install_device_variants?: BeforeInstallDeviceVariant[]
-    custom_recovery_link?: string
-    codename: string
-    custom_unlock_cmd?: string
-    download_boot?: string
-    image?: string
-    install_method?: string
-    is_ab_device?: boolean
-    name: string
-    recovery_boot?: string
-    recovery_reboot?: string
-    recovery_partition_name?: string
-    custom_recovery_codename?: string
-    vendor: string
-    no_oem_unlock_switch?: boolean
-    is_retrofit_dynamic_partitions?: boolean
-    required_bootloader?: string[]
-    is_unlockable?: boolean
-    models?: string[]
-    soc: string
-
-    // lineage specific
-    maintainers?: string[]
-}
-
-const grapheneDevices = {
-    // missing from lineage
-    // (currently none)
-}
-const LINEAGE_WIKI_BRANCH = 'master'
+import { BeforeInstallDeviceVariant, LineageDeviceData, getLineageWikiDeviceData } from './lineageWiki.js'
 
 type BeforeRecoveryInstall = {
     instructions: 'samsung_exynos9xxx'|'samsung_sm7125'
@@ -59,28 +11,7 @@ export class ModelInfos {
     private deviceData: LineageDeviceData
 
     static async get(codename: string): Promise<ModelInfos> {
-        try {
-            const res = await axios.get(`https://raw.githubusercontent.com/LineageOS/lineage_wiki/${LINEAGE_WIKI_BRANCH}/_data/devices/${codename}.yml`)
-            const data = yaml.load(await res.data) as LineageDeviceData
-            return new ModelInfos(data)
-        } catch(err) {
-            if(err?.response?.status === 404) {
-                if(grapheneDevices[codename]) {
-                    return new ModelInfos({
-                        name: grapheneDevices[codename],
-                        codename: codename,
-                        vendor: 'Google',
-                        install_method: 'fastboot_nexus',
-                        custom_unlock_cmd: 'fastboot flashing unlock',
-                        soc: 'Google Tensor'
-                    })
-                } else {
-                    // TODO: there are some devicestos not in the lineage wiki
-                    throw new Error(`could not find device infos for '${codename}'`)
-                }
-            }
-            throw err
-        }
+        return new ModelInfos(await getLineageWikiDeviceData(codename))
     }
 
     constructor(data: LineageDeviceData) {
