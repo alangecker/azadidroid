@@ -4,7 +4,8 @@
   "type":"module",
   "scripts": {
     "find-roms": "ts-node --esm src/scripts/find_roms.ts",
-    "update-model-index": "ts-node --esm src/scripts/update_model_index.ts"
+    "update-model-index": "ts-node --esm src/scripts/update_model_index.ts",
+    "update-rom-availability": "ts-node --esm src/scripts/update_rom_availability.ts"
   },
   "dependencies": {
     "@types/js-yaml": "^4.0.5",
