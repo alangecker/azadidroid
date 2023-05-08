@@ -5,6 +5,15 @@ Automated installation of google free Android distributions - easier than ever b
 
 This is fully written in JavaScript, which allows us in the next step to port it to the browser (using WebUSB) to make it even easier for people to get a google free and updated android on their phone.
 
+## Project Overview
+| Folder            | Purpose 
+|-------------------|--------------------------------------------------------------------------------------------|
+| `azadidroid-data` | Available ROMs, informations about models
+| `azadidroid-lib`  | Logic for automatic installation of android ROMs (utilizing heimdall.js and fastboot.js)
+| `azadidroid-cli`  | command line tool using `azadidroid-lib`
+| `azadidroid-web`  | Web GUI using `azadidroid-lib`
+
+
 ## Supported 
 it is an early version. Lot's of devices probably aren't supported yet.
 
