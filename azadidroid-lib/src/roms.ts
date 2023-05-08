@@ -1,14 +1,14 @@
-import { Rom, RomVersion } from "azadidroid-data/src/roms/common.js";
+import { Rom, RomBuild } from "azadidroid-data/src/roms/common.js";
+export { Rom, RomBuild } from "azadidroid-data/src/roms/common.js";
 import { roms } from "azadidroid-data/src/roms/index.js";
-export { Rom, RomVersion } from "azadidroid-data/src/roms/common.js";
 
 
 export function getAvailableRoms(codename: string) {
-    const out: Array<{rom: Rom, versions: Promise<RomVersion[]>}> = [ ]
+    const out: Array<{rom: Rom, versions: Promise<RomBuild[]>}> = [ ]
 
     for(let name in roms) {
         const promise = roms[name]
-            .getAvailableVersions(codename)
+            .getAvailableBuilds(codename)
             .catch((err) => {
                 return []
             })

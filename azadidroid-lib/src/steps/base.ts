@@ -1,5 +1,5 @@
 import { ModelInfos } from "azadidroid-data/src/model/ModelInfos.js"
-import { Rom, RomVersion } from "azadidroid-data/src/roms/common.js"
+import { Rom, RomBuild } from "azadidroid-data/src/roms/common.js"
 import USBPhone from "../usb/USBPhone.js";
 
 
@@ -26,7 +26,7 @@ export interface InstallContext {
     model: ModelInfos
     phone: USBPhone
     rom: Rom
-    versionToInstall: RomVersion
+    romBuild: RomBuild
     files: {[key: string]: Blob}
 }
 

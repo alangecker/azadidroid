@@ -1,5 +1,5 @@
 import { axios, bypassCORS } from '../utils/fetch.js'
-import { Rom, RomStability, RomVersion, versionToDate } from './common.js'
+import { InstallationMethod, Rom, RomBuild, RomStability, lineageToAndroidVersion, versionToDate } from './common.js'
 
 
 async function getArchiveRom(archiveKey: string, codename: string) {
@@ -12,24 +12,46 @@ async function getArchiveRom(archiveKey: string, codename: string) {
     // pick latest release
     return `https://archive.org/download/${archiveKey}/` + files[files.length-1]
 }
+
+interface LineageBuild {
+    date: string,
+    datetime: number,
+    files: Array<{
+        filename: string,
+        filepath: string,
+        sha1: string
+        sha256: string
+        size: number
+        url: string
+    }>
+    type: 'nightly'
+    version: string
+}
 export class Lineage extends Rom {
     name = 'LineageOS'
     logo = ''
     description = ''
     link = ''
+    async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
+        const res = await axios.get(`https://download.lineageos.org/api/v2/devices/${codename}/builds`)
+        if(res.data?.length) {
+            const release = res.data[0] as LineageBuild
 
-    async getAvailableVersions(codename: string): Promise<RomVersion[]> {
-        const res = await axios.get(bypassCORS(`https://download.lineageos.org/api/v1/${codename}/nightly/*`))
-        const response = res.data?.response
-        if(response?.length) {
-            // a up to date release was found
-            const release = response[response.length-1]
+            const files = release.files
+                .reduce((o, f) => ({
+                    ...o,
+                    [f.filename.endsWith('.img') ? f.filename : 'rom']: {
+                        url: f.url,
+                        sha256: f.sha256,
+                    }
+                }), {})
             return [{
-                date: new Date(release.datetime*1000).toISOString().slice(0,10),
-                version: release.version,
-                url: release.url,
-                sha256: release.id,
+                date: release.date,
                 state: RomStability.BETA,
+                version: release.version,
+                androidVersion: lineageToAndroidVersion(release.version),
+                installMethod: InstallationMethod.Recovery,
+                files
             }]
         }
 
@@ -39,18 +61,27 @@ export class Lineage extends Rom {
             await getArchiveRom('lineageos171-20220217', codename) || 
             // 16.1 archive?
             await getArchiveRom('lineageos20210217', codename)
-    
-        if(!archivedRom) return []
+
+        if(!archivedRom) {
+            return []
+        }
 
         const filename = archivedRom.split('/').reverse()[0]
         const f = filename.split('-')
+
+
         return [{
             date: versionToDate(f[2]),
-            version: f[1]+'-'+f[2],
-            url: archivedRom,
             state: RomStability.BETA,
+            version: f[1],
+            androidVersion: lineageToAndroidVersion(f[1]),
+            installMethod: InstallationMethod.Recovery,
+            files: {
+                rom: {
+                    url: archivedRom
+                }
+            }
         }]
+
     }
 }
-
-// https://github.com/pharuxtan/androidbot/tree/d64984f8bab12f0bee201561c90ec357efbcb167/commands/roms

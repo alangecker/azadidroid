@@ -208,7 +208,7 @@ async function main() {
         model: model,
         phone: phone,
         rom: rom,
-        versionToInstall: version,
+        romBuild: version,
         files: {}
     }
 

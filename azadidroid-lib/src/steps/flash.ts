@@ -219,7 +219,7 @@ export class TWRPInstallROMStep extends Step {
         super('twrp_install_rom')
     }
     async getFilesToDownload(ctx: InstallContext) {
-        const url = new URL(ctx.versionToInstall.url)
+        const url = new URL(ctx.romBuild.files.rom.url)
         const p = url.pathname.split('/')
         return [
             {
@@ -227,8 +227,8 @@ export class TWRPInstallROMStep extends Step {
                 title: ctx.rom.name,
                 fileName: p[p.length-1],
                 url: url.toString(),
-                sha256: ctx.versionToInstall.sha256,
-                sha512: ctx.versionToInstall.sha512
+                sha256: ctx.romBuild.files.rom.sha256,
+                sha512: ctx.romBuild.files.rom.sha512
             }
         ]
     }
@@ -283,7 +283,7 @@ export class FastbootFlashZipStep extends Step {
         super('fastboot_flash_zip')
     }
     async getFilesToDownload(ctx: InstallContext) {
-        const url = new URL(ctx.versionToInstall.url)
+        const url = new URL(ctx.romBuild.files.rom.url)
         const p = url.pathname.split('/')
         return [
             {
@@ -291,8 +291,8 @@ export class FastbootFlashZipStep extends Step {
                 title: ctx.rom.name,
                 fileName: p[p.length-1],
                 url: url.toString(),
-                sha256: ctx.versionToInstall.sha256,
-                sha512: ctx.versionToInstall.sha512
+                sha256: ctx.romBuild.files.rom.sha256,
+                sha512: ctx.romBuild.files.rom.sha512
             }
         ]
     }

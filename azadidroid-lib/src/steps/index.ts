@@ -1,5 +1,5 @@
 import { ModelInfos } from "azadidroid-data/src/model/ModelInfos.js"
-import { Rom, InstallationMethod, RomVersion } from "azadidroid-data/src/roms/common.js"
+import { Rom, InstallationMethod, RomBuild } from "azadidroid-data/src/roms/common.js"
 import { Step } from "./base.js";
 import {
     ABCopyPartitionsStep,
@@ -17,7 +17,7 @@ import { FastbootUnlockStep, WaitForBootloaderStep } from "./prepare.js";
 import { AllowOEMUnlockStep, ConfirmAndroidVersionStep } from "./requirements.js";
 
 
-export async function getSteps(model: ModelInfos, rom: Rom, romVersion: RomVersion) {
+export async function getSteps(model: ModelInfos, rom: Rom, build: RomBuild) {
     const steps = {
         requirements: [] as Step[],
         prepare: [] as Step[],
@@ -31,8 +31,7 @@ export async function getSteps(model: ModelInfos, rom: Rom, romVersion: RomVersi
         steps['requirements'].push(new AllowOEMUnlockStep)
     }
    
-    const installVia = romVersion.installVia || rom.installVia
-    if(installVia == InstallationMethod.Recovery) {
+    if(build.installMethod == InstallationMethod.Recovery) {
         if(model.installMethod == 'heimdall') {
             
             if(model.beforeRecoveryInstall == 'samsung_exynos9xxx' || model.beforeRecoveryInstall == 'samsung_sm7125') {

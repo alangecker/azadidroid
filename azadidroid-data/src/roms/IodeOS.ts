@@ -26,7 +26,7 @@ export class IodeOS extends Rom {
     description = ''
     link = ''
 
-    installVia = InstallationMethod.Bootloader
+    installVia = InstallationMethod.Fastboot
 
     async isBootloaderRelockSupported(codename: string) {
         return true

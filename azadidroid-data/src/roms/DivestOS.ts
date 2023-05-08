@@ -1,5 +1,5 @@
 import { axios, bypassCORS } from '../utils/fetch.js'
-import { Rom, RomStability, RomVersion, versionToDate } from './common.js'
+import { InstallationMethod, Rom, RomBuild, RomStability, lineageToAndroidVersion, versionToDate } from './common.js'
 
 /**
  * Source: https://gitlab.com/divested-mobile/divestos-website/-/blob/master/pages/devices.html#L272
@@ -41,21 +41,21 @@ export class DivestOS extends Rom {
     description = ''
     link = ''
 
-    async getAvailableVersions(codename: string): Promise<RomVersion[]> {
+    async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
         const res = await axios.get(`https://gitlab.com/divested-mobile/mirror.divestos.org/-/raw/master/update_device_info.sh`, {
             headers: {
                 'Accept-Encoding': 'gzip'
             }
         })
+        const lines =res.data.split('\n')
 
-        const lines = res.data.split('\n')
-            .filter(line => line.includes(codename+'/status-'))
+        const bootloaderInformation = lines.find(line => line.includes(codename+'/bootloader_information'))
+        const statusLines = lines.filter(line => line.includes(codename+'/status-'))
         
 
         const versions: Array<{version: string, versionFloat: number, status: DivestOSStatus}> = []
-        for(let line of lines) {
+        for(let line of statusLines) {
             const v = line.match(/echo (\d) .*status-([\d\.]+)/)
-
             versions.push({
                 version: v[2],
                 versionFloat: parseFloat(v[2]),
@@ -76,19 +76,23 @@ export class DivestOS extends Rom {
             }
         })
 
-        const out: RomVersion[] = []
+        const out: RomBuild[] = []
 
         for(let v of filtered) {
-            const regex = new RegExp(`&f=${codename}/divested-${v.version}-(.*?)-.*?"`)
-            const file = page.data.match(regex)
-            if(!file) throw new Error(`DivestOS: there should be a download for ${codename} (${v.version}), but not found on the website`)
-            const date = file[1]
-            let filename = file[0].split('/')[1]
+            const regex = new RegExp(`&f=${codename}/divested-${v.version}-(.*?)-.*?"`, 'g')
+            const files = (page.data as string).match(regex)
+            if(!files) throw new Error(`DivestOS: there should be a download for ${codename} (${v.version}), but not found on the website`)
+
+            const file = files.find(f => f.match(/-fastboot\.zip"$/)) || files[0]
+            let filename = file.split('/')[1]
             filename = filename.slice(0, filename.length-1)
+
+            const date = file.split('-')[2]
 
             out.push({
                 date: versionToDate(date),
                 version: v.version,
+                androidVersion: lineageToAndroidVersion(v.version),
                 state: 
                     WORKING.includes(v.status) 
                     ? RomStability.STABLE : (
@@ -96,8 +100,13 @@ export class DivestOS extends Rom {
                         ? RomStability.BETA
                         : RomStability.UNTESTED
                     ),
-                url: `https://divestos.org/builds/LineageOS/${codename}/${filename}`,
-                sha512: `https://divestos.org/builds/LineageOS/${codename}/${filename}.sha512sum`
+                installMethod: filename.includes('-fastboot.zip') ? InstallationMethod.Fastboot : InstallationMethod.Recovery,
+                files: {
+                    rom: {
+                        url: `https://divestos.org/builds/LineageOS/${codename}/${filename}`,
+                        sha512: `https://divestos.org/builds/LineageOS/${codename}/${filename}.sha512sum`,
+                    }
+                }
             })
         }
         return out

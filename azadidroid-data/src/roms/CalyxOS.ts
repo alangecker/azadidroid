@@ -1,21 +1,29 @@
-import { axios, bypassCORS } from '../utils/fetch.js'
-import { InstallationMethod, Rom, RomStability, RomVersion } from './common.js'
+import { axios } from '../utils/fetch.js'
+import { InstallationMethod, Rom, RomBuild, RomStability } from './common.js'
 import * as yaml from 'js-yaml'
 
-
+/**
+ * this assumes, that CalyxOS increases its major version with every major android version
+ */
+function calyxToAndroidVersion(version: string) {
+    const v = version.split('.').map(a => parseInt(a))
+    if(v[0] === 3 && v[1] >= 3) return '12L'
+    let androidVersion = (v[0] + 9).toString()
+    return androidVersion
+}
 export class CalyxOS extends Rom {
     name = 'CalyxOS'
     logo = ''
     description = ''
     link = ''
 
-    installVia = InstallationMethod.Bootloader
+    installVia = InstallationMethod.Fastboot
 
     async isBootloaderRelockSupported(codename: string) {
         return true
     }
 
-    async getAvailableVersions(codename: string): Promise<RomVersion[]> {
+    async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
         const res = await axios.get(`https://gitlab.com/CalyxOS/calyxos.org/-/raw/main/pages/_data/downloads.yml`, {
             headers: {
                 'Accept-Encoding': 'gzip'
@@ -36,9 +44,15 @@ export class CalyxOS extends Rom {
             {
                 date: release.date,
                 version: release.version,
+                androidVersion: calyxToAndroidVersion(release.version),
                 state: isStable ? RomStability.STABLE : RomStability.BETA,
-                url: release.factory_link,
-                sha256: release.factory_sha256
+                installMethod: InstallationMethod.Fastboot,
+                files: {
+                    rom: {
+                        url: release.factory_link,
+                        sha256: release.factory_sha256,
+                    }
+                }
             }
         ]
     }

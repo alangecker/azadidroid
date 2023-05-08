@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-import { getAvailableRoms, Rom, RomVersion } from "azadidroid-lib/src/roms.js";
+import { getAvailableRoms, Rom, RomBuild } from "azadidroid-lib/src/roms.js";
 import ora from 'ora';
 import logSymbols from 'log-symbols';
 
@@ -11,7 +11,7 @@ export async function pickRom(codename: string) {
     await Promise.all(roms.map(r => r.versions))
     spinner.succeed()
 
-    let options: Array<{rom: Rom, version: RomVersion, label: string}> = []
+    let options: Array<{rom: Rom, version: RomBuild, label: string}> = []
     for(let r of roms) {
         const versions = await r.versions
         let str = ' * ' + chalk.bold(r.rom.name) + ' '.repeat(r.rom.name.length > 13 ? 0 : 13 - r.rom.name.length)
@@ -25,7 +25,7 @@ export async function pickRom(codename: string) {
             options.push({
                 rom: r.rom,
                 version: v,
-                label: `${r.rom.name}${v.variant ? ` (${v.variant})` : ''} ${v.version} [${v.date ? v.date+'/' : ''}${v.state}]`
+                label: `${r.rom.name}${v.variant ? ` (${v.variant})` : ''} ${v.version}${v.androidVersion ? '/'+v.androidVersion : ''} [${v.date ? v.date+'/' : ''}${v.state}]`
             })
         }
     }

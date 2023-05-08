@@ -13,6 +13,25 @@ export type RomAvailability = RomUnavailable | {
     date: string
 }
 
+export type RomFile = {
+    url: string
+    sha256?: string
+    sha512?: string
+}
+
+export type RomBuild = {
+    state: RomStability
+    version: string
+    androidVersion?: string
+    variant?: string
+    date?: string
+    installMethod: InstallationMethod
+    files: {[key: string]: RomFile}
+}
+
+/**
+ * @deprecated replaced with RomBuild
+ */
 export type RomVersion = {
     state: RomStability
     version: string
@@ -27,6 +46,10 @@ export type RomVersion = {
 
 export enum InstallationMethod  {
     Recovery = 'recovery',
+    Fastboot = 'fastboot',
+    /**
+     * @deprecated rather use InstallationMethod.Fastboot
+     */
     Bootloader = 'bootloader',
 }
 export abstract class Rom {
@@ -37,7 +60,29 @@ export abstract class Rom {
     installVia: InstallationMethod = InstallationMethod.Recovery
 
     async isBootloaderRelockSupported(codename: string): Promise<boolean> { return false }
-    abstract getAvailableVersions(codename: string): Promise<RomVersion[]>
+    /**
+     * @deprecated use getAvailableBuilds()
+     */
+    async getAvailableVersions(codename: string): Promise<RomVersion[]> { return [] }
+    async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
+        // wrapping deprecated getAvailableVersions() for backwards compatibility
+        return (await this.getAvailableVersions(codename)).map(v => {
+            return {
+                state: v.state,
+                version: v.version,
+                variant: v.variant,
+                date: v.date,
+                installMethod: this.installVia,
+                files: {
+                    rom: {
+                        url: v.url,
+                        sha256: v.sha256,
+                        sha512: v.sha512
+                    }
+                }
+            }
+        })
+    }
 }
 
 export interface Version {
@@ -52,4 +97,22 @@ export function versionToDate(str: string) {
         str.slice(4,6),  // M
         str.slice(6,8)   // D
     ].join('-')
+}
+
+const knownLineageVersionMapping = {
+    '16.0': '9.0.0',
+    '17.1': '10',
+    '18.1': '11',
+    '19.1': '12.1',
+    '20': '13',
+}
+export function lineageToAndroidVersion(version: string) {
+    if(knownLineageVersionMapping[version]) return knownLineageVersionMapping[version]
+
+    const v = version.split('.')
+    if(knownLineageVersionMapping[v[0]]) return knownLineageVersionMapping[v[0]]
+
+    const majorLineageVersion = parseInt(v[0])
+
+    return (majorLineageVersion - 7).toString()
 }
