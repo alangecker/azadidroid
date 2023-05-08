@@ -2,6 +2,9 @@
   "name": "azadidroid-data",
   "version": "0.0.1",
   "type":"module",
+  "scripts": {
+    "find-roms": "ts-node --esm src/scripts/find_roms.ts"
+  },
   "dependencies": {
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^18.16.3",
