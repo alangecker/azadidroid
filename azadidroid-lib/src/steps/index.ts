@@ -4,6 +4,7 @@ import { Step } from "./base.js";
 import {
     ABCopyPartitionsStep,
     FastbootBootRecoveryStep,
+    FastbootFlashAdditionalImages,
     FastbootFlashZipStep,
     FastbootLockStep,
     FastbootRetrofitDynamicPartitionsStep,
@@ -34,7 +35,7 @@ export async function getSteps(model: ModelInfos, rom: Rom, build: RomBuild) {
     if(build.installMethod == InstallationMethod.Recovery) {
         if(model.installMethod == 'heimdall') {
             
-            if(model.beforeRecoveryInstall == 'samsung_exynos9xxx' || model.beforeRecoveryInstall == 'samsung_sm7125') {
+            if(model.beforeRecoveryInstall?.instructions === 'samsung_exynos9xxx' || model.beforeRecoveryInstall?.instructions == 'samsung_sm7125') {
                 // TODO
                 // steps['prepare'].push()
             }
@@ -44,7 +45,10 @@ export async function getSteps(model: ModelInfos, rom: Rom, build: RomBuild) {
         } else if(model.installMethod.startsWith('fastboot')) {
             steps['prepare'].push(new WaitForBootloaderStep)
             steps['prepare'].push(new FastbootUnlockStep)
-            // TODO: before_recovery_install_boot_stack            
+            if(model.beforeRecoveryInstall?.instructions === 'boot_stack') {
+                steps['prepare'].push(new FastbootFlashAdditionalImages(model.beforeRecoveryInstall.partitions))
+            }
+       
             steps['install'].push(new FastbootBootRecoveryStep)
         }
 

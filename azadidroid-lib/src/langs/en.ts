@@ -31,6 +31,7 @@ export default {
         'odin_flash_recovery': 'Flash recovery',
         'fastboot_boot_recovery': 'Boot recovery',
         'reboot_to_recovery': 'Reboot into recovery',
+        'fastboot_additional_images': 'Flash additional partitions',
         'twrp_wipe': 'Wipe all data',
         'twrp_install_rom': 'Installing ROM',
         'fastboot_flash_zip': 'Installing ROM',

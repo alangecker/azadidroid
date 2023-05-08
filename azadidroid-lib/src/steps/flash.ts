@@ -93,17 +93,12 @@ export class FastbootBootRecoveryStep extends Step {
         logger.debug('reboot bootloader...')
         await fastboot.reboot('bootloader', true)
 
-        if(ctx.model.installMethod == 'fastboot_xiaomi') {
-            logger.debug('flash recovery.img...')
-            await fastboot.flashBlob('recovery', ctx.files['recovery'])
-            logger.debug('reboot into recovery...')
-            await fastboot.reboot('recovery', false).catch(() => {})
-        } else {
-            logger.debug('boot recovery.img...')
-            await fastboot.bootBlob(ctx.files['recovery'], (progress) => {
-                // logger.debug('boot upload progress ', progress)
-            })
-        }
+        const recoveryPartition = ctx.model.installMethod == 'fastboot_xiaomi' ? 'recovery' : ctx.model.recoveryPartitionName
+        logger.debug(`flash ${recoveryPartition}.img...`)
+        await fastboot.flashBlob(recoveryPartition, ctx.files['recovery'])
+        logger.debug('reboot into recovery...')
+        await fastboot.reboot('recovery', false).catch(() => {})
+
         logger.debug('waiting for recovery to be started...')
         abortSignal.throwIfAborted()
 
@@ -141,6 +136,36 @@ export class RebootOdinToRecoveryStep extends Step {
     }
 }
 
+export class FastbootFlashAdditionalImages extends Step {
+    constructor(readonly partitions: string[]) {
+        super('fastboot_additional_images')
+    }
+    async getFilesToDownload(device: InstallContext): Promise<IDownloadRequest[]> {
+        return this.partitions.map(partition => {
+            const file = device.romBuild.files[partition+'.img']
+            if(!file) {
+                throw new Error(`an image for '${partition}' is required, but the ROM did not provide it.`)
+            }
+            return {
+                key: partition,
+                title: `Partition ${partition} image`,
+                fileName: partition+'.img',
+                url: file.url,
+                sha256: file.sha256,
+                sha512: file.sha512
+            }
+        })
+    }
+    async run(ctx: InstallContext) {
+        await ctx.phone.waitFor('fastboot')
+        const fastboot = await ctx.phone.getFastboot()
+
+        for(let partition of this.partitions) {
+            logger.debug('flashing '+partition)
+            await fastboot.flashBlob(partition, ctx.files[partition])
+        }
+    }
+}
 export class ABCopyPartitionsStep extends Step {
     constructor() {
         super('ab_copy_partitions')

@@ -48,6 +48,13 @@ const grapheneDevices = {
 }
 const LINEAGE_WIKI_BRANCH = 'master'
 
+type BeforeRecoveryInstall = {
+    instructions: 'samsung_exynos9xxx'|'samsung_sm7125'
+} | {
+    instructions: 'boot_stack',
+    partitions: string[]
+}
+
 export class ModelInfos {
     private deviceData: LineageDeviceData
 
@@ -114,14 +121,21 @@ export class ModelInfos {
         if(this.deviceData.before_install.instructions !== 'needs_specific_android_fw') return false
         return this.deviceData.before_install.version
     }
-    get beforeRecoveryInstall(): 'samsung_exynos9xxx'|'samsung_sm7125'|null {
-        if(typeof this.deviceData.before_recovery_install  == 'string') return this.deviceData.before_recovery_install as any
-        else null
+    get beforeRecoveryInstall(): BeforeRecoveryInstall|null {
+        if(typeof this.deviceData.before_recovery_install  === 'string') {
+            return {
+                instructions: this.deviceData.before_recovery_install as any
+            }
+        } else if (typeof this.deviceData.before_recovery_install === 'object') {
+            return this.deviceData.before_recovery_install
+        } else  {
+            return null
+        }
     }
 
     get beforeRomInstall(): 'ab_copy_partitions'|null {
         if(typeof this.deviceData.before_lineage_install  == 'string') return this.deviceData.before_lineage_install as any
-        else null
+        else return null
     }
 
     get isRetrofitDynamicPartitions(): boolean {
@@ -147,9 +161,9 @@ export class ModelInfos {
     get isTensorSoc() {
         return this.deviceData.soc?.includes('Google Tensor')
     }
-    // get recoveryPartitionName() {
-    //     return this.deviceData.recovery_partition_name || 'boot'
-    // }
+    get recoveryPartitionName() {
+        return this.deviceData.recovery_partition_name || 'boot'
+    }
 
     /**
      * @deprecated TODO: move to azadidroid-lib because it should not be required, that azadidroid-data knows about
@@ -167,11 +181,12 @@ export class ModelInfos {
                 'needs_specific_android_fw'
             ],
             beforeRecoveryInstall: [
+                'boot_stack',
                 // 'samsung_exynos9xxx',
-                // 'samsung_sm7125'
+                // 'samsung_sm7125',
             ],
             beforeLineageInstall: [
-                'ab_copy_partitions'
+                // 'ab_copy_partitions'
             ]
         }
 
@@ -190,7 +205,9 @@ export class ModelInfos {
             if(typeof this.deviceData.before_recovery_install == 'string') {
                 if(!SUPPORTED.beforeRecoveryInstall.includes(this.deviceData.before_recovery_install)) unsupported.push(this.deviceData.before_recovery_install)
             } else {
-                unsupported.push(this.deviceData.before_recovery_install.instructions)
+                if(!SUPPORTED.beforeRecoveryInstall.includes(this.deviceData.before_recovery_install.instructions)) {
+                    unsupported.push(this.deviceData.before_recovery_install.instructions)
+                }
             }
         }
         if(this.deviceData.before_lineage_install) {
