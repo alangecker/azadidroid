@@ -1,0 +1,2122 @@
+{
+  "scrapeDate": "2023-05-08T15:26:01.292Z",
+  "devices": [
+    {
+      "code": "Amber",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "DRG",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "FP2",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "FP3",
+      "roms": [
+        "iode:4.1-20230401"
+      ]
+    },
+    {
+      "code": "FP4",
+      "roms": [
+        "calyxos:4.9.0",
+        "iode:4.1-20230401"
+      ]
+    },
+    {
+      "code": "I001D",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "I01WD",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "Mi439",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "Mi8917",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "Mi8937",
+      "roms": [
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "PL2",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "RMX1801",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "TP1803",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "X00P",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "X00TD",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "X01AD",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "X01BD",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "YTX703F",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "YTX703L",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "Z01R",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "a3xelte",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "a52q",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "a5xelte",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "a5y17lte",
+      "roms": [
+        "iode:2.11-20230220",
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "a72q",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "a7xelte",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "a7y17lte",
+      "roms": [
+        "iode:2.11-20230220",
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "addison",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "ahannah",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "akari",
+      "roms": [
+        "iode:4.1-20230401",
+        "eos:1.10-s",
+        "divestos:20.0"
+      ]
+    },
+    {
+      "code": "akatsuki",
+      "roms": [
+        "iode:4.1-20230401",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "albus",
+      "roms": [
+        "eos:0.20-o"
+      ]
+    },
+    {
+      "code": "alioth",
+      "roms": [
+        "divestos:19.1",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "angler",
+      "roms": [
+        "divestos:15.1",
+        "eos:0.20-o",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "apollon",
+      "roms": [
+        "iode:3.6-20230401",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "athene",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "aura",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "aurora",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "avicii",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "axolotl",
+      "roms": [
+        "calyxos:4.9.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "axon7",
+      "roms": [
+        "divestos:15.1",
+        "eos:0.19-n",
+        "crdoid:9.0"
+      ]
+    },
+    {
+      "code": "bacon",
+      "roms": [
+        "divestos:18.1",
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "barbet",
+      "roms": [
+        "calyxos:4.9.1",
+        "divestos:20.0",
+        "grapheneos:2023050500",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "bardock",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "bardockpro",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "beckham",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "berlin",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "berlna",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "beryllium",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "beyond0lte",
+      "roms": [
+        "iode:3.6-20230401",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "beyond1lte",
+      "roms": [
+        "iode:3.6-20230401",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "beyond2lte",
+      "roms": [
+        "iode:3.6-20230401",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "beyondx",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "bluejay",
+      "roms": [
+        "calyxos:4.9.0",
+        "divestos:20.0",
+        "iode:4.1-20230401",
+        "grapheneos:2023050500"
+      ]
+    },
+    {
+      "code": "blueline",
+      "roms": [
+        "calyxos:4.9.0",
+        "iode:3.6-20230401",
+        "grapheneos:2023020600",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "bonito",
+      "roms": [
+        "calyxos:4.9.0",
+        "grapheneos:2023020600",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "bramble",
+      "roms": [
+        "calyxos:4.9.1",
+        "divestos:20.0",
+        "grapheneos:2023050500",
+        "protonaosp:12.4.1",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "bullhead",
+      "roms": [
+        "divestos:15.1",
+        "eos:0.20-o"
+      ]
+    },
+    {
+      "code": "cancro",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "capricorn",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "castor",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "castor_windy",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "cedric",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "channel",
+      "roms": [
+        "eos:1.8.1-r",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "cheeseburger",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "cheetah",
+      "roms": [
+        "calyxos:4.9.0",
+        "divestos:20.0",
+        "grapheneos:2023050500",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "chef",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "cheryl",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "chiron",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "clark",
+      "roms": [
+        "divestos:17.1"
+      ]
+    },
+    {
+      "code": "condor",
+      "roms": [
+        "eos:0.7-n"
+      ]
+    },
+    {
+      "code": "coral",
+      "roms": [
+        "calyxos:4.9.0",
+        "grapheneos:2023050500",
+        "protonaosp:12.4.1",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "crackling",
+      "roms": [
+        "divestos:17.1",
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "crosshatch",
+      "roms": [
+        "calyxos:4.9.0",
+        "grapheneos:2023020600",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "crownlte",
+      "roms": [
+        "divestos:20.0",
+        "iode:4.1-20230401",
+        "eos:1.10-q",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "d1",
+      "roms": [
+        "iode:3.6-20230401",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "d2att",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "d2s",
+      "roms": [
+        "iode:3.6-20230401",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "d2spr",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "d2tmo",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "d2vzw",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "d2x",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "d800",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "d801",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "d802",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "d803",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "d850",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "d851",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "d852",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "d855",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "davinci",
+      "roms": [
+        "divestos:17.1",
+        "eos:1.10-q",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "dipper",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "discovery",
+      "roms": [
+        "divestos:19.1",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "dragon",
+      "roms": [
+        "divestos:15.1"
+      ]
+    },
+    {
+      "code": "dre",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "dubai",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "dumpling",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "enchilada",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "equuleus",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "ether",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "evert",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "f1f",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "f400",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "fajita",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "falcon",
+      "roms": [
+        "eos:0.7-n"
+      ]
+    },
+    {
+      "code": "flame",
+      "roms": [
+        "calyxos:4.9.0",
+        "iode:4.1-20230401",
+        "grapheneos:2023050500",
+        "protonaosp:12.4.1",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "flo",
+      "roms": [
+        "divestos:15.1"
+      ]
+    },
+    {
+      "code": "flounder",
+      "roms": [
+        "divestos:15.1"
+      ]
+    },
+    {
+      "code": "flounder_lte",
+      "roms": [
+        "divestos:15.1"
+      ]
+    },
+    {
+      "code": "flox",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.4-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "foster_tab",
+      "roms": [
+        "eos:1.9-r"
+      ]
+    },
+    {
+      "code": "fugu",
+      "roms": [
+        "divestos:15.1"
+      ]
+    },
+    {
+      "code": "gauguin",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "gemini",
+      "roms": [
+        "crdoid:13.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "ginkgo",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "griffin",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "grus",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "gta4xl",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "gta4xlwifi",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "gts210vewifi",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "gts28vewifi",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "gts4lv",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "gts4lvwifi",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "guacamole",
+      "roms": [
+        "divestos:20.0",
+        "crdoid:13.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "guacamoleb",
+      "roms": [
+        "divestos:20.0",
+        "crdoid:10.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "h811",
+      "roms": [
+        "divestos:14.1",
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "h815",
+      "roms": [
+        "divestos:14.1",
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "h830",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "h850",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "h910",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "h918",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "h990",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "ha3g",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "ham",
+      "roms": [
+        "divestos:16.0",
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "hammerhead",
+      "roms": [
+        "divestos:16.0",
+        "eos:0.19-n",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "hannah",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "harpia",
+      "roms": [
+        "divestos:17.1",
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "haydn",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "heart",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "hero2lte",
+      "roms": [
+        "eos:1.10-q",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "herolte",
+      "roms": [
+        "eos:1.10-q",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "himaul",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "himawl",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "hlte",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "hltechn",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "hltekor",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "hltetmo",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "hotdog",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "hotdogb",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "i9100",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "i9300",
+      "roms": [
+        "divestos:14.1",
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "i9305",
+      "roms": [
+        "divestos:14.1",
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "instantnoodle",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "instantnoodlep",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "j7elte",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "jactivelte",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "jalebi",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "jasmine_sprout",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:12.0"
+      ]
+    },
+    {
+      "code": "jason",
+      "roms": [
+        "crdoid:11.0",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "jflteatt",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "jfltespr",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "jfltevzw",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "jfltexx",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "jfvelte",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "kane",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "kccat6",
+      "roms": [
+        "divestos:16.0",
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "kebab",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "kenzo",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "kiev",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "kipper",
+      "roms": [
+        "divestos:16.0"
+      ]
+    },
+    {
+      "code": "kirin",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "kiwi",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "klte",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "klteactivexx",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "klteaio",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "kltechn",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "kltechnduo",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "klteduos",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "kltedv",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "kltekdi",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "kltekor",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "kuntao",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "lake",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "land",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "lavender",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "lemonade",
+      "roms": [
+        "divestos:20.0",
+        "iode:4.1-20230401",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "lemonadep",
+      "roms": [
+        "divestos:20.0",
+        "iode:4.1-20230401",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "lentislte",
+      "roms": [
+        "divestos:16.0"
+      ]
+    },
+    {
+      "code": "liber",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "libra",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "lisa",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "lithium",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "lmi",
+      "roms": [
+        "divestos:19.1",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "ls990",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "ls997",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "lux",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "m20lte",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "m7",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "m8",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-q",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "m8d",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-q",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "maguro",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "mako",
+      "roms": [
+        "divestos:18.1",
+        "eos:0.17-n"
+      ]
+    },
+    {
+      "code": "manta",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "marlin",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "mata",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "merlin",
+      "roms": [
+        "divestos:17.1",
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "merlinx",
+      "roms": [
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "mermaid",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "miatoll",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "mido",
+      "roms": [
+        "eos:0.23-p",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "monet",
+      "roms": [
+        "iode:3.6-20230401",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "montana",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "n5100",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "n5110",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "n5120",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "nairo",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "nash",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "natrium",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "nio",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "nx563j",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "obiwan",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "ocean",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "onclite",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "oneplus2",
+      "roms": [
+        "divestos:17.1",
+        "eos:1.10-q",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "oneplus3",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "onyx",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "oriole",
+      "roms": [
+        "calyxos:4.9.0",
+        "divestos:20.0",
+        "iode:4.1-20230401",
+        "grapheneos:2023050500",
+        "protonaosp:12.4.1"
+      ]
+    },
+    {
+      "code": "osprey",
+      "roms": [
+        "divestos:17.1",
+        "eos:1.10-q",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "panther",
+      "roms": [
+        "calyxos:4.9.0",
+        "divestos:20.0",
+        "grapheneos:2023050500"
+      ]
+    },
+    {
+      "code": "payton",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "pdx203",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "peregrine",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "pioneer",
+      "roms": [
+        "divestos:19.1",
+        "iode:3.6-20230401",
+        "eos:1.10-s",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "platina",
+      "roms": [
+        "eos:1.9-r",
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "pme",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "polaris",
+      "roms": [
+        "eos:1.8.1-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "pro1",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "pro1x",
+      "roms": [
+        "divestos:20.0"
+      ]
+    },
+    {
+      "code": "pstar",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "pyxis",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "r5",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "r7plus",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "r7sf",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "racer",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "raven",
+      "roms": [
+        "calyxos:4.9.0",
+        "divestos:20.0",
+        "grapheneos:2023050500",
+        "protonaosp:12.4.1"
+      ]
+    },
+    {
+      "code": "redfin",
+      "roms": [
+        "calyxos:4.9.1",
+        "divestos:20.0",
+        "iode:4.1-20230401",
+        "grapheneos:2023050500",
+        "protonaosp:12.4.1",
+        "crdoid:13.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "renoir",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "rhannah",
+      "roms": [
+        "crdoid:12.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "river",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "rs988",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "s2",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "s3ve3gds",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "s3ve3gjv",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "s3ve3gxx",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "s5neolte",
+      "roms": [
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "sagit",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "sailfish",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "sake",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "santoni",
+      "roms": [
+        "eos:0.23-p",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "sargo",
+      "roms": [
+        "calyxos:4.9.0",
+        "grapheneos:2023020600",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "scorpio",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "serrano3gxx",
+      "roms": [
+        "divestos:18.1",
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "serranodsdd",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "serranoltexx",
+      "roms": [
+        "divestos:18.1",
+        "eos:0.13-n"
+      ]
+    },
+    {
+      "code": "shamu",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "sirius",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:12.0"
+      ]
+    },
+    {
+      "code": "star2lte",
+      "roms": [
+        "divestos:20.0",
+        "iode:4.1-20230401",
+        "eos:1.10-q",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "starlte",
+      "roms": [
+        "divestos:20.0",
+        "iode:4.1-20230401",
+        "eos:1.10-q",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "sumire",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "sunfish",
+      "roms": [
+        "calyxos:4.9.0",
+        "divestos:20.0",
+        "grapheneos:2023050500",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "surnia",
+      "roms": [
+        "divestos:17.1",
+        "eos:1.10-q"
+      ]
+    },
+    {
+      "code": "surya",
+      "roms": [
+        "crdoid:13.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "suzuran",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "t0lte",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "taimen",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "tissot",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "titan",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "toro",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "toroplus",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "troika",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "tulip",
+      "roms": [
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "twolip",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "ursa",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "us996",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "v1awifi",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "vayu",
+      "roms": [
+        "divestos:19.1",
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "victara",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "violet",
+      "roms": [
+        "eos:0.23-p",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "voyager",
+      "roms": [
+        "divestos:19.1",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "vs985",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r",
+        "crdoid:10.0"
+      ]
+    },
+    {
+      "code": "vs995",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "walleye",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.9-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "wayne",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "whyred",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "wt88047",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "x2",
+      "roms": [
+        "eos:1.10-r",
+        "crdoid:11.0"
+      ]
+    },
+    {
+      "code": "xmsirius",
+      "roms": [
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "xz2c",
+      "roms": [
+        "divestos:20.0",
+        "eos:1.10-s"
+      ]
+    },
+    {
+      "code": "z2_plus",
+      "roms": [
+        "divestos:18.1",
+        "eos:1.8.1-r",
+        "crdoid:12.1"
+      ]
+    },
+    {
+      "code": "z3",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "z3c",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "zangya",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "zangyapro",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "zenfone3",
+      "roms": [
+        "eos:0.23-p"
+      ]
+    },
+    {
+      "code": "zippo",
+      "roms": [
+        "eos:1.10-s",
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "zl1",
+      "roms": [
+        "eos:1.10-r"
+      ]
+    },
+    {
+      "code": "grouper",
+      "roms": [
+        "divestos:14.1"
+      ]
+    },
+    {
+      "code": "n7100",
+      "roms": [
+        "eos:0.19-n"
+      ]
+    },
+    {
+      "code": "raphael",
+      "roms": [
+        "crdoid:13.0"
+      ]
+    },
+    {
+      "code": "yellowstone",
+      "roms": [
+        "divestos:16.0"
+      ]
+    }
+  ]
+}

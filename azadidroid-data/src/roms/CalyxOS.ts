@@ -1,4 +1,4 @@
-import { axios } from '../utils/fetch.js'
+import { axiosGetCached } from '../utils/fetch.js'
 import { InstallationMethod, Rom, RomBuild, RomStability } from './common.js'
 import * as yaml from 'js-yaml'
 
@@ -24,7 +24,7 @@ export class CalyxOS extends Rom {
     }
 
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
-        const res = await axios.get(`https://gitlab.com/CalyxOS/calyxos.org/-/raw/main/pages/_data/downloads.yml`, {
+        const res = await axiosGetCached(`https://gitlab.com/CalyxOS/calyxos.org/-/raw/main/pages/_data/downloads.yml`, {
             headers: {
                 'Accept-Encoding': 'gzip'
             }

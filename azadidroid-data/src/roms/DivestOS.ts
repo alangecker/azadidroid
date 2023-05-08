@@ -1,4 +1,4 @@
-import { axios, bypassCORS } from '../utils/fetch.js'
+import { axiosGetCached, bypassCORS } from '../utils/fetch.js'
 import { InstallationMethod, Rom, RomBuild, RomStability, lineageToAndroidVersion, versionToDate } from './common.js'
 
 /**
@@ -42,7 +42,7 @@ export class DivestOS extends Rom {
     link = ''
 
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
-        const res = await axios.get(`https://gitlab.com/divested-mobile/mirror.divestos.org/-/raw/master/update_device_info.sh`, {
+        const res = await axiosGetCached(`https://gitlab.com/divested-mobile/mirror.divestos.org/-/raw/master/update_device_info.sh`, {
             headers: {
                 'Accept-Encoding': 'gzip'
             }
@@ -69,7 +69,7 @@ export class DivestOS extends Rom {
 
         if(!filtered.length) return []
 
-        const page = await axios(bypassCORS('https://divestos.org/pages/devices'), {
+        const page = await axiosGetCached(bypassCORS('https://divestos.org/pages/devices'), {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0',
                 'Accept-Encoding': 'gzip'

@@ -1,5 +1,5 @@
-import { axios, bypassCORS } from '../utils/fetch.js'
-import { Rom, RomAvailability, RomStability, RomVersion, Version, versionToDate } from './common.js'
+import { axiosGetCached } from '../utils/fetch.js'
+import { InstallationMethod, Rom, RomBuild, RomStability } from './common.js'
 
 export class ProtonAOSP extends Rom {
     name = 'ProtonAOSP'
@@ -7,15 +7,19 @@ export class ProtonAOSP extends Rom {
     description = ''
     link = ''
 
-    async getAvailableVersions(codename: string): Promise<RomVersion[]> {
-        const res = await axios.get('https://protonaosp.org/releases/index.json')
+    async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
+        const res = await axiosGetCached('https://protonaosp.org/releases/index.json')
 
         if(!res.data.latest?.[codename]) return []
-        return res.data.latest[codename].map((v): RomVersion => ({
+        return res.data.latest[codename].map((v): RomBuild => ({
             version: v.version,
-            url: v.url,
             variant: v.variant,
+            androidVersion: v.version.split('.')[0],
+            installMethod: InstallationMethod.Fastboot,
             state: RomStability.STABLE,
+            files: {
+                rom: v.url
+            }            
         }))
     }
 }

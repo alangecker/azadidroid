@@ -1,4 +1,4 @@
-import { axios } from '../utils/fetch.js'
+import { axios, axiosGetCached } from '../utils/fetch.js'
 import { InstallationMethod, Rom, RomStability, RomVersion, versionToDate } from './common.js'
 
 interface GithubReleaseAsset {
@@ -33,7 +33,7 @@ export class IodeOS extends Rom {
     }
 
     async getAvailableVersions(codename: string): Promise<RomVersion[]> {
-        const res = await axios.get(`https://api.github.com/repos/iodeOS/ota/releases?per_page=100`, {
+        const res = await axiosGetCached(`https://api.github.com/repos/iodeOS/ota/releases?per_page=100`, {
             headers: {
                 'Accept-Encoding': 'gzip'
             }
