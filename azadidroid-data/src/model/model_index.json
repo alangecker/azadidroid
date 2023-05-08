@@ -48,6 +48,24 @@
     ]
   },
   {
+    "code": "FP4",
+    "vendor": "Fairphone",
+    "name": "4",
+    "method": "fastboot",
+    "models": [
+      "FP4"
+    ]
+  },
+  {
+    "code": "G",
+    "vendor": "10.or",
+    "name": "G",
+    "method": "fastboot",
+    "models": [
+      "G"
+    ]
+  },
+  {
     "code": "I001D",
     "vendor": "ASUS",
     "name": "ROG Phone 2 (ZS660KL)",
@@ -60,6 +78,73 @@
     "name": "Zenfone 6 (ZS630KL)",
     "method": "fastboot",
     "models": []
+  },
+  {
+    "code": "Mi439",
+    "vendor": "Xiaomi",
+    "name": "Redmi 7A / 8 / 8A / 8A Dual",
+    "method": "fastboot",
+    "models": [
+      "M1903C3EC",
+      "M1903C3EE",
+      "M1903C3EG",
+      "M1903C3EH",
+      "M1903C3EI",
+      "M1903C3ET",
+      "M1908C3IC",
+      "M1908C3IE",
+      "M1908C3IG",
+      "M1908C3IH",
+      "M1908C3II",
+      "M1908C3KE",
+      "M1908C3KG",
+      "M1908C3KH",
+      "M1908C3KI",
+      "M2001C3K3I"
+    ]
+  },
+  {
+    "code": "Mi8917",
+    "vendor": "Xiaomi",
+    "name": "Redmi 4A / 5A / Note 5A Lite / Y1 Lite",
+    "method": "fastboot",
+    "models": [
+      "2016111",
+      "2016112",
+      "2016116",
+      "2016117",
+      "MCE3B",
+      "MCG3B",
+      "MCI3B",
+      "MCT3B",
+      "MDE6",
+      "MDG6",
+      "MDT6",
+      "MDI6"
+    ]
+  },
+  {
+    "code": "Mi8937",
+    "vendor": "Xiaomi",
+    "name": "Redmi 3S / 3X / 4 (India) / 4X / Note 5A Prime / Y1 Prime",
+    "method": "fastboot",
+    "models": [
+      "2016031",
+      "2016037",
+      "2016032",
+      "2016030",
+      "2016036",
+      "2016035",
+      "2016033",
+      "MAI132",
+      "MAG138",
+      "MAE136",
+      "MAT136",
+      "MDE6S",
+      "MDG6S",
+      "MDT6S",
+      "MDI6S"
+    ]
   },
   {
     "code": "P024",
@@ -184,7 +269,7 @@
   {
     "code": "Z00T",
     "vendor": "ASUS",
-    "name": "Zenfone 2 Laser / Selfie (1080p)",
+    "name": "Zenfone 2 Laser (1080p) / Selfie (1080p)",
     "method": "fastboot",
     "models": []
   },
@@ -353,9 +438,9 @@
     "name": "POCO F3 / Redmi K40 / Mi 11X",
     "method": "fastboot",
     "models": [
+      "M2012K11AG",
       "M2012K11AC",
-      "M2012K11AI",
-      "M2012K11AG"
+      "M2012K11AI"
     ]
   },
   {
@@ -387,9 +472,9 @@
     "name": "Mi 10T / Mi 10T Pro / Redmi K30S Ultra",
     "method": "fastboot",
     "models": [
-      "M2007J3SC",
+      "M2007J3SY",
       "M2007J3SG",
-      "M2007J3SY"
+      "M2007J3SC"
     ]
   },
   {
@@ -522,6 +607,15 @@
     ]
   },
   {
+    "code": "berlna",
+    "vendor": "Motorola",
+    "name": "edge 2021",
+    "method": "fastboot",
+    "models": [
+      "XT2141-2"
+    ]
+  },
+  {
     "code": "beryllium",
     "vendor": "Xiaomi",
     "name": "Poco F1",
@@ -572,6 +666,13 @@
     ]
   },
   {
+    "code": "bluejay",
+    "vendor": "Google",
+    "name": "Pixel 6a",
+    "method": "fastboot",
+    "models": []
+  },
+  {
     "code": "blueline",
     "vendor": "Google",
     "name": "Pixel 3",
@@ -602,12 +703,9 @@
   {
     "code": "cancro",
     "vendor": "Xiaomi",
-    "name": "Mi 3 / Mi 4",
+    "name": "Mi 3 / 4",
     "method": "fastboot",
-    "models": [
-      "MI3",
-      "MI4"
-    ]
+    "models": []
   },
   {
     "code": "capricorn",
@@ -717,6 +815,13 @@
     "models": []
   },
   {
+    "code": "cheetah",
+    "vendor": "Google",
+    "name": "Pixel 7 Pro",
+    "method": "fastboot",
+    "models": []
+  },
+  {
     "code": "chef",
     "vendor": "Motorola",
     "name": "one power",
@@ -750,7 +855,7 @@
   {
     "code": "clark",
     "vendor": "Motorola",
-    "name": "moto x pure edition / style (2015)",
+    "name": "moto x pure edition (2015) / style (2015)",
     "method": "fastboot",
     "models": [
       "XT1570",
@@ -932,9 +1037,9 @@
     "models": [
       "M1903F10A",
       "M1903F10C",
-      "M1903F10G",
       "M1903F10I",
-      "M1903F10T"
+      "M1903F10T",
+      "M1903F10G"
     ]
   },
   {
@@ -1026,7 +1131,7 @@
   {
     "code": "espresso3g",
     "vendor": "Samsung",
-    "name": "Galaxy Tab 2 7.0 / Tab 2 10.1 (GSM)",
+    "name": "Galaxy Tab 2 7.0 (GSM) / 10.1 (GSM)",
     "method": "heimdall",
     "models": [
       "P3100",
@@ -1036,7 +1141,7 @@
   {
     "code": "espressowifi",
     "vendor": "Samsung",
-    "name": "Galaxy Tab 2 7.0 / Tab 2 10.1 (Wi-Fi / Wi-Fi + IR)",
+    "name": "Galaxy Tab 2 7.0 (Wi-Fi / Wi-Fi + IR) / 10.1 (Wi-Fi / Wi-Fi + IR)",
     "method": "heimdall",
     "models": [
       "P3110",
@@ -1119,12 +1224,9 @@
   {
     "code": "find7",
     "vendor": "OPPO",
-    "name": "Find 7a/s",
+    "name": "Find 7a / 7s",
     "method": "fastboot",
-    "models": [
-      "Find 7a",
-      "Find 7s"
-    ]
+    "models": []
   },
   {
     "code": "flame",
@@ -1162,29 +1264,29 @@
     "models": []
   },
   {
-    "code": "foster",
+    "code": "foster_tab",
     "vendor": "NVIDIA",
-    "name": "Shield TV (2015 / 2015 Pro / 2017 / 2019 Pro) / Jetson TX1 [Android TV]",
+    "name": "Shield TV (2015 / 2015 Pro / 2017 / 2019 Pro) [Tablet] / Jetson TX1 [Tablet]",
     "method": "fastboot",
     "models": [
       "darcy",
       "foster_e",
       "foster_e_hdd",
-      "jetson_cv",
-      "mdarcy"
+      "mdarcy",
+      "jetson_cv"
     ]
   },
   {
-    "code": "foster_tab",
+    "code": "foster",
     "vendor": "NVIDIA",
-    "name": "Shield TV (2015 / 2015 Pro / 2017 / 2019 Pro) / Jetson TX1 [Tablet]",
+    "name": "Shield TV (2015 / 2015 Pro / 2017 / 2019 Pro) [Android TV] / Jetson TX1 [Android TV]",
     "method": "fastboot",
     "models": [
       "darcy",
       "foster_e",
       "foster_e_hdd",
-      "jetson_cv",
-      "mdarcy"
+      "mdarcy",
+      "jetson_cv"
     ]
   },
   {
@@ -1208,8 +1310,8 @@
     "method": "fastboot",
     "models": [
       "M2007J17G",
-      "M2007J17C",
-      "M2007J17I"
+      "M2007J17I",
+      "M2007J17C"
     ]
   },
   {
@@ -1301,6 +1403,15 @@
     "method": "heimdall",
     "models": [
       "SM-T377P"
+    ]
+  },
+  {
+    "code": "gtowifi",
+    "vendor": "Samsung",
+    "name": "Galaxy Tab A 8.0 (2019)",
+    "method": "heimdall",
+    "models": [
+      "SM-T290"
     ]
   },
   {
@@ -1416,6 +1527,13 @@
     "models": []
   },
   {
+    "code": "h872",
+    "vendor": "LG",
+    "name": "G6 (T-Mobile)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
     "code": "h910",
     "vendor": "LG",
     "name": "V20 (AT&T)",
@@ -1428,6 +1546,15 @@
     "name": "V20 (T-Mobile)",
     "method": "fastboot",
     "models": []
+  },
+  {
+    "code": "h932",
+    "vendor": "LG",
+    "name": "V30 (T-Mobile)",
+    "method": "dd",
+    "models": [
+      "H932"
+    ]
   },
   {
     "code": "h990",
@@ -1490,6 +1617,17 @@
     "name": "Xperia TX",
     "method": "fastboot",
     "models": []
+  },
+  {
+    "code": "haydn",
+    "vendor": "Xiaomi",
+    "name": "Mi 11i / Redmi K40 Pro / Redmi K40 Pro+ / Mi 11X Pro",
+    "method": "fastboot",
+    "models": [
+      "M2012K11G",
+      "M2012K11C",
+      "M2012K11I"
+    ]
   },
   {
     "code": "heart",
@@ -1668,7 +1806,7 @@
   {
     "code": "ido",
     "vendor": "Xiaomi",
-    "name": "Redmi 3/Prime",
+    "name": "Redmi 3 / 3 Prime",
     "method": "fastboot",
     "models": []
   },
@@ -1815,6 +1953,17 @@
     ]
   },
   {
+    "code": "joan",
+    "vendor": "LG",
+    "name": "V30 (Unlocked)",
+    "method": "fastboot",
+    "models": [
+      "H930",
+      "H930DS",
+      "US998"
+    ]
+  },
+  {
     "code": "k3gxx",
     "vendor": "Samsung",
     "name": "Galaxy S5 (International 3G)",
@@ -1883,9 +2032,8 @@
     "name": "moto g 5G / one 5G ace",
     "method": "fastboot",
     "models": [
-      "XT2113-2",
       "XT2113-3",
-      "XT2113-5"
+      "XT2113-2"
     ]
   },
   {
@@ -2093,6 +2241,13 @@
     ]
   },
   {
+    "code": "lancelot",
+    "vendor": "Xiaomi",
+    "name": "Redmi 9",
+    "method": "fastboot",
+    "models": []
+  },
+  {
     "code": "land",
     "vendor": "Xiaomi",
     "name": "Redmi 3S / 3X",
@@ -2131,6 +2286,16 @@
     ]
   },
   {
+    "code": "lemonades",
+    "vendor": "OnePlus",
+    "name": "9R",
+    "method": "fastboot",
+    "models": [
+      "LE2100",
+      "LE2101"
+    ]
+  },
+  {
     "code": "lentislte",
     "vendor": "Samsung",
     "name": "Galaxy S5 LTE-A",
@@ -2149,11 +2314,31 @@
     "models": []
   },
   {
+    "code": "liber",
+    "vendor": "Motorola",
+    "name": "one fusion+",
+    "method": "fastboot",
+    "models": [
+      "XT2067-2"
+    ]
+  },
+  {
     "code": "libra",
     "vendor": "Xiaomi",
     "name": "Mi 4c",
     "method": "fastboot",
     "models": []
+  },
+  {
+    "code": "lisa",
+    "vendor": "Xiaomi",
+    "name": "11 Lite 5G NE / 11 Lite NE 5G / Mi 11 LE",
+    "method": "fastboot",
+    "models": [
+      "2109119DG",
+      "2109119DI",
+      "2107119DC"
+    ]
   },
   {
     "code": "lithium",
@@ -2337,6 +2522,13 @@
     ]
   },
   {
+    "code": "merlinx",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 9",
+    "method": "fastboot",
+    "models": []
+  },
+  {
     "code": "mermaid",
     "vendor": "Sony",
     "name": "Xperia 10 Plus",
@@ -2351,16 +2543,16 @@
   {
     "code": "miatoll",
     "vendor": "Xiaomi",
-    "name": "POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite",
+    "name": "POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro (Global) / Redmi Note 9 Pro (India) / Redmi Note 9 Pro Max / Redmi Note 10 Lite",
     "method": "fastboot",
     "models": [
-      "2109106A1I",
+      "M2003J6CI",
       "M2003J6A1G",
       "M2003J6A1R",
+      "M2003J6B2G",
       "M2003J6A1I",
       "M2003J6B1I",
-      "M2003J6B2G",
-      "M2003J6CI"
+      "2109106A1I"
     ]
   },
   {
@@ -2479,7 +2671,6 @@
     "name": "moto g 5G plus / one 5G",
     "method": "fastboot",
     "models": [
-      "XT2075-2",
       "XT2075-3",
       "XT2075-5"
     ]
@@ -2536,6 +2727,25 @@
     "models": []
   },
   {
+    "code": "nx609j",
+    "vendor": "Nubia",
+    "name": "Red Magic",
+    "method": "fastboot",
+    "models": [
+      "NX609J"
+    ]
+  },
+  {
+    "code": "nx611j",
+    "vendor": "Nubia",
+    "name": "Z18 Mini",
+    "method": "fastboot",
+    "models": [
+      "NX611J",
+      "M3"
+    ]
+  },
+  {
     "code": "obiwan",
     "vendor": "ASUS",
     "name": "ROG Phone 3",
@@ -2567,7 +2777,7 @@
   {
     "code": "onclite",
     "vendor": "Xiaomi",
-    "name": "Redmi 7",
+    "name": "Redmi 7 / Y3",
     "method": "fastboot",
     "models": []
   },
@@ -2592,6 +2802,13 @@
     "code": "onyx",
     "vendor": "OnePlus",
     "name": "X",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "oriole",
+    "vendor": "Google",
+    "name": "Pixel 6",
     "method": "fastboot",
     "models": []
   },
@@ -2629,6 +2846,22 @@
     "models": []
   },
   {
+    "code": "panther",
+    "vendor": "Google",
+    "name": "Pixel 7",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "parker",
+    "vendor": "Motorola",
+    "name": "one zoom",
+    "method": "fastboot",
+    "models": [
+      "XT2010-1"
+    ]
+  },
+  {
     "code": "payton",
     "vendor": "Motorola",
     "name": "moto x4",
@@ -2645,6 +2878,42 @@
       "XQ-AT52",
       "XQ-AT51",
       "XQ-AT42"
+    ]
+  },
+  {
+    "code": "pdx206",
+    "vendor": "Sony",
+    "name": "Xperia 5 II",
+    "method": "fastboot",
+    "models": [
+      "XQ-AS72",
+      "XQ-AS62",
+      "XQ-AS52",
+      "XQ-AS42"
+    ]
+  },
+  {
+    "code": "pdx214",
+    "vendor": "Sony",
+    "name": "Xperia 5 III",
+    "method": "fastboot",
+    "models": [
+      "XQ-BQ72",
+      "XQ-BQ62",
+      "XQ-BQ52",
+      "XQ-BQ42"
+    ]
+  },
+  {
+    "code": "pdx215",
+    "vendor": "Sony",
+    "name": "Xperia 1 III",
+    "method": "fastboot",
+    "models": [
+      "XQ-BC72",
+      "XQ-BC62",
+      "XQ-BC52",
+      "XQ-BC42"
     ]
   },
   {
@@ -2722,29 +2991,36 @@
     "models": []
   },
   {
-    "code": "porg",
+    "code": "porg_tab",
     "vendor": "NVIDIA",
-    "name": "Jetson (Nano / Nano 2GB) [Android TV]",
+    "name": "Jetson Nano [Tablet] / 2GB [Tablet]",
     "method": "apx",
     "models": [
-      "batuu",
-      "porg"
+      "porg",
+      "batuu"
     ]
   },
   {
-    "code": "porg_tab",
+    "code": "porg",
     "vendor": "NVIDIA",
-    "name": "Jetson (Nano / Nano 2GB) [Tablet]",
+    "name": "Jetson Nano [Android TV] / 2GB [Android TV]",
     "method": "apx",
     "models": [
-      "batuu",
-      "porg"
+      "porg",
+      "batuu"
     ]
   },
   {
     "code": "pro1",
     "vendor": "F(x)tec",
     "name": "Pro¹",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "pro1x",
+    "vendor": "F(x)tec",
+    "name": "Pro¹ X",
     "method": "fastboot",
     "models": []
   },
@@ -2760,17 +3036,17 @@
   {
     "code": "pyxis",
     "vendor": "Xiaomi",
-    "name": "Mi CC 9 / Mi 9 Lite",
+    "name": "Mi CC 9 / 9 Lite",
     "method": "fastboot",
     "models": [
-      "M1904F3BG",
-      "M1904F3BC"
+      "M1904F3BC",
+      "M1904F3BG"
     ]
   },
   {
-    "code": "quill",
+    "code": "quill_tab",
     "vendor": "NVIDIA",
-    "name": "Jetson (TX2 / TX2 NX) [Android TV]",
+    "name": "Jetson TX2 [Tablet] / NX [Tablet]",
     "method": "apx",
     "models": [
       "quill",
@@ -2778,9 +3054,9 @@
     ]
   },
   {
-    "code": "quill_tab",
+    "code": "quill",
     "vendor": "NVIDIA",
-    "name": "Jetson (TX2 / TX2 NX) [Tablet]",
+    "name": "Jetson TX2 [Android TV] / NX [Android TV]",
     "method": "apx",
     "models": [
       "quill",
@@ -2790,7 +3066,7 @@
   {
     "code": "r5",
     "vendor": "OPPO",
-    "name": "R5/R5s (International)",
+    "name": "R5 (International) / R5s (International)",
     "method": "fastboot",
     "models": [
       "R8106",
@@ -2826,11 +3102,29 @@
     ]
   },
   {
+    "code": "raven",
+    "vendor": "Google",
+    "name": "Pixel 6 Pro",
+    "method": "fastboot",
+    "models": []
+  },
+  {
     "code": "redfin",
     "vendor": "Google",
     "name": "Pixel 5",
     "method": "fastboot",
     "models": []
+  },
+  {
+    "code": "renoir",
+    "vendor": "Xiaomi",
+    "name": "Mi 11 Lite 5G",
+    "method": "fastboot",
+    "models": [
+      "M2101K9G",
+      "M2101K9C",
+      "M2101K9R"
+    ]
   },
   {
     "code": "rhannah",
@@ -3030,7 +3324,7 @@
   {
     "code": "spyder",
     "vendor": "Motorola",
-    "name": "DROID RAZR/RAZR MAXX (CDMA)",
+    "name": "DROID RAZR (CDMA) / MAXX (CDMA)",
     "method": "fastboot",
     "models": [
       "XT912"
@@ -3267,7 +3561,7 @@
   {
     "code": "umts_spyder",
     "vendor": "Motorola",
-    "name": "DROID RAZR / RAZR MAXX (GSM)",
+    "name": "DROID RAZR (GSM) / MAXX (GSM)",
     "method": "fastboot",
     "models": [
       "XT910"
@@ -3283,7 +3577,14 @@
   {
     "code": "us996",
     "vendor": "LG",
-    "name": "V20 (US Unlocked)",
+    "name": "V20 (GSM Unlocked)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "us996d",
+    "vendor": "LG",
+    "name": "V20 (GSM Unlocked - DirtySanta)",
     "method": "fastboot",
     "models": []
   },
@@ -3351,11 +3652,17 @@
   {
     "code": "vegetalte",
     "vendor": "BQ",
-    "name": "Aquaris E5 4G / Aquaris E5s",
+    "name": "Aquaris E5 4G / E5s",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "vela",
+    "vendor": "Xiaomi",
+    "name": "Mi CC9 Meitu Edition",
     "method": "fastboot",
     "models": [
-      "E5 4G",
-      "E5s"
+      "M1904F3BT"
     ]
   },
   {
@@ -3587,55 +3894,13 @@
   {
     "code": "zl1",
     "vendor": "LeEco",
-    "name": "Le Pro3 / Le Pro3 Elite",
+    "name": "Le Pro3 / Pro3 Elite",
     "method": "fastboot",
     "models": [
       "LEX720",
       "LEX722",
       "LEX727"
     ]
-  },
-  {
-    "code": "cheetah",
-    "vendor": "Google",
-    "name": "Pixel 7 Pro",
-    "models": [],
-    "method": "fastboot"
-  },
-  {
-    "code": "panther",
-    "vendor": "Google",
-    "name": "Pixel 7",
-    "models": [],
-    "method": "fastboot"
-  },
-  {
-    "code": "bluejay",
-    "vendor": "Google",
-    "name": "Pixel 6a",
-    "models": [],
-    "method": "fastboot"
-  },
-  {
-    "code": "raven",
-    "vendor": "Google",
-    "name": "Pixel 6 Pro",
-    "models": [],
-    "method": "fastboot"
-  },
-  {
-    "code": "oriole",
-    "vendor": "Google",
-    "name": "Pixel 6",
-    "models": [],
-    "method": "fastboot"
-  },
-  {
-    "code": "FP4",
-    "vendor": "Fairphone",
-    "name": "Fairphone 4",
-    "models": [],
-    "method": "fastboot"
   },
   {
     "code": "grouper",

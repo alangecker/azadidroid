@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "type":"module",
   "scripts": {
-    "find-roms": "ts-node --esm src/scripts/find_roms.ts"
+    "find-roms": "ts-node --esm src/scripts/find_roms.ts",
+    "update-model-index": "ts-node --esm src/scripts/update_model_index.ts"
   },
   "dependencies": {
     "@types/js-yaml": "^4.0.5",
