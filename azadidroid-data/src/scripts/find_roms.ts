@@ -1,3 +1,4 @@
+import { ModelInfos } from "../model/ModelInfos.js"
 import { roms } from "../roms/index.js"
 
 async function main() {
@@ -6,6 +7,12 @@ async function main() {
         console.error('Usage: yarn find-roms CODENAME [ROM]')
         process.exit(1)
     }
+
+    const model = await ModelInfos.get(codename)
+
+    console.log('---------------------------------------------')
+    console.log(`${model.vendor} ${model.name} [${model.codename}]`)
+    console.log('---------------------------------------------')
 
     const romNames = process.argv[3] ? [process.argv[3]] : Object.keys(roms)
 
@@ -19,10 +26,11 @@ async function main() {
                 notAvailable.push(name)
             }
             for(let build of builds) {
-                console.log(`* ${name}${build.variant ? ` (${build.variant})` : ''} ${build.version}${build.androidVersion ? '/'+build.androidVersion : ''} [${build.date ? build.date+'/' : ''}${build.state}]`)
+                console.log(`* ${name}${build.variant ? ` (${build.variant})` : ''} ${build.version}${build.androidVersion ? ' ('+build.androidVersion+')' : ''} [${build.date ? build.date+'/' : ''}${build.state}]`)
             }
         } catch(err) {
-            console.error(`[${name}] Error: `, err.message)
+            // console.error(`[${name}] Error: `, err.message)
+            notAvailable.push(name)
         }
     })
     await Promise.all(promises)
