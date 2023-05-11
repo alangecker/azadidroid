@@ -36,10 +36,10 @@ export class eOS extends Rom {
             return null
         }
 
-        const filename = res.data.match(/href=(e-.*?)>/)?.[1]
+        const filename = res.data.match(/href=(e-.*?|IMG-e-.*?)>/)?.[1]
         if(!filename) throw new Error('no file found in /e/ OS device page')
         
-        const [e, version, androidMajor, date ] = filename.split('-')
+        const [e, version, androidMajor, date ] = filename.replace(/^IMG-/, '').split('-')
 
         return {
             date: versionToDate(date),
@@ -61,7 +61,7 @@ export class eOS extends Rom {
 
         const stableBuild = await this.getBuild(codename, 'stable')
         if(stableBuild) return [stableBuild]
-        
+
         return []
     }
 }
