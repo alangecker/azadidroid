@@ -8,6 +8,19 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         path: '',
+        redirect: {
+          name: 'ModelList'
+        }
+      },
+      {
+        path: '/installer',
+        name: 'Installer',
+        components: {
+          default: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
+        }
+      },
+      {
+        path: '/list',
         name: 'ModelList',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
