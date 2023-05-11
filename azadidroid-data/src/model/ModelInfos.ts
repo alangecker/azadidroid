@@ -29,6 +29,10 @@ export class ModelInfos {
     get models() {
         return this.deviceData?.models || []
     }
+    get image() {
+        if(!this.deviceData?.image) return null
+        return `https://raw.githubusercontent.com/LineageOS/lineage_wiki/master/images/devices/small/${this.deviceData.image}`
+    }
     get installMethod(): 'heimdall'|'fastboot_nexus'|'fastboot_xiaomi'|'fastboot_motorola' {
         if(!this.deviceData.install_method) {
             throw new Error(`no 'install_method' specified for ${this.codename}`)

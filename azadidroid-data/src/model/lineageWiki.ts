@@ -137,6 +137,9 @@ export async function getLineageWikiDeviceData(codename: string): Promise<Lineag
         if(additionalData.before_install_device_variants) {
             data.before_install_device_variants.push(...additionalData.before_install_device_variants)
         }
+        if(!data.image && additionalData.image) {
+            data.image = additionalData.image
+        }
     }
     data.name = combineNames(names)
     return data
