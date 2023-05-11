@@ -1,3 +1,4 @@
+import { axios, axiosGetCached } from "../utils/fetch"
 
 export enum RomStability {
     STABLE = 'stable',
@@ -100,7 +101,7 @@ export function versionToDate(str: string) {
 }
 
 const knownLineageVersionMapping = {
-    '16.0': '9.0.0',
+    '16.0': '9.0',
     '17.1': '10',
     '18.1': '11',
     '19.1': '12.1',
@@ -115,4 +116,20 @@ export function lineageToAndroidVersion(version: string) {
     const majorLineageVersion = parseInt(v[0])
 
     return (majorLineageVersion - 7).toString()
+}
+
+export async function getGitlabFile(projectId: number, branch: string, path: string) {
+    const res = await axiosGetCached(`https://gitlab.com/api/v4/projects/${projectId}/repository/files/${encodeURIComponent(path)}?ref=${encodeURIComponent(branch)}`, {
+        headers: {
+            'Accept-Encoding': 'gzip'
+        }
+    })
+
+    if(typeof atob === 'function') {
+        return atob(res.data.content)
+    } else if(typeof Buffer !== 'undefined') {
+        return Buffer.from(res.data.content, 'base64').toString('utf-8')
+    } else {
+        throw new Error('could not decode base64. neither atob() nor Buffer() found')
+    }
 }

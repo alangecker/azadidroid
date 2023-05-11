@@ -1,0 +1,54 @@
+resolver 9.9.9.9;
+
+location ~ /cors-bypass/(.*\.archive\.org|archive\.org|divestos\.org|sourceforge\.net|images\.ecloud\.global|releases\.grapheneos\.org)/(.*) {
+    add_header 'Access-Control-Allow-Origin' '*' always;
+
+    if ($request_method = OPTIONS ) {
+        add_header Content-Length 0;
+        add_header Content-Type text/plain;
+        add_header 'Access-Control-Allow-Origin' '*';
+        return 200;
+    }
+    
+    proxy_pass "https://$1/$2$is_args$args";
+    proxy_ssl_server_name on;
+    proxy_set_header  Range $slice_range;
+    proxy_buffer_size   128k;
+    proxy_buffers   4 256k;
+    proxy_busy_buffers_size   256k;
+
+    # avoid duplicated header
+    proxy_hide_header 'Access-Control-Allow-Origin';
+
+    # avoid too big header
+    proxy_hide_header 'Content-Security-Policy';
+
+    # prevent execution of untrusted content
+    proxy_hide_header 'Content-Type';
+
+    add_header Content-Type text/plain;
+
+    # handle redirects internally
+    proxy_intercept_errors on;
+    error_page 301 302 307 = @handle_redirect;
+
+}
+
+location @handle_redirect {
+    set $saved_redirect_location '$upstream_http_location';
+    proxy_pass $saved_redirect_location;
+    proxy_hide_header 'Access-Control-Allow-Origin';
+    add_header 'Access-Control-Allow-Origin' '*' always;
+
+    # prevent execution of untrusted content
+    proxy_hide_header 'Content-Type';
+    add_header Content-Type text/plain;
+
+    # avoid too big header
+    proxy_hide_header 'Content-Security-Policy';
+}
+
+
+location /cors-bypass/ {
+    return 403;
+}

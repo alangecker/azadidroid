@@ -1,4 +1,4 @@
-import { axios } from '../utils/fetch.js'
+import { axios, bypassCORS } from '../utils/fetch.js'
 import { InstallationMethod, Rom, RomStability, RomVersion, versionToDate } from './common.js'
 
 
@@ -15,11 +15,15 @@ export class GrapheneOS extends Rom {
     }
 
     async getAvailableVersions(codename: string): Promise<RomVersion[]> {
-        const res = await axios.get(`https://releases.grapheneos.org/${codename}-stable`, {
+        const res = await axios.get(bypassCORS(`https://releases.grapheneos.org/${codename}-stable`), {
             headers: {
                 'Accept-Encoding': 'gzip'
-            }
+            },
+            validateStatus: (status) => status === 200 || status === 404 || status === 410
         })
+        if(res.status === 404 || res.status === 410) {
+            return []
+        }
         const release = res.data.split(' ')[0]
         return [
             {

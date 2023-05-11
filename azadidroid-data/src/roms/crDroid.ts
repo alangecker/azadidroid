@@ -10,7 +10,7 @@ export class crDroid extends Rom {
     link = ''
   
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
-        const res = await axios.get('https://sourceforge.net/projects/crdroid/rss?path=/' + codename)
+        const res = await axios.get(bypassCORS('https://sourceforge.net/projects/crdroid/rss?path=/' + codename))
         const links = res.data.match(/<link>(.*?)<\/link>/g)
         if(!links) return []
         const link = links.find((l: string) => l.includes('/download'))?.replace(/<.*?>/g, '')
@@ -25,7 +25,7 @@ export class crDroid extends Rom {
             date: versionToDate(f[2]),
             state: RomStability.BETA,
             version: f[1],
-            androidVersion: lineageToAndroidVersion(f[1]),
+            androidVersion: parseInt(f[1]).toString(),
             installMethod: InstallationMethod.Recovery,
             files: {
                 rom: {

@@ -1,5 +1,5 @@
 import { axios, bypassCORS } from '../utils/fetch.js'
-import { InstallationMethod, Rom, RomAvailability, RomBuild, RomStability, RomVersion, Version, versionToDate } from './common.js'
+import { InstallationMethod, Rom, RomAvailability, RomBuild, RomStability, versionToDate } from './common.js'
 import * as yaml from 'js-yaml'
 
 
@@ -27,8 +27,14 @@ export class eOS extends Rom {
     description = ''
     link = ''
 
-    private async getBuild(codename: string, channel: 'dev'|'stable'): Promise<RomBuild> {
-        const res = await axios.get(bypassCORS(`https://images.ecloud.global/${channel}/${codename}/`))
+    private async getBuild(codename: string, channel: 'dev'|'stable'): Promise<RomBuild|null> {
+        const res = await axios.get(bypassCORS(`https://images.ecloud.global/${channel}/${codename}/`), {
+            validateStatus: (status) => [404,200].includes(status)
+        })
+
+        if(res.status === 404) {
+            return null
+        }
 
         const filename = res.data.match(/href=(e-.*?)>/)?.[1]
         if(!filename) throw new Error('no file found in /e/ OS device page')
@@ -50,11 +56,12 @@ export class eOS extends Rom {
         }
     }
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
-        const out = [await this.getBuild(codename, 'dev')]
-        try {
-            out.push(await this.getBuild(codename, 'stable'))
-        } catch(err) {}
+        const devBuild = await this.getBuild(codename, 'dev')
+        if(devBuild) return [devBuild]
 
-        return out
+        const stableBuild = await this.getBuild(codename, 'stable')
+        if(stableBuild) return [stableBuild]
+        
+        return []
     }
 }

@@ -3,7 +3,7 @@ import { InstallationMethod, Rom, RomBuild, RomStability, lineageToAndroidVersio
 
 
 async function getArchiveRom(archiveKey: string, codename: string) {
-    const res = await axios.get(`https://archive.org/download/${archiveKey}/${archiveKey}_files.xml`)
+    const res = await axios.get(bypassCORS(`https://archive.org/download/${archiveKey}/${archiveKey}_files.xml`))
     const files = Array.from((res.data as string).matchAll(/<file name="(.*?)"/g)).map(f => f[1])
         .filter(f => f.startsWith('builds/'+codename+'/') || f.startsWith('roms/'+codename+'/'))
     

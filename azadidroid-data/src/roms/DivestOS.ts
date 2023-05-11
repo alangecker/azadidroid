@@ -1,5 +1,5 @@
 import { axiosGetCached, bypassCORS } from '../utils/fetch.js'
-import { InstallationMethod, Rom, RomBuild, RomStability, lineageToAndroidVersion, versionToDate } from './common.js'
+import { InstallationMethod, Rom, RomBuild, RomStability, getGitlabFile, lineageToAndroidVersion, versionToDate } from './common.js'
 
 /**
  * Source: https://gitlab.com/divested-mobile/divestos-website/-/blob/master/pages/devices.html#L272
@@ -42,12 +42,9 @@ export class DivestOS extends Rom {
     link = ''
 
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
-        const res = await axiosGetCached(`https://gitlab.com/divested-mobile/mirror.divestos.org/-/raw/master/update_device_info.sh`, {
-            headers: {
-                'Accept-Encoding': 'gzip'
-            }
-        })
-        const lines =res.data.split('\n')
+        // https://gitlab.com/divested-mobile/mirror.divestos.org/-/raw/master/update_device_info.sh
+        const lines = (await getGitlabFile(43272742, 'master', 'update_device_info.sh')).split('\n')
+        console.log(lines)
 
         const bootloaderInformation = lines.find(line => line.includes(codename+'/bootloader_information'))
         const statusLines = lines.filter(line => line.includes(codename+'/status-'))
@@ -69,7 +66,7 @@ export class DivestOS extends Rom {
 
         if(!filtered.length) return []
 
-        const page = await axiosGetCached(bypassCORS('https://divestos.org/pages/devices'), {
+        const page = await axiosGetCached(bypassCORS('https://divestos.org/generated/LineageOS-false.html'), {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0',
                 'Accept-Encoding': 'gzip'
