@@ -22,6 +22,10 @@ export class CalyxOS extends Rom {
         return true
     }
 
+    getLink(codename: string) {
+        return `https://calyxos.org/install/devices/${codename}/`
+    }
+
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
         // https://gitlab.com/CalyxOS/calyxos.org/-/raw/main/pages/_data/downloads.yml
         const res = await getGitlabFile(19199746, 'main', 'pages/_data/downloads.yml')

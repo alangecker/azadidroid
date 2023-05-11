@@ -8,6 +8,10 @@ export class crDroid extends Rom {
     logo = ''
     description = ''
     link = ''
+
+    getLink(codename: string): string {
+        return `https://crdroid.net/downloads#${codename}`
+    }
   
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
         const res = await axios.get(bypassCORS('https://sourceforge.net/projects/crdroid/rss?path=/' + codename), {

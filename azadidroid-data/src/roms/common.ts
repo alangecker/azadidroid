@@ -61,6 +61,8 @@ export abstract class Rom {
     installVia: InstallationMethod = InstallationMethod.Recovery
 
     async isBootloaderRelockSupported(codename: string): Promise<boolean> { return false }
+
+    getLink(codename: string): string|null { return null }
     /**
      * @deprecated use getAvailableBuilds()
      */

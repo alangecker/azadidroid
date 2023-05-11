@@ -11,7 +11,8 @@
       <v-icon v-else-if="isAvailable" icon="mdi-file-outline" size="xs" />
     </td>
     <td :colspan="error ? 4 : 1" :class="{'text-decoration-line-through': !isLoading && !isAvailable && !error}">
-      {{ romName }}
+      <a v-if="link" :href="link">{{ romName }}</a>
+      <span v-else>{{ romName }}</span>
       <v-tooltip :text="error" v-if="error" location="start">
         <template #activator="{ props }">
           <v-chip color="red" size="small" v-bind="props">Error</v-chip>
@@ -61,6 +62,10 @@ const isLight = computed(() => {
   return props.isUnlikely
 })
 
+const link = computed(() => {
+  if(!isAvailable.value) return null
+  return roms[props.rom].getLink(props.codename)
+})
 
 onMounted(async () => {
   try {
@@ -83,6 +88,9 @@ onMounted(async () => {
 <style scoped>
 .text-disabled {
   opacity: 0.5;
+}
+a {
+  text-decoration: none;
 }
 </style>
 

@@ -41,6 +41,10 @@ export class DivestOS extends Rom {
     description = ''
     link = ''
 
+    getLink(codename: string) {
+        return `https://divestos.org/pages/devices#device-${codename}`
+    }
+
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
         // https://gitlab.com/divested-mobile/mirror.divestos.org/-/raw/master/update_device_info.sh
         const lines = (await getGitlabFile(43272742, 'master', 'update_device_info.sh')).split('\n')

@@ -7,6 +7,10 @@ export class ProtonAOSP extends Rom {
     description = ''
     link = ''
 
+    getLink(codename: string) {
+        return `https://protonaosp.org/download`
+    }
+
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
         const res = await axiosGetCached('https://protonaosp.org/releases/index.json')
 

@@ -27,6 +27,10 @@ export class eOS extends Rom {
     description = ''
     link = ''
 
+    getLink(codename: string) {
+        return `https://doc.e.foundation/devices/${codename}/install`
+    }
+
     private async getBuild(codename: string, channel: 'dev'|'stable'): Promise<RomBuild|null> {
         const res = await axios.get(bypassCORS(`https://images.ecloud.global/${channel}/${codename}/`), {
             validateStatus: (status) => [404,200].includes(status)

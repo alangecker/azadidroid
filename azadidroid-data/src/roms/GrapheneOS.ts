@@ -10,6 +10,10 @@ export class GrapheneOS extends Rom {
 
     installVia = InstallationMethod.Fastboot
 
+    getLink(codename: string) {
+        return `https://grapheneos.org/install/`
+    }
+
     async isBootloaderRelockSupported(codename: string) {
         return true
     }

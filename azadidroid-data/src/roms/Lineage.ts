@@ -32,6 +32,10 @@ export class Lineage extends Rom {
     logo = ''
     description = ''
     link = ''
+
+    getLink(codename: string){
+        return `https://wiki.lineageos.org/devices/${codename}/`
+    }
     async getAvailableBuilds(codename: string): Promise<RomBuild[]> {
         const res = await axios.get(`https://download.lineageos.org/api/v2/devices/${codename}/builds`)
         if(res.data?.length) {

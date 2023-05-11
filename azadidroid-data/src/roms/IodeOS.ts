@@ -32,6 +32,10 @@ export class IodeOS extends Rom {
         return true
     }
 
+    getLink() {
+        return `https://iode.tech/en/iodeos-installation/`
+    }
+
     async getAvailableVersions(codename: string): Promise<RomVersion[]> {
         const res = await axiosGetCached(`https://api.github.com/repos/iodeOS/ota/releases?per_page=100`, {
             headers: {
