@@ -1,4 +1,4 @@
-import { axios, axiosGetCached } from "../utils/fetch"
+import { axios, axiosGetCached } from "../utils/fetch.js"
 
 export enum RomStability {
     STABLE = 'stable',

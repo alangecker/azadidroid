@@ -55,7 +55,7 @@ export class IodeOS extends Rom {
                 const f = fastboot.name.split('-')
                 return [
                     {
-                        version: f[1]+'-'+f[2],
+                        version: f[1],
                         date: versionToDate(f[2]),
                         state: RomStability.STABLE,
                         url: fastboot.browser_download_url
@@ -65,7 +65,7 @@ export class IodeOS extends Rom {
                 const f = zip.name.split('-')
                 return [
                     {
-                        version: f[1]+'-'+f[2],
+                        version: f[1],
                         date: versionToDate(f[2]),
                         state: RomStability.STABLE,
                         url: zip.browser_download_url,
