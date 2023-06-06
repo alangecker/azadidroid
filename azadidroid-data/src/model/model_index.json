@@ -40,12 +40,9 @@
   {
     "code": "FP3",
     "vendor": "Fairphone",
-    "name": "3",
+    "name": "3 / 3+",
     "method": "fastboot",
-    "models": [
-      "FP3",
-      "FP3+"
-    ]
+    "models": []
   },
   {
     "code": "FP4",
@@ -2478,6 +2475,16 @@
     "models": []
   },
   {
+    "code": "martini",
+    "vendor": "OnePlus",
+    "name": "9RT",
+    "method": "fastboot",
+    "models": [
+      "MT2110",
+      "MT2111"
+    ]
+  },
+  {
     "code": "maserati",
     "vendor": "Motorola",
     "name": "DROID 4",
@@ -3901,6 +3908,13 @@
       "LEX722",
       "LEX727"
     ]
+  },
+  {
+    "code": "lynx",
+    "vendor": "Google",
+    "name": "Pixel 7a",
+    "models": [],
+    "method": "fastboot_nexus"
   },
   {
     "code": "grouper",
