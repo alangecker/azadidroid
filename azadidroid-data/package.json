@@ -1,7 +1,7 @@
 {
   "name": "azadidroid-data",
   "version": "0.0.1",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "find-roms": "ts-node --esm src/scripts/find_roms.ts",
     "update-model-index": "ts-node --esm src/scripts/update_model_index.ts",
@@ -9,10 +9,11 @@
   },
   "dependencies": {
     "@types/js-yaml": "^4.0.5",
-    "@types/node": "^18.16.3",
-    "axios": "^1.4.0",
+    "@types/node": "^20.6.1",
+    "axios": "^1.5.0",
+    "cross-fetch": "^4.0.0",
     "js-yaml": "^4.1.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "ts-node": "^10.9.1"

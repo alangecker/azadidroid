@@ -1,36 +1,9 @@
-import axios from "axios"
 import { DeviceMode } from "../usb/helpers.js"
-import { bypassCORS } from "../utils/fetch.js"
 import { logger } from "../utils/logger.js"
 import sleep from "../utils/sleep.js"
+import { getRecoveryFile } from "../utils/twrp.js"
 import { InstallContext, IDownloadRequest, Step } from "./base.js"
 
-
-async function getRecoveryFile(ctx: InstallContext): Promise<IDownloadRequest> {
-    const codename = ctx.model.recoveryCodename
-    const res = await axios(bypassCORS(`https://dl.twrp.me/${codename}/`))
-    const version = res.data.match(/">(twrp-(.*?).img)<\/a>/)
-    let filename = version[1]
-
-    if(codename === 'herolte' && filename === 'twrp-3.7.0_9-0-herolte.img') {
-        // this version is known to be broken, no fix yet available
-        // https://forum.xda-developers.com/t/recovery-exynos-official-twrp-for-galaxy-s7-herolte.3333770/post-87650111
-
-        // rather use the last known good version
-        filename = 'twrp-3.6.2_9-0-herolte.img'
-    }
-
-    return {
-        key: "recovery",
-        title: "Recovery (TWRP)",
-        fileName: filename,
-        url: `https://dl.twrp.me/${codename}/${filename}`,
-        sha256: `https://dl.twrp.me/${codename}/${filename}.sha256`,
-        additionalHeaders: {
-            'Referer': 'https://dl.twrp.me/'
-        }
-    }
-}
 
 export class OdinFlashRecoveryStep extends Step {
     constructor() {
@@ -50,13 +23,15 @@ export class OdinFlashRecoveryStep extends Step {
             if(adb.isRecovery) {
                 const twrpVersion = await adb.getProp('ro.twrp.version')
                 
-                // TODO: avoid fetching recovery again
                 const files = await this.getFilesToDownload(ctx)
                 const filename = files[0]?.fileName
                 if(filename && twrpVersion?.trim() && filename.startsWith('twrp-'+twrpVersion)) {
                     logger.info("there is already the TWRP version installed we would going to install. skipping this step")
                     return
                 }
+
+                // TODO: possible to flash recovery from recovery? (only TWRP)
+                //  -> do it! much more stable than heimdall.js
             }
             logger.debug('reboot into odin...')
             await adb.reboot('download')

@@ -1,5 +1,5 @@
-import { axios } from '../utils/fetch.js'
 import * as yaml from 'js-yaml'
+import fetch from 'cross-fetch'
 
 const LINEAGE_WIKI_BRANCH = 'master'
 
@@ -51,8 +51,13 @@ export interface LineageDeviceData {
 let lineagewikiDevices: string[]|null = null
 
 async function loadLineageDeviceFiles() {
-    const res = await axios('https://api.github.com/repos/LineageOS/lineage_wiki/contents/_data/devices/')
-    lineagewikiDevices = res.data.map(d => d.name)
+    const res = await fetch('https://api.github.com/repositories/79186428/contents/_data/devices', {
+        headers: {
+            'Authorization': 'Bearer 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'
+        }
+    })
+    const data = await res.json()
+    lineagewikiDevices = data.map(d => d.name)
 }
 
 /**
@@ -79,8 +84,8 @@ export async function getLineageCodenames(): Promise<string[]> {
 }
 
 async function loadDeviceYaml(filename: string) {
-    const res = await axios.get(`https://raw.githubusercontent.com/LineageOS/lineage_wiki/${LINEAGE_WIKI_BRANCH}/_data/devices/${filename}`)
-    return yaml.load(await res.data) as LineageDeviceData
+    const res = await fetch(`https://raw.githubusercontent.com/LineageOS/lineage_wiki/${LINEAGE_WIKI_BRANCH}/_data/devices/${filename}`)
+    return yaml.load(await res.text()) as LineageDeviceData
 }
 
 /**
@@ -119,7 +124,7 @@ function combineNames(names: string[]) {
 export async function getLineageWikiDeviceData(codename: string): Promise<LineageDeviceData> {
     const files = await getLineageCodenameFiles(codename)
 
-    if(!files) {
+    if(!files.length) {
         throw new Error(`could not find device infos for '${codename}'`)
     }
     const data = await loadDeviceYaml(files[0])
