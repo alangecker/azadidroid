@@ -239,7 +239,7 @@ const props = defineProps<{
 
 const emit = defineEmits(["setCodename"]);
 
-const substep = ref(2);
+const substep = ref(1);
 
 // connect
 const isConnecting = ref(false);

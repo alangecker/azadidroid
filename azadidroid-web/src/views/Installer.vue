@@ -16,7 +16,7 @@
           <v-alert
             type="error"
             title="Browser not supported"
-            text="This installer requires a browser with supports 'WebUSB'."
+            text="This installer requires a browser with supports 'WebUSB' like Chromium or Google Chrome"
           ></v-alert>
         </v-card-text>
         <v-card-text v-else>
@@ -80,7 +80,7 @@ import { FileStore } from '../store/files'
 
 const curStep = ref(0);
 const isConnected = ref(false);
-const showConsole = ref(true); // TODO: switch back to false
+const showConsole = ref(false);
 
 const logMessages = ref([] as LogMessage[])
 
@@ -96,7 +96,7 @@ const steps = shallowRef<any>(() => ({}))
 const fileStore = shallowRef(new FileStore)
 
 const reset = () => {
-  curStep.value = 1
+  curStep.value = 0
   isConnected.value = false
   codename.value = ""
   ctx.value.model = null
@@ -161,22 +161,14 @@ watch(codename, async (newCodename) => {
     return;
   }
 
-  // TODO: remove
-  // ctx.value.model = await ModelInfos.get(newCodename);
-  // submit({
-  //   rom: roms.eos,
-  //   romBuild: {"date":"2023-08-16","version":"1.14-q","state":"beta","androidVersion":"10","installMethod":"recovery","files":{"rom":{"url":"https://images.ecloud.global/dev/herolte/e-1.14-q-20230816320942-dev-herolte.zip","sha256":"https://images.ecloud.global/dev/herolte/e-1.14-q-20230816320942-dev-herolte.zip.sha256sum"}}}
-  // })
-  // curStep.value = 5
 });
 
 onMounted(() => {
-  // codename.value = "herolte" // TODO: remove
   setLogListener((msg) => {
     logMessages.value.push(msg)
   })
   reset()
-  curStep.value = 1
+  curStep.value = 0
 })
 
 onUnmounted(() => {
