@@ -52,10 +52,11 @@ export interface LineageDeviceData {
 
 let lineagewikiDevices: string[]|null = null
 
+const ENV = (import.meta as any).env
 async function loadLineageDeviceFiles() {
     const res = await fetch('https://api.github.com/repositories/79186428/contents/_data/devices', {
         headers: {
-            'Authorization': 'Bearer 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'
+            'Authorization': ENV?.['VITE_GITHUB_TOKEN'] ? 'Bearer '+ ENV?.['VITE_GITHUB_TOKEN'] : ''
         }
     })
     const data = await res.json()
