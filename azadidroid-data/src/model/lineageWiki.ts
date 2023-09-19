@@ -20,6 +20,7 @@ export interface LineageDeviceData {
     before_install?: {
         instructions:"needs_specific_android_fw",
         version: string
+        ships_fw?: boolean
     },
     before_install_device_variants?: BeforeInstallDeviceVariant[]
     custom_recovery_link?: string
@@ -41,6 +42,7 @@ export interface LineageDeviceData {
     is_unlockable?: boolean
     models?: string[]
     soc: string
+    firmware_update?: string
 
     // lineage specific
     maintainers?: string[]

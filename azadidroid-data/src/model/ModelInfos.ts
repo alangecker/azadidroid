@@ -17,6 +17,10 @@ export class ModelInfos {
     constructor(data: LineageDeviceData) {
         this.deviceData = data
     }
+
+    get lineageWikiDeviceData() {
+        return this.deviceData
+    }
     get vendor() {
         return this.deviceData.vendor
     }
@@ -54,6 +58,7 @@ export class ModelInfos {
     get needsAndroidVersion(): string|false {
         if(!this.deviceData.before_install) return false
         if(this.deviceData.before_install.instructions !== 'needs_specific_android_fw') return false
+        if(this.deviceData.before_install.ships_fw) return false
         return this.deviceData.before_install.version
     }
     get beforeRecoveryInstall(): BeforeRecoveryInstall|null {
@@ -76,10 +81,28 @@ export class ModelInfos {
     get isRetrofitDynamicPartitions(): boolean {
         return this.deviceData.is_retrofit_dynamic_partitions || false
     }
+
+    get recoveryCodename() {
+        if(this.codename == 'klteactivexx') return 'klte'
         return this.deviceData.custom_recovery_codename || this.codename
     }
     get bootIntoRecoveryInstructions() {
         return this.deviceData.recovery_boot || ''
+    }
+    /**
+     * expects that it uses the same keys as used for booting into the download mode
+     * works at least for most samsung devices
+     * TODO: update for devices where this does not match
+     */
+    get hardRebootKeys() {
+        if(this.deviceData.download_boot) {
+            const m = this.deviceData.download_boot.match(/hold (.*?)(\.| until| and)/)
+            if(m && m[1].includes(" + ")) {
+                // we assume that at least 2 keys are required
+                return m[1]
+            }
+        }
+        return ""
     }
     get unlockCommand() {
         return this.deviceData.custom_unlock_cmd?.replace(/^fastboot /, '') || 'oem unlock'
