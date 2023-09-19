@@ -18,12 +18,13 @@ export default {
             hintsTitle: 'Another app is taking control of your device, so we can’t talk to it. Try following:',
             hints: [
                 'run `adb kill-server` in a Terminal',
+                'try disconnecting and reconnecting the phone'
                 // TODO: other hints
             ],
         },
     },
     stepTitle: {
-        'confirm_android_version': 'Verify current android version',
+        'confirm_android_version': 'Verifying current android version',
         'allow_oem_unlock': 'Allow OEM Unlock',
         'fastboot_unlock': 'Unlock Bootloader',
         'fastboot_lock': 'Relocking Bootloader',

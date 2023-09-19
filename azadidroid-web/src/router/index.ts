@@ -16,7 +16,7 @@ const routes: RouteRecordRaw[] = [
         path: '/installer',
         name: 'Installer',
         components: {
-          default: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
+          default: () => import(/* webpackChunkName: "home" */ '@/views/Installer.vue'),
         }
       },
       {

@@ -21,6 +21,9 @@ import { AllowOEMUnlockStep, ConfirmAndroidVersionStep } from "./requirements.js
 export async function getSteps(model: ModelInfos, rom: Rom, build: RomBuild) {
     const steps = {
         requirements: [] as Step[],
+        /**
+         * @deprecated let's only split between requirements and install
+         */
         prepare: [] as Step[],
         install: [] as Step[]
     }
@@ -43,10 +46,10 @@ export async function getSteps(model: ModelInfos, rom: Rom, build: RomBuild) {
             steps['install'].push(new OdinFlashRecoveryStep)
             steps['install'].push(new RebootOdinToRecoveryStep)
         } else if(model.installMethod.startsWith('fastboot')) {
-            steps['prepare'].push(new WaitForBootloaderStep)
-            steps['prepare'].push(new FastbootUnlockStep)
+            steps['install'].push(new WaitForBootloaderStep)
+            steps['install'].push(new FastbootUnlockStep)
             if(model.beforeRecoveryInstall?.instructions === 'boot_stack') {
-                steps['prepare'].push(new FastbootFlashAdditionalImages(model.beforeRecoveryInstall.partitions))
+                steps['install'].push(new FastbootFlashAdditionalImages(model.beforeRecoveryInstall.partitions))
             }
        
             steps['install'].push(new FastbootBootRecoveryStep)
@@ -67,8 +70,8 @@ export async function getSteps(model: ModelInfos, rom: Rom, build: RomBuild) {
         if(model.installMethod == 'heimdall') {
             throw new Error('currently it is only possible to install ROMs via Recovery on Samsung devices')
         }
-        steps['prepare'].push(new WaitForBootloaderStep)
-        steps['prepare'].push(new FastbootUnlockStep)
+        steps['install'].push(new WaitForBootloaderStep)
+        steps['install'].push(new FastbootUnlockStep)
 
         steps['install'].push(new FastbootFlashZipStep)
         

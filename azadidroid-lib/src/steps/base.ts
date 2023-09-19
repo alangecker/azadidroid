@@ -53,6 +53,8 @@ export class Step {
     async call(event: string, ...args: any[]): Promise<any> {
         if(this.handler[event]) {
             return await this.handler[event](...args)
+        } else {
+            throw new Error(`${this.constructor.name} expected a handler for '${event}', but there is non registered`)
         }
     }
 }

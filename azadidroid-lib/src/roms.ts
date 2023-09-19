@@ -1,5 +1,5 @@
-import { Rom, RomBuild } from "azadidroid-data/src/roms/common.js";
-export { Rom, RomBuild } from "azadidroid-data/src/roms/common.js";
+import type { Rom, RomBuild } from "azadidroid-data/src/roms/common.js";
+export type { Rom, RomBuild } from "azadidroid-data/src/roms/common.js";
 import { roms } from "azadidroid-data/src/roms/index.js";
 
 
