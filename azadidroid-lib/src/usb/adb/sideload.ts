@@ -13,6 +13,8 @@ export async function adbSideload(device: Adb, data: Blob, onProgress: (percenta
 
     try {
         let transmittedBytes = 0
+        
+        const decoder = new TextDecoder()
         while(true) {
             const res = await reader.read()
             if(res.done) {
@@ -20,8 +22,8 @@ export async function adbSideload(device: Adb, data: Blob, onProgress: (percenta
 
                 return
             }
-            // TODO: replace with something cross platform compatible
-            const resStr = Buffer.from(res.value).toString('ascii')
+            const resStr = decoder.decode(res.value)
+
             if(resStr == ADB_EXIT_SUCCESS) {
                 break
             } else if (resStr == ADB_EXIT_FAILURE) {

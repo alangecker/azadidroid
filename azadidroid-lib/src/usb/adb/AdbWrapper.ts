@@ -11,7 +11,7 @@ const CredentialStore = new AdbHybridCredentialStore();
 
 // without this, adb would script would just crash without any error message
 // could not find any other way to catch this error
-process.on('unhandledRejection', (error, p) => {
+if(typeof process?.on === 'function') process.on('unhandledRejection', (error, p) => {
     
     // console.log('=== UNHANDLED REJECTION ===');
     // console.dir((error as any)?.stack);

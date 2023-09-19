@@ -15,6 +15,14 @@ export function isConnectUdevError(err: any) {
         err.message === "Access denied."
     );
 }
+export function isSecurityError(err: any) {
+    return (
+        // err instanceof DOMException &&
+        err.name === "SecurityError" &&
+        err.message?.includes("user gesture")
+    );
+}
+
 export function isClaimError(err: any) {
     return (
         err.message.includes('LIBUSB_ERROR_BUSY') ||

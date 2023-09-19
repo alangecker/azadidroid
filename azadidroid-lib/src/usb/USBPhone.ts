@@ -1,6 +1,6 @@
 import { webusb } from './usb.js'
 import { ADB_DEVICE, FASTBOOT_DEVICE, ODIN_DEVICE } from './conts.js'
-import { isClaimError, isConnectUdevError, isNoDeviceSelectedError } from './errors.js'
+import { isClaimError, isConnectUdevError, isNoDeviceSelectedError, isSecurityError } from './errors.js'
 import { isSameDevice, getEndpoint, getDeviceMode, DeviceMode, findSomeConfigurationMatch } from './helpers.js'
 import { AdbWrapper } from './adb/AdbWrapper.js'
 import sleep from '../utils/sleep.js'
@@ -35,6 +35,7 @@ export class AuthenticationSlowEvent extends Event {
 export class DeviceMissingEvent extends BackgroundErrorEvent {}
 export class AccessDeniedEvent extends BackgroundErrorEvent {}
 export class ClaimFailedEvent extends BackgroundErrorEvent {}
+export class SecurityErrorEvent extends BackgroundErrorEvent {}
 export class UnexpectedBackgroundErrorEvent extends BackgroundErrorEvent {
     err: Error
     constructor(err: Error) {
@@ -89,7 +90,7 @@ export default class USBPhone implements EventTarget {
     isUnlocked: boolean|null = null
 
     constructor() {
-        webusb.addEventListener('disconnect', this._onAnyDeviceDisconnect)
+        webusb?.addEventListener('disconnect', this._onAnyDeviceDisconnect)
     }
 
     /**
@@ -101,7 +102,7 @@ export default class USBPhone implements EventTarget {
     }
 
     private isReconnecting = false
-    async reconnect() {
+    async reconnect(tryOnce = false) {
         if(this.isReconnecting) {
             throw new Error('trying to start to reconnect again, but reconnect() is already running')
         }
@@ -125,14 +126,14 @@ export default class USBPhone implements EventTarget {
                 } catch(err) {
                     logger.error(err)
                 }
+                if(tryOnce) break
                 await sleep(USBPhone.RECONNECT_INTERVAL)
             }
         }
 
         while(!this.isClosed) {
             try {
-                const device = await webusb.requestDevice({filters: this._possibleModesFilter() })    
-                await this._useDevice(device)
+                await this.requestDevice()
                 this.isReconnecting = false
                 return
             } catch(err) {
@@ -225,6 +226,8 @@ export default class USBPhone implements EventTarget {
     }
     private async _initialize() {
         logger.debug(`_initialize()`)
+        this._odinDevice = null
+        this._adb = null
         const match = findSomeConfigurationMatch(this.device)
         await this.device.open()
         await this.device.selectConfiguration(match.conf.configurationValue);
@@ -243,6 +246,8 @@ export default class USBPhone implements EventTarget {
             this.dispatchEvent(new AccessDeniedEvent())
         } else if(isClaimError(err))  {
             this.dispatchEvent(new ClaimFailedEvent())
+        } else if(isSecurityError(err))  {
+            this.dispatchEvent(new SecurityErrorEvent())
         } else {
             this.dispatchEvent(new UnexpectedBackgroundErrorEvent(err))
         }
@@ -273,6 +278,7 @@ export default class USBPhone implements EventTarget {
     async getFastboot() {
         fastboot.setDebugLevel(3)
         const device = new fastboot.FastbootDevice(webusb);
+        // @ts-ignore
         device._registeredUsbListeners = true
         device.device = this.device
         device.epIn = this.endpointIn.endpointNumber

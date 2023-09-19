@@ -1,6 +1,13 @@
-import { getWebUsb } from 'usb'
+import { isBrowser } from "../utils/platform"
 
-// avoid `ReferenceError: navigator is not defined`
-global.navigator = {} as null
+export let webusb: USB
 
-export const webusb = getWebUsb()
+if(isBrowser()) {
+    webusb = navigator?.usb
+} else {
+    // avoid `ReferenceError: navigator is not defined`
+    global.navigator = {} as null
+    import('usb').then(({getWebUsb}) => {
+        webusb = getWebUsb()
+    })
+}

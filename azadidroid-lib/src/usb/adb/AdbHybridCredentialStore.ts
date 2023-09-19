@@ -2,7 +2,8 @@
 
 import { calculateBase64EncodedLength, calculatePublicKey, calculatePublicKeyLength, decodeBase64, decodeUtf8, encodeBase64, type AdbCredentialStore } from "@yume-chan/adb";
 import { isBrowser } from "../../utils/platform.js";
-import { webcrypto } from 'crypto'
+
+const webcrypto = globalThis.crypto
 
 const memoryStore = {}
 function storeGet(key: string) {
@@ -16,7 +17,7 @@ function storeGet(key: string) {
 }
 function storeSet(key: string, value: string) {
     if(isBrowser()) {
-        storeSet(key, value)
+        window.localStorage.setItem(key, value)
     } else {
         memoryStore[key] = value
     }
