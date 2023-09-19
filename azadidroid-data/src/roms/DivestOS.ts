@@ -38,7 +38,7 @@ const UNTESTED = [
 export class DivestOS extends Rom {
     name = 'DivestOS'
     logo = ''
-    description = ''
+    description = 'a privacy focussed LineageOS fork'
     link = ''
 
     getLink(codename: string) {

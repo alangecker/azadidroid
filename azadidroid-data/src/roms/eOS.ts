@@ -24,7 +24,7 @@ function letterToAndroidVersion(letter: string): string|undefined {
 export class eOS extends Rom {
     name = '/e/ OS'
     logo = ''
-    description = ''
+    description = '/e/ OS is a popular fork of Lineage OS, aimed at user friendliness and convenience. It comes with Micro-G installed, which allows the use of Google services.'
     link = ''
 
     getLink(codename: string) {

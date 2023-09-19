@@ -6,7 +6,7 @@ import { InstallationMethod, Rom, RomBuild, RomStability, RomVersion, lineageToA
 export class crDroid extends Rom {
     name = 'crDroid'
     logo = ''
-    description = ''
+    description = 'crDroid is based on the LineageOS & Android Open Source Project with extra contributions from many people within the Android community.'
     link = ''
 
     getLink(codename: string): string {

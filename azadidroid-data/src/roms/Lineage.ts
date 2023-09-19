@@ -30,7 +30,7 @@ interface LineageBuild {
 export class Lineage extends Rom {
     name = 'LineageOS'
     logo = ''
-    description = ''
+    description = 'Lineage OS is one of the longest-running custom ROMs available. It has a huge community of developers and users.'
     link = ''
 
     getLink(codename: string){

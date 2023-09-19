@@ -13,7 +13,7 @@ function calyxToAndroidVersion(version: string) {
 export class CalyxOS extends Rom {
     name = 'CalyxOS'
     logo = ''
-    description = ''
+    description = 'Calyx is a custom ROM for pixel phones, aimed at making security and privacy a priority, but not at the expense of convenience.'
     link = ''
 
     installVia = InstallationMethod.Fastboot
