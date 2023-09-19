@@ -1,11 +1,11 @@
 {
-  "scrapeDate": "2023-06-06T11:21:31.608Z",
+  "scrapeDate": "2023-09-19T08:55:12.860Z",
   "devices": [
     {
       "code": "Amber",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -13,7 +13,7 @@
       "code": "DRG",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -21,7 +21,7 @@
       "code": "FP2",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -29,8 +29,8 @@
       "code": "FP3",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
-        "iode:4.1",
+        "eos:1.14-s",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -38,9 +38,9 @@
       "code": "FP4",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
-        "eos:1.11-s",
-        "iode:4.1",
+        "calyxos:4.13.1",
+        "eos:1.14-s",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -55,7 +55,7 @@
       "code": "I001D",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -63,7 +63,7 @@
       "code": "I01WD",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -71,7 +71,6 @@
       "code": "Mi439",
       "android": 13,
       "roms": [
-        "crdoid:12.1",
         "eos:1.11-s",
         "lineage:20.0"
       ]
@@ -96,7 +95,7 @@
       "code": "PL2",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -104,7 +103,7 @@
       "code": "RMX1801",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -112,7 +111,7 @@
       "code": "TP1803",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -121,7 +120,7 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-r"
+        "eos:1.14-r"
       ]
     },
     {
@@ -129,7 +128,7 @@
       "android": 13,
       "roms": [
         "crdoid:12.1",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -137,7 +136,7 @@
       "code": "X01AD",
       "android": 11,
       "roms": [
-        "eos:1.11-r"
+        "eos:1.14-r"
       ]
     },
     {
@@ -145,7 +144,7 @@
       "android": 12,
       "roms": [
         "crdoid:12.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:16.0"
       ]
     },
@@ -153,7 +152,7 @@
       "code": "YTX703F",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:16.0"
       ]
     },
@@ -161,7 +160,7 @@
       "code": "YTX703L",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:16.0"
       ]
     },
@@ -170,7 +169,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -178,7 +177,7 @@
       "code": "a3xelte",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -186,7 +185,15 @@
       "code": "a52q",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "a52sxq",
+      "android": 13,
+      "roms": [
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -194,7 +201,7 @@
       "code": "a5xelte",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -203,8 +210,8 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-r",
-        "iode:2.11",
+        "eos:1.14-r",
+        "iode:2.14",
         "lineage:18.1"
       ]
     },
@@ -212,7 +219,7 @@
       "code": "a72q",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -220,7 +227,7 @@
       "code": "a7xelte",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -229,8 +236,8 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-r",
-        "iode:2.11",
+        "eos:1.14-r",
+        "iode:2.14",
         "lineage:18.1"
       ]
     },
@@ -238,7 +245,7 @@
       "code": "addison",
       "android": 11,
       "roms": [
-        "eos:0.19-n",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -247,7 +254,7 @@
       "android": 12,
       "roms": [
         "crdoid:12.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -256,8 +263,8 @@
       "android": 13,
       "roms": [
         "divestos:20.0",
-        "eos:1.11-s",
-        "iode:4.1",
+        "eos:1.14-s",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -266,8 +273,8 @@
       "android": 13,
       "roms": [
         "divestos:20.0",
-        "eos:1.11-s",
-        "iode:4.1",
+        "eos:1.14-s",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -275,7 +282,7 @@
       "code": "albus",
       "android": 11,
       "roms": [
-        "eos:0.20-o",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -284,7 +291,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "divestos:19.1",
+        "divestos:20.0",
         "eos:1.11-s",
         "lineage:20.0"
       ]
@@ -310,16 +317,16 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "divestos:19.1",
         "eos:1.11-s",
-        "iode:3.6",
-        "lineage:19.1"
+        "iode:4.4",
+        "lineage:20.0"
       ]
     },
     {
       "code": "athene",
       "android": 7,
       "roms": [
+        "divestos:14.1",
         "eos:0.19-n"
       ]
     },
@@ -328,7 +335,7 @@
       "android": 13,
       "roms": [
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -337,7 +344,7 @@
       "android": 13,
       "roms": [
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -345,8 +352,9 @@
       "code": "avicii",
       "android": 13,
       "roms": [
+        "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -354,8 +362,8 @@
       "code": "axolotl",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
-        "eos:1.11-s",
+        "calyxos:4.12.0",
+        "eos:1.13-s",
         "lineage:20.0"
       ]
     },
@@ -381,10 +389,10 @@
       "code": "barbet",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
         "divestos:20.0",
-        "eos:1.11-s",
-        "grapheneos:2023052900",
+        "eos:1.14-s",
+        "grapheneos:2023090600",
         "lineage:20.0"
       ]
     },
@@ -392,7 +400,7 @@
       "code": "bardock",
       "android": 13,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:20.0"
       ]
     },
@@ -400,7 +408,7 @@
       "code": "bardockpro",
       "android": 13,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:20.0"
       ]
     },
@@ -409,7 +417,7 @@
       "android": 13,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -424,7 +432,7 @@
       "code": "berlin",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -432,7 +440,7 @@
       "code": "berlna",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -442,7 +450,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -451,8 +459,8 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
-        "iode:3.6",
+        "eos:1.14-s",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -461,8 +469,8 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
-        "iode:3.6",
+        "eos:1.14-s",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -471,8 +479,8 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
-        "iode:3.6",
+        "eos:1.14-s",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -481,7 +489,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -489,10 +497,10 @@
       "code": "bluejay",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
         "divestos:20.0",
-        "grapheneos:2023052900",
-        "iode:4.1",
+        "grapheneos:2023090600",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -500,10 +508,11 @@
       "code": "blueline",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
-        "eos:1.11-s",
+        "calyxos:4.12.0",
+        "divestos:20.0",
+        "eos:1.14-s",
         "grapheneos:2023020600",
-        "iode:3.6",
+        "iode:3.9",
         "lineage:19.1"
       ]
     },
@@ -511,8 +520,9 @@
       "code": "bonito",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
-        "eos:1.11-s",
+        "calyxos:4.12.0",
+        "divestos:20.0",
+        "eos:1.14-s",
         "grapheneos:2023020600",
         "lineage:19.1"
       ]
@@ -521,10 +531,10 @@
       "code": "bramble",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
         "divestos:20.0",
-        "eos:1.11-s",
-        "grapheneos:2023052900",
+        "eos:1.14-s",
+        "grapheneos:2023090600",
         "lineage:20.0",
         "protonaosp:12.4.1"
       ]
@@ -556,7 +566,7 @@
       "code": "castor",
       "android": 11,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:18.1"
       ]
     },
@@ -564,7 +574,7 @@
       "code": "castor_windy",
       "android": 11,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:18.1"
       ]
     },
@@ -572,7 +582,7 @@
       "code": "cedric",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -581,7 +591,7 @@
       "android": 13,
       "roms": [
         "crdoid:10.0",
-        "eos:1.8.1-r",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -598,7 +608,7 @@
       "roms": [
         "crdoid:12.1",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -606,10 +616,10 @@
       "code": "cheetah",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
         "crdoid:13.0",
         "divestos:20.0",
-        "grapheneos:2023052900",
+        "grapheneos:2023090600",
         "lineage:20.0"
       ]
     },
@@ -618,7 +628,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -627,7 +637,7 @@
       "android": 13,
       "roms": [
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -636,7 +646,7 @@
       "android": 13,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:20.0"
       ]
     },
@@ -658,10 +668,11 @@
       "code": "coral",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
         "crdoid:13.0",
-        "eos:1.11-s",
-        "grapheneos:2023052900",
+        "divestos:20.0",
+        "eos:1.14-s",
+        "grapheneos:2023090600",
         "lineage:20.0",
         "protonaosp:12.4.1"
       ]
@@ -679,8 +690,9 @@
       "code": "crosshatch",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
-        "eos:1.11-s",
+        "calyxos:4.12.0",
+        "divestos:20.0",
+        "eos:1.14-s",
         "grapheneos:2023020600",
         "lineage:19.1"
       ]
@@ -690,9 +702,8 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "divestos:20.0",
-        "eos:1.11-q",
-        "iode:4.1",
+        "eos:1.14-q",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -701,8 +712,8 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
-        "iode:3.6",
+        "eos:1.14-s",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -718,8 +729,8 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
-        "iode:3.6",
+        "eos:1.14-s",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -749,7 +760,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -758,7 +769,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -767,7 +778,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -776,7 +787,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -785,7 +796,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -794,7 +805,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -804,7 +815,7 @@
       "roms": [
         "crdoid:10.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -814,7 +825,7 @@
       "roms": [
         "crdoid:10.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -822,8 +833,9 @@
       "code": "d855",
       "android": 11,
       "roms": [
+        "crdoid:10.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -834,7 +846,7 @@
         "crdoid:13.0",
         "divestos:17.1",
         "eos:1.11-q",
-        "lineage:17.1"
+        "lineage:20.0"
       ]
     },
     {
@@ -845,12 +857,28 @@
       ]
     },
     {
+      "code": "debx",
+      "android": 11,
+      "roms": [
+        "divestos:18.1",
+        "lineage:18.1"
+      ]
+    },
+    {
+      "code": "devon",
+      "android": 13,
+      "roms": [
+        "crdoid:13.0",
+        "lineage:20.0"
+      ]
+    },
+    {
       "code": "dipper",
       "android": 13,
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -859,7 +887,7 @@
       "android": 12,
       "roms": [
         "divestos:19.1",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:19.1"
       ]
     },
@@ -874,7 +902,7 @@
       "code": "dre",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -882,7 +910,7 @@
       "code": "dubai",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -892,7 +920,7 @@
       "roms": [
         "crdoid:12.1",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -900,9 +928,9 @@
       "code": "enchilada",
       "android": 13,
       "roms": [
-        "crdoid:13.0",
+        "crdoid:12.1",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -911,7 +939,7 @@
       "android": 13,
       "roms": [
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -920,7 +948,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -928,7 +956,7 @@
       "code": "evert",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -946,17 +974,24 @@
       "roms": [
         "crdoid:10.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
+      ]
+    },
+    {
+      "code": "f62",
+      "android": 13,
+      "roms": [
+        "lineage:20.0"
       ]
     },
     {
       "code": "fajita",
       "android": 13,
       "roms": [
-        "crdoid:13.0",
+        "crdoid:12.1",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -985,19 +1020,13 @@
       "code": "flame",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
-        "eos:1.11-s",
-        "grapheneos:2023052900",
-        "iode:4.1",
+        "calyxos:4.12.0",
+        "divestos:20.0",
+        "eos:1.14-s",
+        "grapheneos:2023090600",
+        "iode:4.4",
         "lineage:20.0",
         "protonaosp:12.4.1"
-      ]
-    },
-    {
-      "code": "flo",
-      "android": 8,
-      "roms": [
-        "divestos:15.1"
       ]
     },
     {
@@ -1059,7 +1088,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:19.1"
       ]
     },
@@ -1077,7 +1106,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:18.1"
       ]
     },
@@ -1085,7 +1114,7 @@
       "code": "grus",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1093,7 +1122,8 @@
       "code": "gta4xl",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "crdoid:13.0",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1101,7 +1131,8 @@
       "code": "gta4xlwifi",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "crdoid:13.0",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1133,7 +1164,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1142,7 +1173,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1152,7 +1183,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1162,7 +1193,7 @@
       "roms": [
         "crdoid:10.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1184,53 +1215,49 @@
     },
     {
       "code": "h830",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "divestos:19.1",
-        "eos:1.11-r",
-        "lineage:19.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
       "code": "h850",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "divestos:19.1",
-        "eos:1.11-r",
-        "lineage:19.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
       "code": "h870",
-      "android": 12,
+      "android": 13,
       "roms": [
         "divestos:19.1",
-        "lineage:19.1"
+        "lineage:20.0"
       ]
     },
     {
       "code": "h872",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "lineage:19.1"
+        "lineage:20.0"
       ]
     },
     {
       "code": "h910",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "divestos:19.1",
-        "eos:1.11-r",
-        "lineage:19.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
       "code": "h918",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "divestos:19.1",
-        "eos:1.11-r",
-        "lineage:19.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
@@ -1242,11 +1269,10 @@
     },
     {
       "code": "h990",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "divestos:19.1",
-        "eos:1.11-r",
-        "lineage:19.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
@@ -1270,7 +1296,7 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "divestos:16.0",
+        "divestos:18.1",
         "eos:0.19-n"
       ]
     },
@@ -1278,7 +1304,7 @@
       "code": "hannah",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1287,14 +1313,23 @@
       "android": 10,
       "roms": [
         "divestos:17.1",
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
+      ]
+    },
+    {
+      "code": "hawao",
+      "android": 13,
+      "roms": [
+        "crdoid:13.0",
+        "lineage:20.0"
       ]
     },
     {
       "code": "haydn",
       "android": 13,
       "roms": [
+        "crdoid:13.0",
         "eos:1.11-s",
         "lineage:20.0"
       ]
@@ -1304,7 +1339,7 @@
       "android": 13,
       "roms": [
         "crdoid:10.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1313,7 +1348,7 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-q"
+        "eos:1.14-q"
       ]
     },
     {
@@ -1321,7 +1356,7 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-q"
+        "eos:1.14-q"
       ]
     },
     {
@@ -1344,7 +1379,7 @@
       "roms": [
         "crdoid:11.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1353,7 +1388,7 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1362,7 +1397,7 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1371,7 +1406,7 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1381,7 +1416,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1391,7 +1426,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1424,7 +1459,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1434,7 +1469,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1442,7 +1477,7 @@
       "code": "j7elte",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -1451,7 +1486,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1468,16 +1503,16 @@
       "roms": [
         "crdoid:12.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
     {
       "code": "jason",
-      "android": 11,
+      "android": 12,
       "roms": [
-        "crdoid:11.0",
-        "eos:1.11-r",
+        "crdoid:12.1",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -1486,7 +1521,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1495,7 +1530,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1504,7 +1539,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1514,7 +1549,7 @@
       "roms": [
         "crdoid:11.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1523,7 +1558,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1558,7 +1593,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1589,7 +1624,7 @@
       "android": 12,
       "roms": [
         "divestos:19.1",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:19.1"
       ]
     },
@@ -1597,7 +1632,7 @@
       "code": "kiwi",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -1607,7 +1642,7 @@
       "roms": [
         "crdoid:11.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1615,7 +1650,7 @@
       "code": "klteactivexx",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1623,7 +1658,7 @@
       "code": "klteaio",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1631,7 +1666,7 @@
       "code": "kltechn",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1639,7 +1674,7 @@
       "code": "kltechnduo",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1647,7 +1682,7 @@
       "code": "klteduos",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1655,7 +1690,7 @@
       "code": "kltedv",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1663,7 +1698,7 @@
       "code": "kltekdi",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1671,7 +1706,7 @@
       "code": "kltekor",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -1679,7 +1714,7 @@
       "code": "kuntao",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -1688,7 +1723,7 @@
       "android": 13,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1696,6 +1731,7 @@
       "code": "lancelot",
       "android": 13,
       "roms": [
+        "crdoid:13.0",
         "lineage:20.0"
       ]
     },
@@ -1713,7 +1749,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -1723,8 +1759,8 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
-        "iode:4.1",
+        "eos:1.14-s",
+        "iode:4.2",
         "lineage:20.0"
       ]
     },
@@ -1734,8 +1770,8 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
-        "iode:4.1",
+        "eos:1.14-s",
+        "iode:4.2",
         "lineage:20.0"
       ]
     },
@@ -1743,6 +1779,7 @@
       "code": "lemonades",
       "android": 13,
       "roms": [
+        "divestos:20.0",
         "lineage:20.0"
       ]
     },
@@ -1758,7 +1795,7 @@
       "code": "liber",
       "android": 12,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:19.1"
       ]
     },
@@ -1773,6 +1810,7 @@
       "code": "lisa",
       "android": 13,
       "roms": [
+        "crdoid:13.0",
         "eos:1.11-s",
         "lineage:20.0"
       ]
@@ -1781,7 +1819,7 @@
       "code": "lithium",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -1790,7 +1828,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "divestos:19.1",
+        "divestos:20.0",
         "eos:1.11-s",
         "lineage:20.0"
       ]
@@ -1801,32 +1839,55 @@
       "roms": [
         "crdoid:11.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:16.0"
       ]
     },
     {
       "code": "ls997",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "divestos:19.1",
-        "eos:1.11-r",
-        "lineage:19.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
       "code": "lux",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
+      ]
+    },
+    {
+      "code": "lynx",
+      "android": 13,
+      "roms": [
+        "calyxos:4.12.0",
+        "crdoid:13.0",
+        "grapheneos:2023090600",
+        "lineage:20.0"
       ]
     },
     {
       "code": "m20lte",
       "android": 11,
       "roms": [
-        "eos:1.11-r"
+        "eos:1.14-r"
+      ]
+    },
+    {
+      "code": "m5",
+      "android": 13,
+      "roms": [
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "m52xq",
+      "android": 13,
+      "roms": [
+        "lineage:20.0"
       ]
     },
     {
@@ -1842,7 +1903,7 @@
       "roms": [
         "crdoid:10.0",
         "divestos:18.1",
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -1852,7 +1913,7 @@
       "roms": [
         "crdoid:10.0",
         "divestos:18.1",
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -1880,11 +1941,19 @@
     },
     {
       "code": "marlin",
-      "android": 11,
+      "android": 13,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
-        "lineage:18.1"
+        "eos:1.14-r",
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "mars",
+      "android": 13,
+      "roms": [
+        "crdoid:13.0",
+        "lineage:20.0"
       ]
     },
     {
@@ -1898,7 +1967,7 @@
       "code": "mata",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -1921,7 +1990,7 @@
       "android": 10,
       "roms": [
         "divestos:17.1",
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -1938,8 +2007,15 @@
       "android": 12,
       "roms": [
         "divestos:19.1",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:19.1"
+      ]
+    },
+    {
+      "code": "messi",
+      "android": 13,
+      "roms": [
+        "lineage:20.0"
       ]
     },
     {
@@ -1948,7 +2024,7 @@
       "roms": [
         "crdoid:13.0",
         "eos:1.11-s",
-        "lineage:19.1"
+        "lineage:20.0"
       ]
     },
     {
@@ -1963,8 +2039,8 @@
       "code": "monet",
       "android": 12,
       "roms": [
-        "eos:1.11-s",
-        "iode:3.6",
+        "eos:1.14-s",
+        "iode:3.9",
         "lineage:19.1"
       ]
     },
@@ -1972,7 +2048,7 @@
       "code": "montana",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2014,17 +2090,17 @@
     },
     {
       "code": "nash",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "eos:1.11-s",
-        "lineage:19.1"
+        "eos:1.14-s",
+        "lineage:20.0"
       ]
     },
     {
       "code": "natrium",
       "android": 12,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:19.1"
       ]
     },
@@ -2040,7 +2116,14 @@
       "code": "nx563j",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "nx606j",
+      "android": 13,
+      "roms": [
         "lineage:20.0"
       ]
     },
@@ -2055,6 +2138,28 @@
       "code": "nx611j",
       "android": 13,
       "roms": [
+        "eos:1.14-s",
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "nx619j",
+      "android": 13,
+      "roms": [
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "nx651j",
+      "android": 13,
+      "roms": [
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "nx659j",
+      "android": 13,
+      "roms": [
         "lineage:20.0"
       ]
     },
@@ -2062,7 +2167,7 @@
       "code": "obiwan",
       "android": 11,
       "roms": [
-        "eos:1.11-r"
+        "eos:1.14-r"
       ]
     },
     {
@@ -2070,16 +2175,23 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "odroidc4",
+      "android": 13,
+      "roms": [
         "lineage:20.0"
       ]
     },
     {
       "code": "onclite",
-      "android": 12,
+      "android": 13,
       "roms": [
         "eos:1.11-s",
-        "lineage:19.1"
+        "lineage:20.0"
       ]
     },
     {
@@ -2088,7 +2200,7 @@
       "roms": [
         "crdoid:10.0",
         "divestos:17.1",
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -2113,10 +2225,10 @@
       "code": "oriole",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
         "divestos:20.0",
-        "grapheneos:2023052900",
-        "iode:4.1",
+        "grapheneos:2023090600",
+        "iode:4.4",
         "lineage:20.0",
         "protonaosp:12.4.1"
       ]
@@ -2127,7 +2239,7 @@
       "roms": [
         "crdoid:10.0",
         "divestos:17.1",
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -2135,9 +2247,10 @@
       "code": "panther",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
+        "crdoid:13.0",
         "divestos:20.0",
-        "grapheneos:2023052900",
+        "grapheneos:2023090600",
         "lineage:20.0"
       ]
     },
@@ -2153,7 +2266,7 @@
       "android": 13,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2161,7 +2274,7 @@
       "code": "pdx203",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2199,8 +2312,8 @@
       "roms": [
         "crdoid:10.0",
         "divestos:19.1",
-        "eos:1.11-s",
-        "iode:3.6",
+        "eos:1.14-s",
+        "iode:3.9",
         "lineage:19.1"
       ]
     },
@@ -2210,7 +2323,7 @@
       "roms": [
         "crdoid:12.1",
         "divestos:18.1",
-        "eos:1.11-r"
+        "eos:1.14-r"
       ]
     },
     {
@@ -2226,7 +2339,7 @@
       "roms": [
         "crdoid:11.0",
         "divestos:20.0",
-        "eos:1.8.1-r",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2249,7 +2362,7 @@
       "android": 13,
       "roms": [
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2263,10 +2376,10 @@
     },
     {
       "code": "pstar",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "eos:1.11-s",
-        "lineage:19.1"
+        "eos:1.14-s",
+        "lineage:20.0"
       ]
     },
     {
@@ -2313,7 +2426,14 @@
       "code": "racer",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "radxa0",
+      "android": 13,
+      "roms": [
         "lineage:20.0"
       ]
     },
@@ -2321,9 +2441,9 @@
       "code": "raven",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
         "divestos:20.0",
-        "grapheneos:2023052900",
+        "grapheneos:2023090600",
         "lineage:20.0",
         "protonaosp:12.4.1"
       ]
@@ -2332,12 +2452,12 @@
       "code": "redfin",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
-        "grapheneos:2023052900",
-        "iode:4.1",
+        "eos:1.14-s",
+        "grapheneos:2023090600",
+        "iode:4.4",
         "lineage:20.0",
         "protonaosp:12.4.1"
       ]
@@ -2346,7 +2466,7 @@
       "code": "renoir",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2355,8 +2475,16 @@
       "android": 12,
       "roms": [
         "crdoid:12.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
+      ]
+    },
+    {
+      "code": "rhode",
+      "android": 13,
+      "roms": [
+        "crdoid:13.0",
+        "lineage:20.0"
       ]
     },
     {
@@ -2364,24 +2492,30 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "rosemary",
+      "android": 13,
+      "roms": [
         "lineage:20.0"
       ]
     },
     {
       "code": "rs988",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "divestos:19.1",
-        "eos:1.11-r",
-        "lineage:19.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
       "code": "s2",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -2389,7 +2523,7 @@
       "code": "s3ve3gds",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2397,7 +2531,7 @@
       "code": "s3ve3gjv",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2405,7 +2539,7 @@
       "code": "s3ve3gxx",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2413,7 +2547,7 @@
       "code": "s5neolte",
       "android": 10,
       "roms": [
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -2421,25 +2555,25 @@
       "code": "sagit",
       "android": 13,
       "roms": [
-        "crdoid:11.0",
-        "eos:1.11-s",
+        "crdoid:13.0",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
     {
       "code": "sailfish",
-      "android": 11,
+      "android": 13,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
-        "lineage:18.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
       "code": "sake",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2456,8 +2590,9 @@
       "code": "sargo",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
-        "eos:1.11-s",
+        "calyxos:4.12.0",
+        "divestos:20.0",
+        "eos:1.14-s",
         "grapheneos:2023020600",
         "lineage:19.1"
       ]
@@ -2466,7 +2601,7 @@
       "code": "scorpio",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -2500,7 +2635,7 @@
       "roms": [
         "crdoid:11.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2509,7 +2644,7 @@
       "android": 12,
       "roms": [
         "crdoid:12.0",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2518,9 +2653,8 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "divestos:20.0",
-        "eos:1.11-q",
-        "iode:4.1",
+        "eos:1.14-q",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -2529,9 +2663,8 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "divestos:20.0",
-        "eos:1.11-q",
-        "iode:4.1",
+        "eos:1.14-q",
+        "iode:4.4",
         "lineage:20.0"
       ]
     },
@@ -2546,10 +2679,10 @@
       "code": "sunfish",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4",
+        "calyxos:4.12.0",
         "divestos:20.0",
-        "eos:1.11-s",
-        "grapheneos:2023052900",
+        "eos:1.14-s",
+        "grapheneos:2023090600",
         "lineage:20.0"
       ]
     },
@@ -2558,7 +2691,7 @@
       "android": 10,
       "roms": [
         "divestos:17.1",
-        "eos:1.11-q",
+        "eos:1.14-q",
         "lineage:17.1"
       ]
     },
@@ -2567,7 +2700,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2575,7 +2708,15 @@
       "code": "suzuran",
       "android": 11,
       "roms": [
-        "eos:1.11-r"
+        "eos:1.14-r"
+      ]
+    },
+    {
+      "code": "sweet",
+      "android": 13,
+      "roms": [
+        "crdoid:13.0",
+        "lineage:20.0"
       ]
     },
     {
@@ -2591,7 +2732,16 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
+        "lineage:20.0"
+      ]
+    },
+    {
+      "code": "tangorpro",
+      "android": 13,
+      "roms": [
+        "calyxos:4.12.0",
+        "grapheneos:2023090600",
         "lineage:20.0"
       ]
     },
@@ -2600,7 +2750,7 @@
       "android": 12,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:19.1"
       ]
     },
@@ -2629,7 +2779,7 @@
       "code": "troika",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2646,7 +2796,7 @@
       "roms": [
         "crdoid:11.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -2655,32 +2805,31 @@
       "android": 13,
       "roms": [
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
     {
       "code": "us996",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "divestos:19.1",
-        "eos:1.11-r",
-        "lineage:19.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
       "code": "us996d",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "lineage:19.1"
+        "lineage:20.0"
       ]
     },
     {
       "code": "us997",
-      "android": 12,
+      "android": 13,
       "roms": [
         "divestos:19.1",
-        "lineage:19.1"
+        "lineage:20.0"
       ]
     },
     {
@@ -2696,7 +2845,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:19.1",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:19.1"
       ]
     },
@@ -2712,7 +2861,7 @@
       "android": 11,
       "roms": [
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2721,7 +2870,8 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:0.23-p"
+        "eos:0.23-p",
+        "lineage:20.0"
       ]
     },
     {
@@ -2729,7 +2879,7 @@
       "android": 12,
       "roms": [
         "divestos:19.1",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:19.1"
       ]
     },
@@ -2739,17 +2889,16 @@
       "roms": [
         "crdoid:10.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
     {
       "code": "vs995",
-      "android": 12,
+      "android": 13,
       "roms": [
-        "divestos:19.1",
-        "eos:1.11-r",
-        "lineage:19.1"
+        "eos:1.14-r",
+        "lineage:20.0"
       ]
     },
     {
@@ -2765,7 +2914,7 @@
       "roms": [
         "crdoid:13.0",
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2775,7 +2924,7 @@
       "roms": [
         "crdoid:11.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -2785,7 +2934,7 @@
       "roms": [
         "crdoid:11.0",
         "divestos:18.1",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:17.1"
       ]
     },
@@ -2802,7 +2951,7 @@
       "android": 11,
       "roms": [
         "crdoid:11.0",
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2810,7 +2959,7 @@
       "code": "xmsirius",
       "android": 13,
       "roms": [
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2819,25 +2968,24 @@
       "android": 13,
       "roms": [
         "divestos:20.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
     {
       "code": "z2_plus",
-      "android": 12,
+      "android": 13,
       "roms": [
         "crdoid:12.1",
-        "divestos:18.1",
         "eos:1.8.1-r",
-        "lineage:19.1"
+        "lineage:20.0"
       ]
     },
     {
       "code": "z3",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2845,7 +2993,7 @@
       "code": "z3c",
       "android": 11,
       "roms": [
-        "eos:1.11-r",
+        "eos:1.14-r",
         "lineage:18.1"
       ]
     },
@@ -2878,7 +3026,7 @@
       "android": 13,
       "roms": [
         "crdoid:13.0",
-        "eos:1.11-s",
+        "eos:1.14-s",
         "lineage:20.0"
       ]
     },
@@ -2891,11 +3039,11 @@
       ]
     },
     {
-      "code": "lynx",
+      "code": "felix",
       "android": 13,
       "roms": [
-        "calyxos:4.9.4-2",
-        "grapheneos:2023052900"
+        "calyxos:4.12.0",
+        "grapheneos:2023090600"
       ]
     },
     {

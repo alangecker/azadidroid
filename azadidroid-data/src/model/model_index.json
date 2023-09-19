@@ -303,6 +303,17 @@
     ]
   },
   {
+    "code": "a52sxq",
+    "vendor": "Samsung",
+    "name": "Galaxy A52s 5G",
+    "method": "heimdall",
+    "models": [
+      "SM-A528B",
+      "SM-A528N",
+      "SM-A528B/DS"
+    ]
+  },
+  {
     "code": "a5xelte",
     "vendor": "Samsung",
     "name": "Galaxy A5 (2016)",
@@ -712,6 +723,16 @@
     "models": []
   },
   {
+    "code": "caprip",
+    "vendor": "Motorola",
+    "name": "moto g30",
+    "method": "fastboot",
+    "models": [
+      "XT2129-1",
+      "XT2129-2"
+    ]
+  },
+  {
     "code": "castor",
     "vendor": "Sony",
     "name": "Xperia Tablet Z2 LTE",
@@ -1029,14 +1050,13 @@
   {
     "code": "davinci",
     "vendor": "Xiaomi",
-    "name": "Redmi K20 / Mi 9T",
+    "name": "Mi 9T / Redmi K20 (China) / Redmi K20 (India)",
     "method": "fastboot",
     "models": [
+      "M1903F10G",
       "M1903F10A",
       "M1903F10C",
-      "M1903F10I",
-      "M1903F10T",
-      "M1903F10G"
+      "M1903F10I"
     ]
   },
   {
@@ -1049,9 +1069,25 @@
   {
     "code": "deb",
     "vendor": "Google",
-    "name": "Nexus 7 (LTE, 2013 version)",
+    "name": "Nexus 7 2013 (LTE)",
     "method": "fastboot",
     "models": []
+  },
+  {
+    "code": "debx",
+    "vendor": "Google",
+    "name": "Nexus 7 2013 (LTE, Repartitioned)",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "devon",
+    "vendor": "Motorola",
+    "name": "moto g32",
+    "method": "fastboot",
+    "models": [
+      "XT2235-2"
+    ]
   },
   {
     "code": "dipper",
@@ -1184,6 +1220,18 @@
     "name": "G3 (Korea)",
     "method": "dd",
     "models": []
+  },
+  {
+    "code": "f62",
+    "vendor": "Samsung",
+    "name": "Galaxy F62 / M62",
+    "method": "heimdall",
+    "models": [
+      "SM-E625F",
+      "SM-E625F/DS",
+      "SM-M625F",
+      "SM-M625F/DS"
+    ]
   },
   {
     "code": "fajita",
@@ -1606,6 +1654,15 @@
       "XT1603",
       "XT1604",
       "XT1607"
+    ]
+  },
+  {
+    "code": "hawao",
+    "vendor": "Motorola",
+    "name": "moto g42",
+    "method": "fastboot",
+    "models": [
+      "XT2233-2"
     ]
   },
   {
@@ -2396,6 +2453,13 @@
     ]
   },
   {
+    "code": "lynx",
+    "vendor": "Google",
+    "name": "Pixel 7a",
+    "method": "fastboot",
+    "models": []
+  },
+  {
     "code": "m20lte",
     "vendor": "Samsung",
     "name": "Galaxy M20",
@@ -2416,6 +2480,25 @@
     "models": [
       "K420N",
       "K420DS"
+    ]
+  },
+  {
+    "code": "m5",
+    "vendor": "Banana Pi",
+    "name": "M5",
+    "method": "amlogic_update",
+    "models": []
+  },
+  {
+    "code": "m52xq",
+    "vendor": "Samsung",
+    "name": "Galaxy M52 5G",
+    "method": "heimdall",
+    "models": [
+      "SM-M526B",
+      "SM-M526BR",
+      "SM-M526B/DS",
+      "SM-M526BR/DS"
     ]
   },
   {
@@ -2473,6 +2556,15 @@
     "name": "Pixel XL",
     "method": "fastboot",
     "models": []
+  },
+  {
+    "code": "mars",
+    "vendor": "Xiaomi",
+    "name": "Mi 11 Pro",
+    "method": "fastboot",
+    "models": [
+      "M2102K1AC"
+    ]
   },
   {
     "code": "martini",
@@ -2545,6 +2637,16 @@
       "I3223",
       "I4213",
       "I4293"
+    ]
+  },
+  {
+    "code": "messi",
+    "vendor": "Motorola",
+    "name": "moto z3",
+    "method": "fastboot",
+    "models": [
+      "XT1929-15",
+      "XT1929-17"
     ]
   },
   {
@@ -2734,6 +2836,15 @@
     "models": []
   },
   {
+    "code": "nx606j",
+    "vendor": "Nubia",
+    "name": "Z18",
+    "method": "fastboot",
+    "models": [
+      "NX606J"
+    ]
+  },
+  {
     "code": "nx609j",
     "vendor": "Nubia",
     "name": "Red Magic",
@@ -2750,6 +2861,36 @@
     "models": [
       "NX611J",
       "M3"
+    ]
+  },
+  {
+    "code": "nx619j",
+    "vendor": "Nubia",
+    "name": "Red Magic Mars",
+    "method": "fastboot",
+    "models": [
+      "NX619J"
+    ]
+  },
+  {
+    "code": "nx651j",
+    "vendor": "Nubia",
+    "name": "Play 5G / Red Magic 5G Lite",
+    "method": "fastboot",
+    "models": [
+      "NX651J",
+      "NX651J-EEA"
+    ]
+  },
+  {
+    "code": "nx659j",
+    "vendor": "Nubia",
+    "name": "Red Magic 5G (Global) / 5G (China) / 5S (Global) / 5S (China)",
+    "method": "fastboot",
+    "models": [
+      "NX659J",
+      "NX659J-EEA",
+      "NX659J-UN"
     ]
   },
   {
@@ -2779,6 +2920,13 @@
     "vendor": "Sony",
     "name": "Xperia ZL",
     "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "odroidc4",
+    "vendor": "HardKernel",
+    "name": "ODROID-C4",
+    "method": "amlogic_update",
     "models": []
   },
   {
@@ -2873,7 +3021,15 @@
     "vendor": "Motorola",
     "name": "moto x4",
     "method": "fastboot",
-    "models": []
+    "models": [
+      "XT1900-1",
+      "XT1900-2",
+      "XT1900-3",
+      "XT1900-4",
+      "XT1900-5",
+      "XT1900-6",
+      "XT1900-7"
+    ]
   },
   {
     "code": "pdx203",
@@ -3109,6 +3265,13 @@
     ]
   },
   {
+    "code": "radxa0",
+    "vendor": "Radxa",
+    "name": "Zero",
+    "method": "amlogic_update",
+    "models": []
+  },
+  {
     "code": "raven",
     "vendor": "Google",
     "name": "Pixel 6 Pro",
@@ -3146,6 +3309,15 @@
     ]
   },
   {
+    "code": "rhode",
+    "vendor": "Motorola",
+    "name": "moto g52",
+    "method": "fastboot",
+    "models": [
+      "XT2221-1"
+    ]
+  },
+  {
     "code": "river",
     "vendor": "Motorola",
     "name": "moto g7",
@@ -3156,6 +3328,13 @@
       "XT1962-05",
       "XT1962-06"
     ]
+  },
+  {
+    "code": "rosemary",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 10S",
+    "method": "fastboot",
+    "models": []
   },
   {
     "code": "roth",
@@ -3422,6 +3601,18 @@
     ]
   },
   {
+    "code": "sweet",
+    "vendor": "Xiaomi",
+    "name": "Redmi Note 10 Pro / Pro (India) / Pro Max (India)",
+    "method": "fastboot",
+    "models": [
+      "M2101K6G",
+      "M2101K6R",
+      "M2101K6P",
+      "M2101K6I"
+    ]
+  },
+  {
     "code": "t0lte",
     "vendor": "Samsung",
     "name": "Galaxy Note 2 (LTE)",
@@ -3451,6 +3642,13 @@
     "code": "taimen",
     "vendor": "Google",
     "name": "Pixel 2 XL",
+    "method": "fastboot",
+    "models": []
+  },
+  {
+    "code": "tangorpro",
+    "vendor": "Google",
+    "name": "Pixel Tablet",
     "method": "fastboot",
     "models": []
   },
@@ -3692,7 +3890,10 @@
     "vendor": "Xiaomi",
     "name": "Redmi Note 7 Pro",
     "method": "fastboot",
-    "models": []
+    "models": [
+      "M1901F7S",
+      "M1901F7BE"
+    ]
   },
   {
     "code": "voyager",
@@ -3910,9 +4111,9 @@
     ]
   },
   {
-    "code": "lynx",
+    "code": "felix",
     "vendor": "Google",
-    "name": "Pixel 7a",
+    "name": "Pixel Fold",
     "models": [],
     "method": "fastboot_nexus"
   },
