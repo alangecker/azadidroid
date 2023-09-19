@@ -1,5 +1,5 @@
-import { Adb } from '@yume-chan/adb';
-import { AdbWebUsbBackendStream } from '@yume-chan/adb-backend-webusb';
+import { Adb, AdbDaemonTransport } from '@yume-chan/adb';
+import { AdbDaemonWebUsbConnection } from '@yume-chan/adb-daemon-webusb';
 import sleep from '../../utils/sleep.js';
 import AdbHybridCredentialStore from './AdbHybridCredentialStore.js';
 import { adbSideload } from './sideload.js';
@@ -7,7 +7,7 @@ import { logger } from '../../utils/logger.js';
 import { TwrpHelper } from './twrp.js';
 import { webusb } from '../usb.js';
 
-const CredentialStore = new AdbHybridCredentialStore();
+const credentialStore = new AdbHybridCredentialStore();
 
 // without this, adb would script would just crash without any error message
 // could not find any other way to catch this error
@@ -22,7 +22,7 @@ export class AdbWrapper {
         readonly adb: Adb
     ) {}
     static async connectToUSBDevice(usbDevice: USBDevice, inEndpoint: USBEndpoint, outEndpoint: USBEndpoint, loadProps = true, onAuthSlow?: Function): Promise<AdbWrapper> {
-        const streams = new AdbWebUsbBackendStream(usbDevice, inEndpoint, outEndpoint, webusb);
+        const connection = new AdbDaemonWebUsbConnection(usbDevice, inEndpoint, outEndpoint, webusb)
         let timeout: NodeJS.Timeout|number
         let authSlowTimer: NodeJS.Timeout|number
         return new Promise( async (resolve, reject) => {
@@ -34,10 +34,12 @@ export class AdbWrapper {
                 authSlowTimer = setTimeout(onAuthSlow, 2000)
             }
 
-            const device = await Adb.authenticate(
-                streams,
-                CredentialStore,
-                undefined
+            const device = new Adb(
+                await AdbDaemonTransport.authenticate({
+                    connection,
+                    credentialStore,
+                    serial: null
+                })
             );
             clearTimeout(timeout)
             clearTimeout(authSlowTimer)
@@ -71,13 +73,13 @@ export class AdbWrapper {
      * SM_G870F, Pixel_3a, ...
      */
     get model() {
-        return this.adb.model
+        return this.adb.banner.model
     }
     /**
      * sargo, klteactivexx, ...
      */
     get product() {
-        return this.adb.product
+        return this.adb.banner.product
     }
     async shell(cmd: string|string[]) {
         const res = await this.adb.subprocess.spawnAndWait(cmd);

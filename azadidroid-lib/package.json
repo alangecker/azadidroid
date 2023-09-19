@@ -4,7 +4,7 @@
   "type": "module",
   "dependencies": {
     "@yume-chan/adb": "^0.0.21",
-    "@yume-chan/adb-backend-webusb": "^0.0.19",
+    "@yume-chan/adb-daemon-webusb": "^0.0.21",
     "@yume-chan/stream-extra": "^0.0.21",
     "android-fastboot": "file:../fastboot.js",
     "axios": "^1.2.1",

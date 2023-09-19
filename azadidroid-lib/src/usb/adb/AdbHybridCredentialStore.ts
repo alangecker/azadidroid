@@ -1,78 +1,118 @@
-// cspell: ignore RSASSA
 
-import { calculateBase64EncodedLength, calculatePublicKey, calculatePublicKeyLength, decodeBase64, decodeUtf8, encodeBase64, type AdbCredentialStore } from "@yume-chan/adb";
-import { isBrowser } from "../../utils/platform.js";
+import type { AdbCredentialStore, AdbPrivateKey } from "@yume-chan/adb";
 
-const webcrypto = globalThis.crypto
+// migrate from IndexedDB to azadidroid-lib DataStore
 
-const memoryStore = {}
-function storeGet(key: string) {
-    if(isBrowser()) {
-        return window.localStorage.getItem(key)
-    } else {
-        return memoryStore[key]
-        // TODO: storage in node
-        return
-    }
-}
-function storeSet(key: string, value: string) {
-    if(isBrowser()) {
-        window.localStorage.setItem(key, value)
-    } else {
-        memoryStore[key] = value
-    }
+function openDatabase() {
+    return new Promise<IDBDatabase>((resolve, reject) => {
+        const request = indexedDB.open("Tango", 1);
+        request.onerror = () => {
+            reject(request.error);
+        };
+        request.onupgradeneeded = () => {
+            const db = request.result;
+            db.createObjectStore("Authentication", { autoIncrement: true });
+        };
+        request.onsuccess = () => {
+            const db = request.result;
+            resolve(db);
+        };
+    });
 }
 
-async function generateKey() {
-    const { privateKey: cryptoKey } = await webcrypto.subtle.generateKey(
-        {
-            name: 'RSASSA-PKCS1-v1_5',
-            modulusLength: 2048,
-            // 65537
-            publicExponent: new Uint8Array([0x01, 0x00, 0x01]),
-            hash: 'SHA-1',
-        },
-        true,
-        ['sign', 'verify']
-    );
+async function saveKey(key: Uint8Array): Promise<void> {
+    const db = await openDatabase();
 
-    const privateKey = new Uint8Array(await webcrypto.subtle.exportKey('pkcs8', cryptoKey!));
-    return privateKey
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction("Authentication", "readwrite");
+        const store = transaction.objectStore("Authentication");
+        const putRequest = store.add(key);
+        putRequest.onerror = () => {
+            reject(putRequest.error);
+        };
+        putRequest.onsuccess = () => {
+            resolve();
+        };
+        transaction.onerror = () => {
+            reject(transaction.error);
+        };
+        transaction.oncomplete = () => {
+            db.close();
+        };
+    });
 }
 
+async function getAllKeys() {
+    const db = await openDatabase();
+
+    return new Promise<Uint8Array[]>((resolve, reject) => {
+        const transaction = db.transaction("Authentication", "readonly");
+        const store = transaction.objectStore("Authentication");
+        const getRequest = store.getAll();
+        getRequest.onerror = () => {
+            reject(getRequest.error);
+        };
+        getRequest.onsuccess = () => {
+            resolve(getRequest.result as Uint8Array[]);
+        };
+        transaction.onerror = () => {
+            reject(transaction.error);
+        };
+        transaction.oncomplete = () => {
+            db.close();
+        };
+    });
+}
 
 export default class AdbHybridCredentialStore implements AdbCredentialStore {
-    public readonly localStorageKey: string;
+    #appName: string;
 
-    public constructor(localStorageKey = 'private-key') {
-        this.localStorageKey = localStorageKey;
+    constructor(appName = "Tango") {
+        this.#appName = appName;
     }
 
-    public *iterateKeys(): Generator<Uint8Array, void, void> {
-        const privateKey = storeGet(this.localStorageKey);
-        if (privateKey) {
-            yield decodeBase64(privateKey);
-        }
-    }
-
-    public async generateKey(): Promise<Uint8Array> {
-        const privateKey  = await generateKey()
-        storeSet(this.localStorageKey, decodeUtf8(encodeBase64(privateKey)));
-
-        // The authentication module in core doesn't need public keys.
-        // It will generate the public key from private key every time.
-        // However, maybe there are people want to manually put this public key onto their device,
-        // so also save the public key for their convenience.
-        const publicKeyLength = calculatePublicKeyLength();
-        const [publicKeyBase64Length] = calculateBase64EncodedLength(publicKeyLength);
-        const publicKeyBuffer = new Uint8Array(publicKeyBase64Length);
-        calculatePublicKey(privateKey, publicKeyBuffer);
-        encodeBase64(
-            publicKeyBuffer.subarray(0, publicKeyLength),
-            publicKeyBuffer
+    /**
+     * Generates a RSA private key and store it into LocalStorage.
+     *
+     * Calling this method multiple times will overwrite the previous key.
+     *
+     * @returns The private key in PKCS #8 format.
+     */
+    async generateKey(): Promise<AdbPrivateKey> {
+        const { privateKey: cryptoKey } = await crypto.subtle.generateKey(
+            {
+                name: "RSASSA-PKCS1-v1_5",
+                modulusLength: 2048,
+                // 65537
+                publicExponent: new Uint8Array([0x01, 0x00, 0x01]),
+                hash: "SHA-1",
+            },
+            true,
+            ["sign", "verify"],
         );
-        storeSet(this.localStorageKey + '.pub', decodeUtf8(publicKeyBuffer));
 
-        return privateKey;
+        const privateKey = new Uint8Array(
+            await crypto.subtle.exportKey("pkcs8", cryptoKey),
+        );
+        await saveKey(privateKey);
+
+        return {
+            buffer: privateKey,
+            name: `${this.#appName}@${globalThis.location.hostname}`,
+        };
+    }
+
+    /**
+     * Yields the stored RSA private key.
+     *
+     * This method returns a generator, so `for await...of...` loop should be used to read the key.
+     */
+    async *iterateKeys(): AsyncGenerator<AdbPrivateKey, void, void> {
+        for (const key of await getAllKeys()) {
+            yield {
+                buffer: key,
+                name: `${this.#appName}@${globalThis.location.hostname}`,
+            };
+        }
     }
 }
