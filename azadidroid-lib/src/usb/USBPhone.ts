@@ -9,6 +9,8 @@ import { isBrowser, isNode } from '../utils/platform.js'
 import { logger } from '../utils/logger.js'
 /// <reference path="./android-fastboot.d.ts" />
 import * as fastboot from "android-fastboot";
+import {  ModelSummary, getModelIndex } from 'azadidroid-data/src/model/models.js'
+import { adbIdentifyPossibleModels } from './adb/identify.js'
 
 export class StateChangeEvent extends Event {
     constructor() {  super('stateChanged') }
@@ -325,6 +327,45 @@ export default class USBPhone implements EventTarget {
                 logger.error(err)
             }
             await sleep(200)
+        }
+    }
+
+    codename: string|null = null
+    async identifyDevice(chooseCallback: (options: ModelSummary[]) => Promise<string>) {
+
+        let options: ModelSummary[] = []
+        switch(this.deviceMode) {
+            case DeviceMode.ADB:
+                const adb = await this.getAdb()
+                options =  await adbIdentifyPossibleModels(adb)
+                break
+            case DeviceMode.ODIN:
+                // verify connection works
+                const odin = await this.getOdin()
+
+                if(odin.modelName) {
+                    options = getModelIndex()
+                        .filter(m => m.method === 'heimdall' && (m.code === odin.modelName || m.models.includes(odin.modelName)))
+                } else {
+                    options = getModelIndex()
+                        .filter(m => m.method == 'heimdall')
+                }
+                break
+            case DeviceMode.FASTBOOT:
+                const fastboot = await this.getFastboot()
+                const product =  await fastboot.getVariable('product')
+                options = getModelIndex()
+                    .filter(m => m.code === product || m.models.includes(product))
+                break
+        }
+
+
+        if(options.length == 1) {
+            this.codename = options[0].code
+        } else if(options.length > 1) {
+            this.codename = await chooseCallback(options)
+        } else {
+            throw new Error(`could not identify phone`)
         }
     }
 }

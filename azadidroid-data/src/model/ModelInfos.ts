@@ -76,12 +76,6 @@ export class ModelInfos {
     get isRetrofitDynamicPartitions(): boolean {
         return this.deviceData.is_retrofit_dynamic_partitions || false
     }
-    get isCovered() {
-        return this.unsupportedFeatures.length === 0
-    }
-
-    get recoveryCodename() {
-        if(this.codename == 'klteactivexx') return 'klte'
         return this.deviceData.custom_recovery_codename || this.codename
     }
     get bootIntoRecoveryInstructions() {
@@ -98,61 +92,6 @@ export class ModelInfos {
     }
     get recoveryPartitionName() {
         return this.deviceData.recovery_partition_name || 'boot'
-    }
-
-    /**
-     * @deprecated TODO: move to azadidroid-lib because it should not be required, that azadidroid-data knows about
-     * the capabilities of azadidroid-lib
-     */
-    get unsupportedFeatures() {
-        const SUPPORTED = {
-            instalMethod: [
-                'heimdall',
-                'fastboot_nexus',
-                'fastboot_xiaomi',
-                'fastboot_motorola',
-            ],
-            beforeInstall: [
-                'needs_specific_android_fw'
-            ],
-            beforeRecoveryInstall: [
-                'boot_stack',
-                // 'samsung_exynos9xxx',
-                // 'samsung_sm7125',
-            ],
-            beforeLineageInstall: [
-                // 'ab_copy_partitions'
-            ]
-        }
-
-
-        let unsupported: string[] = []
-        if(!SUPPORTED.instalMethod.includes(this.installMethod)) unsupported.push(this.installMethod)
-
-        if(this.deviceData.required_bootloader) unsupported.push('required_bootloader')
-
-        if(this.deviceData.before_install) {
-            if(!SUPPORTED.beforeInstall.includes(this.deviceData.before_install.instructions)) unsupported.push(this.deviceData.before_install.instructions)
-        }
-        
-
-        if(this.deviceData.before_recovery_install) {
-            if(typeof this.deviceData.before_recovery_install == 'string') {
-                if(!SUPPORTED.beforeRecoveryInstall.includes(this.deviceData.before_recovery_install)) unsupported.push(this.deviceData.before_recovery_install)
-            } else {
-                if(!SUPPORTED.beforeRecoveryInstall.includes(this.deviceData.before_recovery_install.instructions)) {
-                    unsupported.push(this.deviceData.before_recovery_install.instructions)
-                }
-            }
-        }
-        if(this.deviceData.before_lineage_install) {
-            if(!SUPPORTED.beforeLineageInstall.includes(this.deviceData.before_lineage_install)) unsupported.push(this.deviceData.before_lineage_install)
-        }
-
-        if(typeof this.deviceData.is_unlockable !== 'undefined' && this.deviceData.is_unlockable !== false) {
-            unsupported.push('not_unlockable')
-        }
-        return unsupported
     }
 }    
 
