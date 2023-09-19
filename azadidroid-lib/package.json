@@ -3,21 +3,21 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@yume-chan/adb": "^0.0.19",
+    "@yume-chan/adb": "^0.0.21",
     "@yume-chan/adb-backend-webusb": "^0.0.19",
-    "@yume-chan/stream-extra": "^0.0.19",
+    "@yume-chan/stream-extra": "^0.0.21",
     "android-fastboot": "file:../fastboot.js",
     "axios": "^1.2.1",
     "azadidroid-data": "../azadidroid-data",
     "heimdall.js": "file:../heimdall.js",
     "js-yaml": "^4.1.0",
     "jssha": "^3.3.0",
-    "usb": "2.9.0"
+    "usb": "2.10.0"
   },
   "devDependencies": {
-    "@types/js-yaml": "^4.0.5",
-    "@types/node": "^18.11.7",
+    "@types/js-yaml": "^4.0.6",
+    "@types/node": "^20.6.2",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.4"
+    "typescript": "^5.2.2"
   }
 }
