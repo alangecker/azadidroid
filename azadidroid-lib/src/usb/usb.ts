@@ -1,4 +1,4 @@
-import { isBrowser } from "../utils/platform"
+import { isBrowser } from "../utils/platform.js"
 
 export let webusb: USB
 
@@ -7,7 +7,5 @@ if(isBrowser()) {
 } else {
     // avoid `ReferenceError: navigator is not defined`
     global.navigator = {} as null
-    import('usb').then(({getWebUsb}) => {
-        webusb = getWebUsb()
-    })
+    webusb = (await import('usb')).getWebUsb()
 }

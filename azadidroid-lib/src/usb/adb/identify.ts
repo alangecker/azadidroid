@@ -1,5 +1,5 @@
-import { ModelSummary, getModelIndex } from "azadidroid-data/src/model/models"
-import { AdbWrapper } from "./AdbWrapper"
+import { ModelSummary, getModelIndex } from "azadidroid-data/src/model/models.js"
+import { AdbWrapper } from "./AdbWrapper.js"
 
 export async function adbIdentifyPossibleModels(adb: AdbWrapper): Promise<ModelSummary[]> {
     const adbCodename = adb.product

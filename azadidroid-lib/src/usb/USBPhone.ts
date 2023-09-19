@@ -7,7 +7,6 @@ import sleep from '../utils/sleep.js'
 import { OdinDevice } from 'heimdall.js/src/OdinDevice.js'
 import { isBrowser, isNode } from '../utils/platform.js'
 import { logger } from '../utils/logger.js'
-/// <reference path="./android-fastboot.d.ts" />
 import * as fastboot from "android-fastboot";
 import {  ModelSummary, getModelIndex } from 'azadidroid-data/src/model/models.js'
 import { adbIdentifyPossibleModels } from './adb/identify.js'
@@ -276,7 +275,7 @@ export default class USBPhone implements EventTarget {
         return this._odinDevice
     }
     async getFastboot() {
-        fastboot.setDebugLevel(3)
+        // fastboot.setDebugLevel(DebugLevel.Verbose)
         const device = new fastboot.FastbootDevice(webusb);
         // @ts-ignore
         device._registeredUsbListeners = true

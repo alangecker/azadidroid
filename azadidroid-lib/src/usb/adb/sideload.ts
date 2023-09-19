@@ -18,7 +18,9 @@ export async function adbSideload(device: Adb, data: Blob, onProgress: (percenta
         while(true) {
             const res = await reader.read()
             if(res.done) {
-                await socket.close().catch(() => {})
+                try {
+                    await socket.close()
+                } catch(_) {}
 
                 return
             }
@@ -43,7 +45,9 @@ export async function adbSideload(device: Adb, data: Blob, onProgress: (percenta
             onProgress(transmittedBytes/data.size*100 * 0.99)
         }
     } catch(err) {
-        await socket.close().catch(() => {})
+        try {
+            await socket.close()
+        } catch(_) {}
         throw err
     }
     await socket.close()

@@ -6,10 +6,10 @@
     "@yume-chan/adb": "^0.0.21",
     "@yume-chan/adb-daemon-webusb": "^0.0.21",
     "@yume-chan/stream-extra": "^0.0.21",
-    "android-fastboot": "file:../fastboot.js",
+    "android-fastboot": "^1.0.0",
     "axios": "^1.2.1",
-    "azadidroid-data": "../azadidroid-data",
-    "heimdall.js": "file:../heimdall.js",
+    "azadidroid-data": "^0.0.1",
+    "heimdall.js": "^0.0.1",
     "js-yaml": "^4.1.0",
     "jssha": "^3.3.0",
     "usb": "2.10.0"

@@ -1,0 +1,17 @@
+{
+    "name": "azadidroid",
+    "private": "true",
+    "workspaces": [
+      "azadidroid-data",
+      "azadidroid-cli",
+      "azadidroid-lib",
+      "azadidroid-web",
+      "fastboot.js",
+      "heimdall.js"
+    ],
+    "scripts": {
+        "azadidroid": "yarn workspace azadidroid-cli run azadidroid",
+        "web-dev": "yarn workspace azadidroid-web run dev"
+    }
+  }
+  
